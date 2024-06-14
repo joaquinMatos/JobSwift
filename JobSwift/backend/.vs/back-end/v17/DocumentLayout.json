@@ -1,0 +1,225 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A1125420-798D-422B-B01F-6D711B70E413}|back-end\\back-end.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\backend\\back-end\\migrations\\20240614184421_bdjobswift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1125420-798D-422B-B01F-6D711B70E413}|back-end\\back-end.csproj|solutionrelative:back-end\\migrations\\20240614184421_bdjobswift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1125420-798D-422B-B01F-6D711B70E413}|back-end\\back-end.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\backend\\back-end\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1125420-798D-422B-B01F-6D711B70E413}|back-end\\back-end.csproj|solutionrelative:back-end\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\backend\\domain\\entities\\perfilcandidato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\perfilcandidato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\backend\\domain\\entities\\ofertatrabajo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\ofertatrabajo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\backend\\domain\\entities\\reclutador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\reclutador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\backend\\domain\\dto\\perfilcandidatoresponsive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\perfilcandidatoresponsive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\backend\\domain\\dto\\reclutadorresponsive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\reclutadorresponsive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\backend\\domain\\entities\\favoritos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\favoritos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\backend\\domain\\entities\\candidato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\candidato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\backend\\domain\\entities\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 109,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Favoritos.cs",
+              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\Favoritos.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Favoritos.cs",
+              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\Favoritos.cs",
+              "RelativeToolTip": "Domain\\Entities\\Favoritos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T18:16:55.71Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20240614184421_bdjobswift.cs",
+              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\back-end\\Migrations\\20240614184421_bdjobswift.cs",
+              "RelativeDocumentMoniker": "back-end\\Migrations\\20240614184421_bdjobswift.cs",
+              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\back-end\\Migrations\\20240614184421_bdjobswift.cs",
+              "RelativeToolTip": "back-end\\Migrations\\20240614184421_bdjobswift.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T18:44:23.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ReclutadorResponsive.cs",
+              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\DTO\\ReclutadorResponsive.cs",
+              "RelativeDocumentMoniker": "Domain\\DTO\\ReclutadorResponsive.cs",
+              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\DTO\\ReclutadorResponsive.cs",
+              "RelativeToolTip": "Domain\\DTO\\ReclutadorResponsive.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T18:42:43.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Candidato.cs",
+              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\Candidato.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Candidato.cs",
+              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\Candidato.cs",
+              "RelativeToolTip": "Domain\\Entities\\Candidato.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T18:31:52.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OfertaTrabajo.cs",
+              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\OfertaTrabajo.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\OfertaTrabajo.cs",
+              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\OfertaTrabajo.cs",
+              "RelativeToolTip": "Domain\\Entities\\OfertaTrabajo.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABsAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T18:31:47.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Response.cs",
+              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\Response.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Response.cs",
+              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\Response.cs",
+              "RelativeToolTip": "Domain\\Entities\\Response.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T18:31:45.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Reclutador.cs",
+              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\Reclutador.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Reclutador.cs",
+              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\Reclutador.cs",
+              "RelativeToolTip": "Domain\\Entities\\Reclutador.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T18:31:44.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PerfilCandidato.cs",
+              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\PerfilCandidato.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\PerfilCandidato.cs",
+              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\PerfilCandidato.cs",
+              "RelativeToolTip": "Domain\\Entities\\PerfilCandidato.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T18:31:34.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\back-end\\Context\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "back-end\\Context\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\back-end\\Context\\ApplicationDbContext.cs",
+              "RelativeToolTip": "back-end\\Context\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAYwFMAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T18:22:08.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PerfilCandidatoResponsive.cs",
+              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\DTO\\PerfilCandidatoResponsive.cs",
+              "RelativeDocumentMoniker": "Domain\\DTO\\PerfilCandidatoResponsive.cs",
+              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\DTO\\PerfilCandidatoResponsive.cs",
+              "RelativeToolTip": "Domain\\DTO\\PerfilCandidatoResponsive.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T18:20:38.299Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
