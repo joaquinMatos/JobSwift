@@ -66,6 +66,7 @@ D:\JobSwift\back-end\back-end\obj\Debug\net6.0\refint\back-end.dll
 D:\JobSwift\back-end\back-end\obj\Debug\net6.0\back-end.pdb
 D:\JobSwift\back-end\back-end\obj\Debug\net6.0\back-end.genruntimeconfig.cache
 D:\JobSwift\back-end\back-end\obj\Debug\net6.0\ref\back-end.dll
+<<<<<<< HEAD
 C:\Users\balam\OneDrive\Escritorio\Entorno de Trabajo\JobSwift\backend\back-end\bin\Debug\net6.0\appsettings.json
 C:\Users\balam\OneDrive\Escritorio\Entorno de Trabajo\JobSwift\backend\back-end\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\balam\OneDrive\Escritorio\Entorno de Trabajo\JobSwift\backend\back-end\bin\Debug\net6.0\back-end.exe
@@ -135,3 +136,5 @@ C:\Users\balam\OneDrive\Escritorio\Entorno de Trabajo\JobSwift\backend\back-end\
 C:\Users\balam\OneDrive\Escritorio\Entorno de Trabajo\JobSwift\backend\back-end\obj\Debug\net6.0\back-end.pdb
 C:\Users\balam\OneDrive\Escritorio\Entorno de Trabajo\JobSwift\backend\back-end\obj\Debug\net6.0\back-end.genruntimeconfig.cache
 C:\Users\balam\OneDrive\Escritorio\Entorno de Trabajo\JobSwift\backend\back-end\obj\Debug\net6.0\ref\back-end.dll
+=======
+>>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a

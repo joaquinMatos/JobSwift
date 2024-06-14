@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\back-end\\back-end.csproj": {}
   },
   "projects": {
@@ -15,6 +16,26 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\balam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "D:\\JobSwift\\back-end\\back-end\\back-end.csproj": {}
+  },
+  "projects": {
+    "D:\\JobSwift\\back-end\\back-end\\back-end.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\JobSwift\\back-end\\back-end\\back-end.csproj",
+        "projectName": "back-end",
+        "projectPath": "D:\\JobSwift\\back-end\\back-end\\back-end.csproj",
+        "packagesPath": "C:\\Users\\larry\\.nuget\\packages\\",
+        "outputPath": "D:\\JobSwift\\back-end\\back-end\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\ArchivosProgramas\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\larry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +43,23 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+<<<<<<< HEAD
+=======
+          "C:\\Program Files\\dotnet\\library-packs": {},
+>>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Domain.csproj": {
                 "projectPath": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Domain.csproj"
+=======
+              "D:\\JobSwift\\back-end\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\JobSwift\\back-end\\Domain\\Domain.csproj"
+>>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
               }
             }
           }
@@ -49,10 +79,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+<<<<<<< HEAD
             "Dapper": {
               "target": "Package",
               "version": "[2.1.35, )"
             },
+=======
+>>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -91,6 +124,7 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201\\RuntimeIdentifierGraph.json"
         }
       }
@@ -106,6 +140,27 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\balam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\JobSwift\\back-end\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\JobSwift\\back-end\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "D:\\JobSwift\\back-end\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\larry\\.nuget\\packages\\",
+        "outputPath": "D:\\JobSwift\\back-end\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\ArchivosProgramas\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\larry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -113,6 +168,10 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+<<<<<<< HEAD
+=======
+          "C:\\Program Files\\dotnet\\library-packs": {},
+>>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -167,7 +226,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+>>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
         }
       }
     }

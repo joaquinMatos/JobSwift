@@ -8,7 +8,10 @@
     ".NETCoreApp,Version=v6.0": {
       "back-end/1.0.0": {
         "dependencies": {
+<<<<<<< HEAD
           "Dapper": "2.1.35",
+=======
+>>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
           "Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0",
@@ -19,6 +22,7 @@
           "back-end.dll": {}
         }
       },
+<<<<<<< HEAD
       "Dapper/2.1.35": {
         "runtime": {
           "lib/net5.0/Dapper.dll": {
@@ -27,6 +31,8 @@
           }
         }
       },
+=======
+>>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
       "Humanizer.Core/2.8.26": {
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {
@@ -502,6 +508,7 @@
       "serviceable": false,
       "sha512": ""
     },
+<<<<<<< HEAD
     "Dapper/2.1.35": {
       "type": "package",
       "serviceable": true,
@@ -509,6 +516,8 @@
       "path": "dapper/2.1.35",
       "hashPath": "dapper.2.1.35.nupkg.sha512"
     },
+=======
+>>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
     "Humanizer.Core/2.8.26": {
       "type": "package",
       "serviceable": true,

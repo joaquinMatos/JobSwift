@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\",
   "Documents": [
     {
@@ -41,11 +42,19 @@
     {
       "AbsoluteMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\backend\\domain\\entities\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+  "WorkspaceRootPath": "D:\\JobSwift\\back-end\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A1125420-798D-422B-B01F-6D711B70E413}|back-end\\back-end.csproj|d:\\jobswift\\back-end\\back-end\\services\\candidatoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1125420-798D-422B-B01F-6D711B70E413}|back-end\\back-end.csproj|solutionrelative:back-end\\services\\candidatoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
     }
   ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
+<<<<<<< HEAD
       "VerticalTabListWidth": 109,
       "DocumentGroups": [
         {
@@ -158,6 +167,15 @@
               "EditorCaption": ""
             },
             {
+=======
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+>>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
               "$type": "Bookmark",
               "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
             },
@@ -183,6 +201,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 1,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\back-end\\Context\\ApplicationDbContext.cs",
@@ -205,6 +224,17 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-14T18:20:38.299Z",
+=======
+              "DocumentIndex": 0,
+              "Title": "CandidatoServices.cs",
+              "DocumentMoniker": "D:\\JobSwift\\back-end\\back-end\\Services\\CandidatoServices.cs",
+              "RelativeDocumentMoniker": "back-end\\Services\\CandidatoServices.cs",
+              "ToolTip": "D:\\JobSwift\\back-end\\back-end\\Services\\CandidatoServices.cs",
+              "RelativeToolTip": "back-end\\Services\\CandidatoServices.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T10:56:37.844Z",
+>>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
               "EditorCaption": ""
             }
           ]

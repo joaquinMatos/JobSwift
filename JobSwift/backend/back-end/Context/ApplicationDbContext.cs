@@ -1,6 +1,9 @@
 ﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+<<<<<<< HEAD
 using System.Diagnostics.Contracts;
+=======
+>>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
 
 namespace back_end.Context
 {
@@ -10,16 +13,22 @@ namespace back_end.Context
 
         //Modelos
         public DbSet<Candidato> Candidato { get; set; }
+<<<<<<< HEAD
         public DbSet<Reclutador> Reclutador { get; set; }
         public DbSet<OfertaTrabajo> OfertaTrabajo { get; set; }
         public DbSet<Favoritos> Favoritos { get; set; }
         public DbSet<PerfilCandidato> PerfilCandidato { get; set; }
+=======
+>>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //Funcion Insertar Tabla Candidato
             modelBuilder.Entity<Candidato>().HasData(
+<<<<<<< HEAD
                 
+=======
+>>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
                 new Candidato
                 {
                     IdCandidato = 1,
@@ -32,6 +41,7 @@ namespace back_end.Context
                     NTelefonico = "1234567890",
                     Token = "sometoken123"
                 }
+<<<<<<< HEAD
                
             );
 
@@ -95,6 +105,9 @@ namespace back_end.Context
                   Fk_IdOfertaTrabajo = 1
                }
            );
+=======
+            );
+>>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
         }
     }
 
