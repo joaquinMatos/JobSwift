@@ -31,3 +31,18 @@ C:\Users\balam\OneDrive\Escritorio\Entorno de Trabajo\JobSwift\backend\Domain\ob
 C:\Users\balam\OneDrive\Escritorio\Entorno de Trabajo\JobSwift\backend\Domain\obj\Debug\net6.0\ref\Domain.dll
 =======
 >>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\Domain\bin\Debug\net6.0\Domain.deps.json
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\Domain\bin\Debug\net6.0\Domain.runtimeconfig.json
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\Domain\bin\Debug\net6.0\Domain.dll
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\Domain\bin\Debug\net6.0\Domain.pdb
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\Domain\obj\Debug\net6.0\Domain.csproj.AssemblyReference.cache
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\Domain\obj\Debug\net6.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\Domain\obj\Debug\net6.0\Domain.AssemblyInfoInputs.cache
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\Domain\obj\Debug\net6.0\Domain.AssemblyInfo.cs
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\Domain\obj\Debug\net6.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\Domain\obj\Debug\net6.0\Domain.sourcelink.json
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\Domain\obj\Debug\net6.0\Domain.dll
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\Domain\obj\Debug\net6.0\refint\Domain.dll
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\Domain\obj\Debug\net6.0\Domain.pdb
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\Domain\obj\Debug\net6.0\Domain.genruntimeconfig.cache
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\Domain\obj\Debug\net6.0\ref\Domain.dll

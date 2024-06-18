@@ -138,3 +138,14 @@ C:\Users\balam\OneDrive\Escritorio\Entorno de Trabajo\JobSwift\backend\back-end\
 C:\Users\balam\OneDrive\Escritorio\Entorno de Trabajo\JobSwift\backend\back-end\obj\Debug\net6.0\ref\back-end.dll
 =======
 >>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\back-end\obj\Debug\net6.0\back-end.csproj.AssemblyReference.cache
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\back-end\obj\Debug\net6.0\back-end.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\back-end\obj\Debug\net6.0\back-end.AssemblyInfoInputs.cache
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\back-end\obj\Debug\net6.0\back-end.AssemblyInfo.cs
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\back-end\obj\Debug\net6.0\back-end.csproj.CoreCompileInputs.cache
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\back-end\obj\Debug\net6.0\back-end.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\back-end\obj\Debug\net6.0\back-end.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\back-end\obj\Debug\net6.0\back-end.sourcelink.json
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\back-end\obj\Debug\net6.0\back-end.dll
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\back-end\obj\Debug\net6.0\refint\back-end.dll
+C:\Users\balam\OneDrive\Escritorio\Entorno de trabajo\JobSwift\Jobswift\backend\back-end\obj\Debug\net6.0\back-end.pdb

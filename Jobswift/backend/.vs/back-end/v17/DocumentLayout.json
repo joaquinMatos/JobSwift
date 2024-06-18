@@ -1,181 +1,32 @@
 {
   "Version": 1,
-<<<<<<< HEAD
-  "WorkspaceRootPath": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\",
+  "WorkspaceRootPath": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1125420-798D-422B-B01F-6D711B70E413}|back-end\\back-end.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\backend\\back-end\\migrations\\20240614184421_bdjobswift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1125420-798D-422B-B01F-6D711B70E413}|back-end\\back-end.csproj|solutionrelative:back-end\\migrations\\20240614184421_bdjobswift.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1125420-798D-422B-B01F-6D711B70E413}|back-end\\back-end.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\backend\\back-end\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A1125420-798D-422B-B01F-6D711B70E413}|back-end\\back-end.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\jobswift\\backend\\back-end\\back-end.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A1125420-798D-422B-B01F-6D711B70E413}|back-end\\back-end.csproj|solutionrelative:back-end\\back-end.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\balam\\OneDrive\\Documentos\\Microsoft.Common.CurrentVersion||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1125420-798D-422B-B01F-6D711B70E413}|back-end\\back-end.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\jobswift\\backend\\back-end\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1125420-798D-422B-B01F-6D711B70E413}|back-end\\back-end.csproj|solutionrelative:back-end\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\backend\\domain\\entities\\perfilcandidato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\perfilcandidato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\backend\\domain\\entities\\ofertatrabajo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\ofertatrabajo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\backend\\domain\\entities\\reclutador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\reclutador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\backend\\domain\\dto\\perfilcandidatoresponsive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\perfilcandidatoresponsive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\backend\\domain\\dto\\reclutadorresponsive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\reclutadorresponsive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\backend\\domain\\entities\\favoritos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\favoritos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\backend\\domain\\entities\\candidato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\candidato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\backend\\domain\\entities\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E290D360-7DA0-4C09-A315-95D5BC138097}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-  "WorkspaceRootPath": "D:\\JobSwift\\back-end\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A1125420-798D-422B-B01F-6D711B70E413}|back-end\\back-end.csproj|d:\\jobswift\\back-end\\back-end\\services\\candidatoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1125420-798D-422B-B01F-6D711B70E413}|back-end\\back-end.csproj|solutionrelative:back-end\\services\\candidatoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
     }
   ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
-<<<<<<< HEAD
-      "VerticalTabListWidth": 109,
+      "VerticalTabListWidth": 216,
       "DocumentGroups": [
         {
-          "DockedHeight": 200,
-          "SelectedChildIndex": 1,
+          "DockedHeight": 305,
+          "SelectedChildIndex": -1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Favoritos.cs",
-              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\Favoritos.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Favoritos.cs",
-              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\Favoritos.cs",
-              "RelativeToolTip": "Domain\\Entities\\Favoritos.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T18:16:55.71Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20240614184421_bdjobswift.cs",
-              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\back-end\\Migrations\\20240614184421_bdjobswift.cs",
-              "RelativeDocumentMoniker": "back-end\\Migrations\\20240614184421_bdjobswift.cs",
-              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\back-end\\Migrations\\20240614184421_bdjobswift.cs",
-              "RelativeToolTip": "back-end\\Migrations\\20240614184421_bdjobswift.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T18:44:23.64Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ReclutadorResponsive.cs",
-              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\DTO\\ReclutadorResponsive.cs",
-              "RelativeDocumentMoniker": "Domain\\DTO\\ReclutadorResponsive.cs",
-              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\DTO\\ReclutadorResponsive.cs",
-              "RelativeToolTip": "Domain\\DTO\\ReclutadorResponsive.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T18:42:43.411Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Candidato.cs",
-              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\Candidato.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Candidato.cs",
-              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\Candidato.cs",
-              "RelativeToolTip": "Domain\\Entities\\Candidato.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T18:31:52.458Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OfertaTrabajo.cs",
-              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\OfertaTrabajo.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\OfertaTrabajo.cs",
-              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\OfertaTrabajo.cs",
-              "RelativeToolTip": "Domain\\Entities\\OfertaTrabajo.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABsAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T18:31:47.641Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Response.cs",
-              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\Response.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Response.cs",
-              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\Response.cs",
-              "RelativeToolTip": "Domain\\Entities\\Response.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T18:31:45.936Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Reclutador.cs",
-              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\Reclutador.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Reclutador.cs",
-              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\Reclutador.cs",
-              "RelativeToolTip": "Domain\\Entities\\Reclutador.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABkAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T18:31:44.141Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PerfilCandidato.cs",
-              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\PerfilCandidato.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\PerfilCandidato.cs",
-              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Entities\\PerfilCandidato.cs",
-              "RelativeToolTip": "Domain\\Entities\\PerfilCandidato.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T18:31:34.501Z",
-              "EditorCaption": ""
-            },
-            {
-=======
-      "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedHeight": 200,
-          "SelectedChildIndex": 6,
-          "Children": [
-            {
->>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
               "$type": "Bookmark",
               "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
             },
@@ -198,51 +49,64 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 1,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\back-end\\Context\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "back-end\\Context\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\back-end\\Context\\ApplicationDbContext.cs",
-              "RelativeToolTip": "back-end\\Context\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAYwFMAAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T18:22:08.114Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PerfilCandidatoResponsive.cs",
-              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\DTO\\PerfilCandidatoResponsive.cs",
-              "RelativeDocumentMoniker": "Domain\\DTO\\PerfilCandidatoResponsive.cs",
-              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\DTO\\PerfilCandidatoResponsive.cs",
-              "RelativeToolTip": "Domain\\DTO\\PerfilCandidatoResponsive.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T18:20:38.299Z",
-=======
-              "DocumentIndex": 0,
-              "Title": "CandidatoServices.cs",
-              "DocumentMoniker": "D:\\JobSwift\\back-end\\back-end\\Services\\CandidatoServices.cs",
-              "RelativeDocumentMoniker": "back-end\\Services\\CandidatoServices.cs",
-              "ToolTip": "D:\\JobSwift\\back-end\\back-end\\Services\\CandidatoServices.cs",
-              "RelativeToolTip": "back-end\\Services\\CandidatoServices.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAowAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T10:56:37.844Z",
->>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
-              "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedHeight": 200,
-          "SelectedChildIndex": -1,
+          "DockedHeight": 95,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AQIAALwVAAAAAAAAAAAcwKsVAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-06-18T20:53:55.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Microsoft.Common.CurrentVersion",
+              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Documentos\\Microsoft.Common.CurrentVersion",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Documentos\\Microsoft.Common.CurrentVersion",
+              "ToolTip": "C:\\Users\\balam\\OneDrive\\Documentos\\Microsoft.Common.CurrentVersion",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Documentos\\Microsoft.Common.CurrentVersion",
+              "ViewState": "AQIAAK0aAAAAAAAAAAAAAMsaAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-06-18T20:49:35.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "back-end.csproj",
+              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\back-end\\back-end.csproj",
+              "RelativeDocumentMoniker": "back-end\\back-end.csproj",
+              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\back-end\\back-end.csproj",
+              "RelativeToolTip": "back-end\\back-end.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-06-18T20:39:21.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\back-end\\Context\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "back-end\\Context\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\back-end\\Context\\ApplicationDbContext.cs",
+              "RelativeToolTip": "back-end\\Context\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAkAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T20:35:05.336Z"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"

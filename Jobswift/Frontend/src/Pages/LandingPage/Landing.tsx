@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from './Header';
+import Navbar from '../../components/Header';
 import Hero from './Hero';
 import Cards from './Cards';
-import Footer from './Footer';
+import Footer from '../../components/Footer';
 import Search from './Search';
 import Opcion from './Opcion';
 
@@ -15,7 +15,6 @@ const Landing = () => {
       <Cards />
       <Opcion />
       <Footer />
-      
     </div>
   );
 };

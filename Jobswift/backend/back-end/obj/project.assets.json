@@ -2,7 +2,6 @@
   "version": 3,
   "targets": {
     "net6.0": {
-<<<<<<< HEAD
       "Dapper/2.1.35": {
         "type": "package",
         "compile": {
@@ -16,8 +15,6 @@
           }
         }
       },
-=======
->>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -900,7 +897,6 @@
     }
   },
   "libraries": {
-<<<<<<< HEAD
     "Dapper/2.1.35": {
       "sha512": "YKRwjVfrG7GYOovlGyQoMvr1/IJdn+7QzNXJxyMh0YfFF5yvDmTYaJOVYWsckreNjGsGSEtrMTpnzxTUq/tZQw==",
       "type": "package",
@@ -922,8 +918,6 @@
         "readme.md"
       ]
     },
-=======
->>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
     "Humanizer.Core/2.8.26": {
       "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "type": "package",
@@ -2486,10 +2480,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-<<<<<<< HEAD
       "Dapper >= 2.1.35",
-=======
->>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
       "Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.0",
@@ -2498,39 +2489,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\balam\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\larry\\.nuget\\packages\\": {},
-    "D:\\ArchivosProgramas\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
->>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\back-end\\back-end.csproj",
+      "projectUniqueName": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\back-end\\back-end.csproj",
       "projectName": "back-end",
-      "projectPath": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\back-end\\back-end.csproj",
+      "projectPath": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\back-end\\back-end.csproj",
       "packagesPath": "C:\\Users\\balam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\back-end\\obj\\",
+      "outputPath": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\back-end\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\balam\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "D:\\JobSwift\\back-end\\back-end\\back-end.csproj",
-      "projectName": "back-end",
-      "projectPath": "D:\\JobSwift\\back-end\\back-end\\back-end.csproj",
-      "packagesPath": "C:\\Users\\larry\\.nuget\\packages\\",
-      "outputPath": "D:\\JobSwift\\back-end\\back-end\\obj\\",
-      "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\ArchivosProgramas\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
-      "configFilePaths": [
-        "C:\\Users\\larry\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
->>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2538,23 +2509,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-<<<<<<< HEAD
-=======
-        "C:\\Program Files\\dotnet\\library-packs": {},
->>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-<<<<<<< HEAD
-            "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de Trabajo\\JobSwift\\backend\\Domain\\Domain.csproj"
-=======
-            "D:\\JobSwift\\back-end\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\JobSwift\\back-end\\Domain\\Domain.csproj"
->>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
+            "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj"
             }
           }
         }
@@ -2574,13 +2536,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
-<<<<<<< HEAD
           "Dapper": {
             "target": "Package",
             "version": "[2.1.35, )"
           },
-=======
->>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[6.0.0, )"
@@ -2619,12 +2578,16 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201\\RuntimeIdentifierGraph.json"
-=======
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
->>>>>>> 36c71e2e54349876c50dd31a9fe3b96670c57b6a
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\back-end\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
