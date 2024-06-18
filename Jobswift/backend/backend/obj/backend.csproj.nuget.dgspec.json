@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\JobSwift\\Jobswift\\backend\\backend.csproj": {}
+    "D:\\JobSwift\\Jobswift\\Backend\\Backend\\Backend.csproj": {}
   },
   "projects": {
-    "D:\\JobSwift\\Jobswift\\backend\\backend.csproj": {
+    "D:\\JobSwift\\Jobswift\\Backend\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\JobSwift\\Jobswift\\backend\\backend.csproj",
-        "projectName": "backend",
-        "projectPath": "D:\\JobSwift\\Jobswift\\backend\\backend.csproj",
+        "projectUniqueName": "D:\\JobSwift\\Jobswift\\Backend\\Backend\\Backend.csproj",
+        "projectName": "Backend",
+        "projectPath": "D:\\JobSwift\\Jobswift\\Backend\\Backend\\Backend.csproj",
         "packagesPath": "C:\\Users\\larry\\.nuget\\packages\\",
-        "outputPath": "D:\\JobSwift\\Jobswift\\backend\\obj\\",
+        "outputPath": "D:\\JobSwift\\Jobswift\\Backend\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\ArchivosProgramas\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -71,6 +71,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "System.Diagnostics.Tools": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [

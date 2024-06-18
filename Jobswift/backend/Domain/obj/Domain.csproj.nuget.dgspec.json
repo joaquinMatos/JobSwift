@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\JobSwift\\Jobswift\\Domain\\Domain.csproj": {}
+    "D:\\JobSwift\\Jobswift\\Backend\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "D:\\JobSwift\\Jobswift\\Domain\\Domain.csproj": {
+    "D:\\JobSwift\\Jobswift\\Backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\JobSwift\\Jobswift\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\JobSwift\\Jobswift\\Backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\JobSwift\\Jobswift\\Domain\\Domain.csproj",
+        "projectPath": "D:\\JobSwift\\Jobswift\\Backend\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\larry\\.nuget\\packages\\",
-        "outputPath": "D:\\JobSwift\\Jobswift\\Domain\\obj\\",
+        "outputPath": "D:\\JobSwift\\Jobswift\\Backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\ArchivosProgramas\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -67,6 +67,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "System.Diagnostics.Tools": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [
