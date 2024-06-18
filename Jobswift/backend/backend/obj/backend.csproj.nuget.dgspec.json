@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\JobSwift\\Jobswift\\Backend\\Backend\\Backend.csproj": {}
+    "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\Backend\\Backend.csproj": {}
   },
   "projects": {
-    "D:\\JobSwift\\Jobswift\\Backend\\Backend\\Backend.csproj": {
+    "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\JobSwift\\Jobswift\\Backend\\Backend\\Backend.csproj",
+        "projectUniqueName": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "D:\\JobSwift\\Jobswift\\Backend\\Backend\\Backend.csproj",
-        "packagesPath": "C:\\Users\\larry\\.nuget\\packages\\",
-        "outputPath": "D:\\JobSwift\\Jobswift\\Backend\\Backend\\obj\\",
+        "projectPath": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\Backend\\Backend.csproj",
+        "packagesPath": "C:\\Users\\balam\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\Backend\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\ArchivosProgramas\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\larry\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\balam\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,13 +22,16 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -92,6 +91,90 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\balam\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\balam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.Diagnostics.Tools": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

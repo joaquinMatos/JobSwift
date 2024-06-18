@@ -2242,24 +2242,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\larry\\.nuget\\packages\\": {},
-    "D:\\ArchivosProgramas\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\balam\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\JobSwift\\Jobswift\\Backend\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "D:\\JobSwift\\Jobswift\\Backend\\Domain\\Domain.csproj",
-      "packagesPath": "C:\\Users\\larry\\.nuget\\packages\\",
-      "outputPath": "D:\\JobSwift\\Jobswift\\Backend\\Domain\\obj\\",
+      "projectPath": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj",
+      "packagesPath": "C:\\Users\\balam\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\Domain\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\ArchivosProgramas\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\larry\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\balam\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2267,7 +2262,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

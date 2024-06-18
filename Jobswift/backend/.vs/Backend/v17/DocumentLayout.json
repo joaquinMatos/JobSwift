@@ -1,49 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\JobSwift\\Jobswift\\Backend\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|c:\\users\\balam\\onedrive\\escritorio\\entorno de trabajo\\jobswift\\jobswift\\backend\\backend\\migrations\\20240618222135_example.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\migrations\\20240618222135_example.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
-      "VerticalTabListWidth": 256,
+      "VerticalTabListWidth": 110,
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
-            }
-          ]
-        },
-        {
-          "DockedHeight": 200,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20240618222135_example.cs",
+              "DocumentMoniker": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\backend\\Migrations\\20240618222135_example.cs",
+              "RelativeDocumentMoniker": "backend\\Migrations\\20240618222135_example.cs",
+              "ToolTip": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\backend\\Migrations\\20240618222135_example.cs",
+              "RelativeToolTip": "backend\\Migrations\\20240618222135_example.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T22:21:36.444Z",
+              "EditorCaption": ""
             }
           ]
         }

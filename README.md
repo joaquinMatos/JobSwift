@@ -25,25 +25,4 @@ Comando para migrar la Base de datos a SQLserver
 
 # Estructura 
 
-├── src/
-│   ├── assets/
-│   │   └── logo.png
-│   ├── components/
-│   │   ├── Button
-│   │   └── Header
-│   ├── pages/
-│   │   ├── HomePage
-│   │   └── AboutPage
-│   ├── context/
-│   │   └── AuthContext
-│   ├── hooks/
-│   │   └── useAuth
-│   ├── services/
-│   │   └── api
-│   ├── styles/
-│   │   └── main.css
-│   ├── utils/
-│   │   └── formatDate
-│   ├── routes/
-│   │   └── AppRoutes
-|   └── App.tsx
+![alt text](image-1.png)
