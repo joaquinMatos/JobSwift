@@ -4,6 +4,7 @@ using Domain.DTO;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
+using System.Security.Claims;
 
 namespace back_end.Services
 {
@@ -14,6 +15,7 @@ namespace back_end.Services
         public CandidatoServices(ApplicationDbContext context)
         {
             _context = context;
+
         }
 
         public async Task<Response<List<Candidato>>> ObtenerCandidatos()
@@ -27,6 +29,11 @@ namespace back_end.Services
             {
                 throw new Exception("Ocurrió un error al obtener los candidatos: " + ex.Message);
             }
+        }
+
+        public async Task<Candidato> ObtenerCandidatoPorCredenciales(string user, string password)
+        {
+            return await _context.Candidato.Where(x => x.Email == user && x.Contrasena == password).FirstOrDefaultAsync();
         }
 
         public async Task<Response<Candidato>> ObtenerCandidato(int id)
@@ -123,5 +130,6 @@ namespace back_end.Services
                 throw new Exception("Ocurrió un error al eliminar el candidato: " + ex.Message);
             }
         }
+
     }
 }

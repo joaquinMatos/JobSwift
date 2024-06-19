@@ -1,20 +1,16 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../../context/AuthLogin';
-
 
 const LoginComponent: React.FC = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const { login } = useAuth();
     const navigate = useNavigate();
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Aquí puedes añadir la lógica de autenticación con la API y obtener el token
-        const fakeToken = '123456'; // Simular un token
-        login(fakeToken);
-        navigate('/dashboard');
+        const fakeToken = '12345623421131fs131'; // Replace with actual token received from API or authentication process
+        sessionStorage.setItem('authToken', fakeToken); // Save token in sessionStorage
+        navigate('/dashboard'); // Navigate to dashboard after successful login
     };
 
     return (

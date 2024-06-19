@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj": {}
+    "C:\\Users\\balam\\Desktop\\Entorno de TRbajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj": {
+    "C:\\Users\\balam\\Desktop\\Entorno de TRbajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\balam\\Desktop\\Entorno de TRbajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\balam\\Desktop\\Entorno de TRbajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\balam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\balam\\OneDrive\\Escritorio\\Entorno de trabajo\\JobSwift\\Jobswift\\backend\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\balam\\Desktop\\Entorno de TRbajo\\JobSwift\\Jobswift\\backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\balam\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

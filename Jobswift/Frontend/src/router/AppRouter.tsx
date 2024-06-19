@@ -6,18 +6,18 @@ import Landing from '../Pages/LandingPage/Landing';
 import LoginComponent from '../Pages/authentication/CandidateLogin';
 import { AuthProvider } from '../context/AuthLogin';
 
-const App: React.FC = () => {
+const AppRouter: React.FC = () => {
     return (
         <AuthProvider>
             <Routes>
-                <Route path='' element={<Landing />} />
-                <Route path='login' element={<LoginComponent />} />
-                <Route element={<ProtectedRoute canActivate={false} />}>
-                    <Route path='dashboard' element={<DashboardCandidate />} />
+                <Route path="/" element={<Landing />} />
+                <Route path="/login" element={<LoginComponent />} />
+                <Route element={<ProtectedRoute />}>
+                    <Route path="/dashboard" element={<DashboardCandidate />} />
                 </Route>
             </Routes>
         </AuthProvider>
     );
 };
 
-export default App;
+export default AppRouter;

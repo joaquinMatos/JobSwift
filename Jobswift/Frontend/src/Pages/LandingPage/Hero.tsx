@@ -1,8 +1,17 @@
-import { Grid, Box, Typography, Button, Stack, Card } from "@mui/material";
+import { Grid, Box, Typography, Button, Stack } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
+import React from 'react';
 
 const Hero = () => {
+    
+    const navigate = useNavigate();
+
+    const ClickLogin = () => {
+        navigate('/login');
+    };
+
     return (
-        <Box display="flex" sx={{ position: 'relative', bgcolor: '#00AAFF', minHeight: 'auto', overflow: 'hidden' }}>
+        <Box display="flex" sx={{ position: 'relative', bgcolor: '#00AAFF', minHeight: '100vh', overflow: 'hidden' }}>
             {/* Fondos circulares */}
             <Box sx={{ position: 'absolute', top: '-200px', left: '-200px', zIndex: 0 }}>
                 <Box
@@ -75,6 +84,7 @@ const Hero = () => {
                                     Registrate
                                 </Button>
                                 <Button
+                                    onClick={ClickLogin}
                                     variant="contained"
                                     sx={{
                                         bgcolor: '#E67D15',
@@ -100,13 +110,11 @@ const Hero = () => {
                             borderRadius: '50%',
                             zIndex: 1,
                         }} />
-                        <img alt="" src="img/chicaoriginal-removebg-preview.png" style={{ zIndex: 2, alignSelf: 'flex-end', height: '100%' }} />
+                        <img alt="Illustration" src="img/chicaoriginal-removebg-preview.png" style={{ zIndex: 2, alignSelf: 'flex-end', height: '100%' }} />
                     </Grid>
                 </Grid>
             </Box>
-
         </Box>
-
     );
 }
 
