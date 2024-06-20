@@ -23,6 +23,18 @@ builder.Services.AddTransient<ICandidatoServices, CandidatoServices>();
 
 builder.Services.AddTransient<IValidarTokenServices, ValidarTokenServices>();
 
+// CORS 
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("MyPolicy", builder =>
+    {
+        builder.WithOrigins("http://localhost:3000") 
+               .AllowAnyHeader()
+               .AllowAnyMethod();
+    });
+});
+
 // JWT 
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

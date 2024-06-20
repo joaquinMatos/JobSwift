@@ -10,7 +10,6 @@ const Landing = () => {
   return (
     <div>
       <Navbar />
-      <Search />
       <Hero />
       <Cards />
       <Opcion />

@@ -63,8 +63,7 @@
               "ViewState": "AQIAAEIAAAAAAAAAAAAYwB8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-19T04:23:38.995Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -77,8 +76,7 @@
               "ViewState": "AQIAAEUAAAAAAAAAAAAowFwAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-19T05:22:43.219Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -91,8 +89,7 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-19T05:20:16.091Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -105,8 +102,7 @@
               "ViewState": "AQIAABsAAAAAAAAAAAAYwAgAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-19T05:40:28.372Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -138,9 +134,9 @@
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\balam\\Desktop\\Entorno de TRbajo\\JobSwift\\Jobswift\\backend\\backend\\Program.cs",
               "RelativeDocumentMoniker": "backend\\Program.cs",
-              "ToolTip": "C:\\Users\\balam\\Desktop\\Entorno de TRbajo\\JobSwift\\Jobswift\\backend\\backend\\Program.cs",
-              "RelativeToolTip": "backend\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "ToolTip": "C:\\Users\\balam\\Desktop\\Entorno de TRbajo\\JobSwift\\Jobswift\\backend\\backend\\Program.cs*",
+              "RelativeToolTip": "backend\\Program.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-19T19:41:07.505Z",
               "EditorCaption": ""
@@ -155,8 +151,7 @@
               "RelativeToolTip": "backend\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-19T19:16:31.334Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T19:16:31.334Z"
             },
             {
               "$type": "Document",
@@ -168,8 +163,7 @@
               "RelativeToolTip": "backend\\Services\\Interfaces\\IValidarTokenServices.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T19:19:26.763Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T19:19:26.763Z"
             },
             {
               "$type": "Document",
@@ -181,8 +175,7 @@
               "RelativeToolTip": "backend\\Services\\ValidarTokenServices.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T19:15:34.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T19:15:34.038Z"
             },
             {
               "$type": "Document",
@@ -192,10 +185,9 @@
               "RelativeDocumentMoniker": "Domain\\DTO\\JwTResponse.cs",
               "ToolTip": "C:\\Users\\balam\\Desktop\\Entorno de TRbajo\\JobSwift\\Jobswift\\backend\\Domain\\DTO\\JwTResponse.cs",
               "RelativeToolTip": "Domain\\DTO\\JwTResponse.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAArAAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAABRwA4AAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T05:56:19.234Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T05:56:19.234Z"
             },
             {
               "$type": "Document",
@@ -207,8 +199,7 @@
               "RelativeToolTip": "backend\\Context\\ApplicationDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwBAAAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T05:18:39.939Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-19T05:18:39.939Z"
             }
           ]
         }

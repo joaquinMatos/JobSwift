@@ -1,16 +1,22 @@
 import React from 'react';
-import { Navigate, Outlet } from 'react-router-dom';
+import { Route, RouteProps, Navigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthLogin';
 
-const ProtectedRoute: React.FC = () => {
-    const { isAuthenticated } = useAuth();
-    const token = sessionStorage.getItem('authToken');
+interface ProtectedRouteProps extends RouteProps {
+  element: React.ReactNode;
+}
 
-    if (!isAuthenticated || !token) {
-        return <Navigate to="/login" />;
-    }
+const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
+  element,
+  ...rest
+}) => {
+  const { token } = useAuth();
 
-    return <Outlet />;
+  if (!token) {
+    return <Navigate to="/login" replace />;
+  }
+
+  return <Route {...rest} element={element} />;
 };
 
 export default ProtectedRoute;
