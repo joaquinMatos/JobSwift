@@ -7,6 +7,7 @@ import { useAuth } from '../../context/AuthLogin';
 import LoandingProgressBars from '../../components/Loanding';
 
 
+
 const API_URL = "https://localhost:7151";
 
 const LoginComponent = () => {
@@ -47,7 +48,7 @@ const LoginComponent = () => {
     };
 
     if (loading) {
-        return <div><LoandingProgressBars /></div>;
+        return <div> <LoandingProgressBars /></div>;
     }
 
     return (

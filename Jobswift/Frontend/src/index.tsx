@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Landing from './pages/LandingPage/Landing';
-import DashboardCandidate from './pages/Candidateprofile/DashboardCandidate';
-import LoginComponent from './pages/authentication/CandidateLogin';
 import ProtectedRoute from './utils/ProtectedRoute';
 import { AuthProvider } from './context/AuthLogin';
+import Landing from './Pages/LandingPage/Landing';
+import LoginComponent from './Pages/authentication/CandidateLogin';
+import DashboardCandidate from './components/Candidate/DashboardCandidate';
 
 const AppRouter = createBrowserRouter([
   {
