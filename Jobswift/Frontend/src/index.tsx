@@ -1,8 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import { BrowserRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Landing from './pages/LandingPage/Landing';
+import DashboardCandidate from './pages/Candidateprofile/DashboardCandidate';
+import LoginComponent from './pages/authentication/CandidateLogin';
+import ProtectedRoute from './utils/ProtectedRoute';
+import { AuthProvider } from './context/AuthLogin';
+
+const AppRouter = createBrowserRouter([
+  {
+    path:"/",
+    element: <Landing/>
+  },
+  {
+    path:"/login",
+    element: <LoginComponent/>
+  },
+  {
+    path: "/",
+    element: <ProtectedRoute />,
+    children: [
+      {
+        path: "/dashboard",
+        element: <DashboardCandidate />,
+      }
+    ],
+  },
+]);
+
 
 
 const root = ReactDOM.createRoot(
@@ -10,8 +35,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <AuthProvider>
+      <RouterProvider router = {AppRouter}/>
+    </AuthProvider>
   </React.StrictMode>
 );
