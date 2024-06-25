@@ -11,32 +11,35 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// Register services
 builder.Services.AddTransient<ICandidatoServices, CandidatoServices>();
-
 builder.Services.AddTransient<IValidarTokenServices, ValidarTokenServices>();
+builder.Services.AddTransient<IFavoritoServices, FavoritoServices>(); 
+builder.Services.AddTransient<IOfertaTrabajoServices, OfertaTrabajoServices>(); 
+builder.Services.AddTransient<IPerfilCandidatoServices, PerfilCandidatoServices>(); 
+builder.Services.AddTransient<IReclutadorServices, ReclutadorServices>();
+
 
 // CORS 
-
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("MyPolicy", builder =>
     {
-        builder.WithOrigins("http://localhost:3000") 
+        builder.WithOrigins("http://localhost:3000")
                .AllowAnyHeader()
                .AllowAnyMethod();
     });
 });
 
 // JWT 
-
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -52,10 +55,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-
-
 var app = builder.Build();
-
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Domain.DTO
 {
-    internal class PerfilCandidatoResponsive
+    public class PerfilCandidatoResponsive
     {
         public string FotoCandidato { get; set; }
         public string Experiencia { get; set; }

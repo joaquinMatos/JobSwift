@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\balam\\Desktop\\Entorno de TRbajo\\JobSwift\\Jobswift\\backend\\Backend\\Backend.csproj": {}
+    "D:\\JobSwift\\Jobswift\\backend\\Backend\\Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\balam\\Desktop\\Entorno de TRbajo\\JobSwift\\Jobswift\\backend\\Backend\\Backend.csproj": {
+    "D:\\JobSwift\\Jobswift\\backend\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\balam\\Desktop\\Entorno de TRbajo\\JobSwift\\Jobswift\\backend\\Backend\\Backend.csproj",
+        "projectUniqueName": "D:\\JobSwift\\Jobswift\\backend\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "C:\\Users\\balam\\Desktop\\Entorno de TRbajo\\JobSwift\\Jobswift\\backend\\Backend\\Backend.csproj",
-        "packagesPath": "C:\\Users\\balam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\balam\\Desktop\\Entorno de TRbajo\\JobSwift\\Jobswift\\backend\\Backend\\obj\\",
+        "projectPath": "D:\\JobSwift\\Jobswift\\backend\\Backend\\Backend.csproj",
+        "packagesPath": "C:\\Users\\larry\\.nuget\\packages\\",
+        "outputPath": "D:\\JobSwift\\Jobswift\\backend\\Backend\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\balam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\larry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\balam\\Desktop\\Entorno de TRbajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\balam\\Desktop\\Entorno de TRbajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj"
+              "D:\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -108,21 +112,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\balam\\Desktop\\Entorno de TRbajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj": {
+    "D:\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\balam\\Desktop\\Entorno de TRbajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\balam\\Desktop\\Entorno de TRbajo\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\balam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\balam\\Desktop\\Entorno de TRbajo\\JobSwift\\Jobswift\\backend\\Domain\\obj\\",
+        "projectPath": "D:\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\larry\\.nuget\\packages\\",
+        "outputPath": "D:\\JobSwift\\Jobswift\\backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\balam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\larry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -193,7 +201,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
