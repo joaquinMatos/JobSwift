@@ -1,6 +1,6 @@
 import { Grid, Box, Typography, Button, Stack } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
-import visual from '../../img/phone.svg';
+import visual from '../../img/adornos/phone.svg';
 import CustomButton from "../../components/ButtonLogin";
 
 
@@ -93,7 +93,7 @@ const Hero = () => {
                                             minWidth: '200px',
                                             fontSize: '20px',
                                             padding: '5px',
-                                            bgcolor: '#ffffff',
+                                            background: '#ffffff',
                                             color: '#000000',
                                             borderRadius: '10px',
                                             border: '2px solid #000000'

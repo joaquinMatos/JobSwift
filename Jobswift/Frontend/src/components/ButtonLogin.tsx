@@ -10,11 +10,12 @@ const CustomButton = ({ onClick, children, sx, tooltipText, ...props }:any) => {
         variant="contained"
         sx={{
           bgcolor: '#E67D15',
-          color: '#050505',
+          color: '#21bbff',
           fontWeight: 'bold',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          background: '#000000',
           ...sx,
         }}
         {...props}

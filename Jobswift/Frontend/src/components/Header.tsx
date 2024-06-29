@@ -35,7 +35,7 @@ const Navbar = () => {
                       minWidth: '120px',
                       fontSize: '10px',
                       padding: '5px',
-                      bgcolor: '#ffffff',
+                      background: 'white',
                       color: '#000000',
                       borderRadius: '10px',
                       border: '2px solid #000000'
@@ -55,7 +55,7 @@ const Navbar = () => {
                       minWidth: '120px',
                       fontSize: '10px',
                       padding: '5px',
-                      bgcolor: '#000000',
+                      background: '#000000',
                       color: '#21bbff',
                       borderRadius: '10px',
                     }}
