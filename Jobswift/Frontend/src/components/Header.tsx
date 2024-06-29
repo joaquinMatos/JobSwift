@@ -1,36 +1,73 @@
 import React from 'react';
-import { AppBar, Box, Button, Grid, Toolbar, Typography } from '@mui/material';
+import { AppBar, Box, Grid, Toolbar } from '@mui/material';
+import CustomButton from './ButtonLogin';
+import logo from '../Logo.svg';
+import reclutador from '..//img/user.svg'
+import candidato from '..//img/candidate2.svg'
+import { useNavigate } from 'react-router';
+
+
 
 const Navbar = () => {
+
+  const navigate = useNavigate();
+
+  const handleLoginClick = () => {
+    navigate('/prueba')
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ backgroundColor: '#333' }}>
+      <AppBar position="static" sx={{ backgroundColor: '#21bbff', marginTop: "10px" }}>
         <Toolbar>
-          <Grid container justifyContent="space-evenly">
+          <Grid container justifyContent="space-between" alignItems="center" sx={{ width: '100%' }}>
+            {/* Logo o título a la izquierda */}
             <Grid item>
-              <Button href="#home" sx={{ color: '#fff', fontWeight: 'bold', '&:hover': { color: '#ddd' } }}>
-                Home
-              </Button>
+              <img src={logo} alt="Logo" style={{ height: '40px' , marginLeft: '30px'}} />
             </Grid>
+            {/* Botones a la derecha */}
             <Grid item>
-              <Button href="#puestos" sx={{ color: '#fff', fontWeight: 'bold', '&:hover': { color: '#ddd' } }}>
-                Puestos
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button href="#services" sx={{ color: '#fff', fontWeight: 'bold', '&:hover': { color: '#ddd' } }}>
-                Our Services
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button href="#team" sx={{ color: '#fff', fontWeight: 'bold', '&:hover': { color: '#ddd' } }}>
-                Our Team
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button href="#contact" sx={{ color: '#fff', fontWeight: 'bold', '&:hover': { color: '#ddd' } }}>
-                Contact us
-              </Button>
+              <Grid container spacing={1} alignItems="center">
+                <Grid item>
+                  <CustomButton
+                    onClick={handleLoginClick}
+                    sx={{
+                      minWidth: '120px',
+                      fontSize: '10px',
+                      padding: '5px',
+                      bgcolor: '#ffffff',
+                      color: '#000000',
+                      borderRadius: '10px',
+                      border: '2px solid #000000'
+                    }}
+                    tooltipText="Login reclutadores"
+                  >
+                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={candidato} alt="" style={{ width: '20px', marginRight: '5px' }} />
+                      Login
+                    </Box>
+                  </CustomButton>
+                </Grid>
+                <Grid item>
+                <CustomButton
+                    onClick={handleLoginClick}
+                    sx={{
+                      minWidth: '120px',
+                      fontSize: '10px',
+                      padding: '5px',
+                      bgcolor: '#000000',
+                      color: '#21bbff',
+                      borderRadius: '10px',
+                    }}
+                    tooltipText="Login reclutadores"
+                  >
+                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={reclutador} alt="" style={{ width: '20px', marginRight: '5px' }} />
+                      Login
+                    </Box>
+                  </CustomButton>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </Toolbar>
