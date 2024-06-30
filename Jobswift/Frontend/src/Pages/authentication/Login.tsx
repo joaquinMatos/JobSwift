@@ -117,14 +117,13 @@ const Login = () => {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 style={{
-                                width: '100%',
+                                    width: '100%',
                                     padding: '10px',
                                     marginBottom: '10px',
                                     borderRadius: '50px',
                                     border: '2px solid #21bbff',
                                     background: '#FFFFFF',
                                     boxSizing: 'border-box',
-                                    color: '#ffffff',
                                 }}
                                 required
                             />
