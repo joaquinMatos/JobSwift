@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppBar, Box, Grid, Toolbar } from '@mui/material';
 import CustomButton from './ButtonLogin';
-import logo from '../Logo.svg';
+import logo from '../logo.svg';
 import reclutador from '..//img/user.svg'
 import candidato from '..//img/candidate2.svg'
 import { useNavigate } from 'react-router';
