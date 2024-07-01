@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "Backend/1.0.0": {
+      "backend/1.0.0": {
         "dependencies": {
           "Dapper": "2.1.35",
           "Domain": "1.0.0",
@@ -20,7 +20,7 @@
           "System.Diagnostics.Tools": "4.3.0"
         },
         "runtime": {
-          "Backend.dll": {}
+          "backend.dll": {}
         }
       },
       "Dapper/2.1.35": {
@@ -536,7 +536,7 @@
     }
   },
   "libraries": {
-    "Backend/1.0.0": {
+    "backend/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

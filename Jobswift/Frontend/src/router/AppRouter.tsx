@@ -5,6 +5,8 @@ import ProtectedRoute from "../utils/ProtectedRoute";
 import DashboardCandidate from "../Pages/Candidateprofile/DashboardCandidate";
 import RegistroUser from "../Pages/RegistroUser/RegristroUser";
 import Login from "../Pages/authentication/Login";
+import Dashboard from "../Pages/Dentro/All";
+
 
 const AppRouter = createBrowserRouter([
       {
@@ -29,7 +31,7 @@ const AppRouter = createBrowserRouter([
         children: [
           {
             path: "/dashboard",
-            element: <DashboardCandidate />,
+            element: <Dashboard />,
           }
         ],
       },

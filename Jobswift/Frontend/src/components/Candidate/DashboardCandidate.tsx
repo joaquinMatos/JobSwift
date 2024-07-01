@@ -11,7 +11,7 @@ const DashboardCandidate = () => {
         <>
             <h1>Bienvenido</h1>
             <Button variant="contained" onClick={logoutUser}>Logout</Button>
-            <Typography>Hola</Typography>
+            <Typography>HolaNN</Typography>
         </>
     );
 };
