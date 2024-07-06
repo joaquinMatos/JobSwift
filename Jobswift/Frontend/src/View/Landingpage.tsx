@@ -6,7 +6,7 @@ import Opcion from "../Pages/LandingPage/Opcion";
 
 const Landing = () => {
   return (
-    <div>
+    <div >
       <Header />
       <Hero />
       <Opcion />

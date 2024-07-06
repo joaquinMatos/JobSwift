@@ -6,10 +6,7 @@ import { AuthResponse } from '../../interface/interface';
 import { useAuth } from '../../context/AuthLogin';
 import LoandingProgressBars from '../../components/Loanding';
 import señor from '../../img/avatar/Aseñor.svg'
-
-
-
-const API_URL = "https://localhost:7151";
+import API_URL from '../../utils/api';
 
 const LoginComponent = () => {
     const [email, setEmail] = useState('');

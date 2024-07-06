@@ -22,12 +22,15 @@ namespace Backend.Controllers
         private readonly IConfiguration _configuration;
         private readonly ICandidatoServices _candidatoServices;
         private readonly IValidarTokenServices _validarTokenServices;
+        private readonly IReclutadorServices _reclutadorServices;
 
-        public LoginController( IConfiguration configuration, ICandidatoServices candidatoServices, IValidarTokenServices validarTokenServices)
+
+        public LoginController( IConfiguration configuration, ICandidatoServices candidatoServices, IValidarTokenServices validarTokenServices, IReclutadorServices reclutadorServices)
         {
             _configuration = configuration;
             _candidatoServices = candidatoServices;
             _validarTokenServices = validarTokenServices;
+            _reclutadorServices = reclutadorServices;
         }
 
         [HttpPost]
@@ -36,26 +39,57 @@ namespace Backend.Controllers
         {
             var data = JsonConvert.DeserializeObject<dynamic>(opdata.ToString());
 
-            string user = data.Email.ToString();
-            string password = data.Constrasena.ToString();
+            string user = data.Email?.ToString();
+            string password = data.Constrasena?.ToString();
+
+            if (string.IsNullOrEmpty(user) || string.IsNullOrEmpty(password))
+            {
+                return BadRequest(new { success = false, message = "Datos de inicio de sesión no válidos", result = "" });
+            }
 
             Candidato candidato = await _candidatoServices.ObtenerCandidatoPorCredenciales(user, password);
+            Reclutador reclutador = null;
+            string rol = null;
 
             if (candidato == null)
             {
-                return Unauthorized(new { success = false, message = "Credenciales incorrectas" , result = "" });
+                reclutador = await _reclutadorServices.ObtenerReclutadorPorCredenciales(user, password);
+                if (reclutador != null)
+                {
+                    rol = "Reclutador";
+                }
+            }
+            else
+            {
+                rol = "Candidato";
+            }
+
+            if (candidato == null && reclutador == null)
+            {
+                return Unauthorized(new { success = false, message = "Credenciales incorrectas", result = "" });
             }
 
             var jwt = _configuration.GetSection("Jwt").Get<JwTResponse>();
 
-            var claims = new[]
+            var claims = new List<Claim>
+    {
+        new Claim(JwtRegisteredClaimNames.Sub, jwt.Subject),
+        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+        new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString())
+    };
+
+            if (candidato != null)
             {
-                new Claim(JwtRegisteredClaimNames.Sub, jwt.Subject),
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()),
-                new Claim("id", candidato.IdCandidato.ToString()),
-                new Claim("usuario", candidato.NombreCompleto)
-            };
+                claims.Add(new Claim("id", candidato.IdCandidato.ToString()));
+                claims.Add(new Claim("usuario", candidato.NombreCompleto));
+                claims.Add(new Claim("rol", "Candidato"));
+            }
+            else if (reclutador != null)
+            {
+                claims.Add(new Claim("id", reclutador.IdReclutador.ToString()));
+                claims.Add(new Claim("Ncomercial", reclutador.NombreComercial));
+                claims.Add(new Claim("rol", "Reclutador"));
+            }
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwt.Key));
             var signIn = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
@@ -72,11 +106,12 @@ namespace Backend.Controllers
             {
                 success = true,
                 message = "exito",
-                result = new JwtSecurityTokenHandler().WriteToken(token)
+                result = new JwtSecurityTokenHandler().WriteToken(token),
+                rol = rol
             });
         }
 
-         [HttpDelete]
+        [HttpDelete]
          [Route("eliminar")]
          [Authorize]
             public async Task<IActionResult> EliminarFavoritos([FromBody] Candidato candidato)

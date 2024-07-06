@@ -12,5 +12,6 @@ namespace back_end.Services.Interfaces
         Task<Response<Reclutador>> CrearReclutador(ReclutadorResponsive request);
         Task<Response<int>> ActualizarReclutador(int id, ReclutadorResponsive request);
         Task<Response<int>> EliminarReclutador(int id);
+        Task<Reclutador> ObtenerReclutadorPorCredenciales(string user, string password);
     }
 }

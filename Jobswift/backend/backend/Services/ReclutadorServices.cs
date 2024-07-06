@@ -31,6 +31,11 @@ namespace back_end.Services
             }
         }
 
+        public async Task<Reclutador> ObtenerReclutadorPorCredenciales(string user, string password)
+        {
+            return await _context.Reclutador.Where(x => x.Email == user && x.constrasena == password).FirstOrDefaultAsync();
+        }
+
         public async Task<Response<Reclutador>> ObtenerReclutador(int id)
         {
             try

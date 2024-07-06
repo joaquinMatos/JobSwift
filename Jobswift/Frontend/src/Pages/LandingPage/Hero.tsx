@@ -19,7 +19,7 @@ const Hero = () => {
     };
 
     return (
-        <Box display="flex" sx={{ position: 'relative', bgcolor: '#21bbff', minHeight: '100vh', overflow: 'hidden' }}>
+        <Box display="flex" sx={{ position: 'relative', bgcolor: '#21bbff', minHeight: '100vh', overflow: 'hidden'}}>
             {/* Fondos circulares */}
             <Box sx={{ position: 'absolute', top: '550px', left: '10px', zIndex: 0 }}>
                 <Box
