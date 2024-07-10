@@ -27,7 +27,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleLoginClick = () => {
-    navigate('/prueba');
+    navigate('/candidate-login');
   };
 
   return (

@@ -1,39 +1,48 @@
-import { createBrowserRouter } from "react-router-dom";
-import Landing from "../View/Landingpage";
-import Login_candidate from "../Pages/authentication/CandidateLogin";
-import ProtectedRoute from "../utils/ProtectedRoute";
-import DashboardCandidate from "../Pages/Candidateprofile/DashboardCandidate";
-import RegistroUser from "../Pages/RegistroUser/RegristroUser";
-import Login from "../Pages/authentication/Login";
+import React, { useState } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Landing from '../View/Landingpage';
+import ProtectedRoute from '../utils/ProtectedRoute';
+import RegistroUser from '../Pages/RegistroUser/RegristroUser';
+import Dashboard from '../View/Dcandidate';
+import Login from '../Pages/authentication/Candidate-login';
+import { Box, IconButton } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import Hamburguesa from '../components/Menu';
 
-const AppRouter = createBrowserRouter([
-      {
-        path: "/",
-        element: <Landing />
-      },
-      {
-        path: "/login",
-        element: <Login_candidate />
-      },
-      {
-        path: "/register",
-        element: <RegistroUser/>
-      },
-      {
-        path: "/prueba",
-        element: <Login/>
-      },
-      {
-        path: "/",
-        element: <ProtectedRoute />,
-        children: [
-          {
-            path: "/dashboard",
-            element: <DashboardCandidate />,
-          }
-        ],
-      },
-]);
-    
+const AppRouter = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [userData, setUserData] = useState<string>("Joaquin Zetina"); // Aquí defines el estado para data
+  const location = useLocation();
+
+  const toggleDrawer = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  // Función para determinar si mostrar el menú en la ruta actual
+  const shouldShowMenu = location.pathname === '/dashboard';
+
+  return (
+    <>
+      <Box>
+        {/* Renderiza IconButton solo si shouldShowMenu es true */}
+        {shouldShowMenu && (
+          <IconButton onClick={toggleDrawer}>
+            <MenuIcon />
+          </IconButton>
+        )}
+        {/* Renderiza Hamburguesa solo si shouldShowMenu es true */}
+        {shouldShowMenu && <Hamburguesa open={menuOpen} toggleDrawer={toggleDrawer} data={userData} />}
+      </Box>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/candidate-register" element={<RegistroUser />} />
+        <Route path="/candidate-login" element={<Login />} />
+        <Route path="/" element={<ProtectedRoute />}>
+          <Route path="/dashboard" element={<Dashboard />} /> {/* No necesitas pasar userData aquí */}
+        </Route>
+      </Routes>
+    </>
+  );
+};
 
 export default AppRouter;

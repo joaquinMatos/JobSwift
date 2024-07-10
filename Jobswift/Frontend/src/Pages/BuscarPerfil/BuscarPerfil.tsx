@@ -10,7 +10,6 @@ const BuscarPerfil = () => {
         <Header />
         <Body />
         <Circulos />
-        
     </div>
   );
 };

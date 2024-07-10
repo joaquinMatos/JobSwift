@@ -7,8 +7,7 @@ const Trabajo = () => {
   return (
     <div>
         <Header />
-        <Body />
-        
+        <Body />  
     </div>
   );
 };

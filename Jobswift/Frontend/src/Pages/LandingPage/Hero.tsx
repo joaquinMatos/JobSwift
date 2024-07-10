@@ -9,13 +9,13 @@ const Hero = () => {
     const navigate = useNavigate();
 
     const routerLogin = () => {
-        // Lógica de inicio de sesión
-        navigate('/login');
+        // navegar por Login
+        navigate('/candidate-login');
     };
 
     const routerRegister = () => {
-        // Lógica de inicio de sesión
-        navigate('/register');
+        // navegar por register
+        navigate('/candidate-register');
     };
 
     return (
@@ -98,7 +98,7 @@ const Hero = () => {
                                             borderRadius: '10px',
                                             border: '2px solid #000000'
                                         }}
-                                        tooltipText="Login reclutadores"
+                                        tooltipText="Candidatos"
                                     >
                                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                             {/* <img src={candidato} alt="" style={{ width: '20px', marginRight: '5px' }} /> */}

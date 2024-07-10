@@ -1,4 +1,5 @@
 ﻿using back_end.Services.Interfaces;
+using Backend.Services;
 using Backend.Services.Interfaces;
 using Domain.DTO;
 using Domain.Entities;
@@ -24,8 +25,29 @@ namespace back_end.Controllers
         [HttpGet]
         public async Task<IActionResult> ObtenerLista()
         {
+
+            // lógica para validar
+            var identity = HttpContext.User.Identity as ClaimsIdentity;
+            if (identity == null)
+            {
+                return Unauthorized(new
+                {
+                    success = false,
+                    message = "Token no válido",
+                    result = ""
+                });
+            }
+
+            var rtoken = await _validarTokenServices.ValidarToken(identity);
+            if (!rtoken.success)
+            {
+                return Unauthorized(rtoken);
+            }
+            // fin validación
+
             var result = await _ofertaTrabajoServices.ObtenerOfertasTrabajo();
             return Ok(result);
+
         }
 
         [HttpGet("{id}")]

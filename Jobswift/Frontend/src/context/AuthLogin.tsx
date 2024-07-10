@@ -1,6 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import { AuthResponse } from '../interface/interface';
-import { Navigate } from 'react-router';
 
 interface AuthProviderProps {
   children: React.ReactNode;
@@ -60,7 +59,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
     setAccessToken(userData.body.accessToken);
     localStorage.setItem("Authorization", JSON.stringify(tokenData));
-    localStorage.setItem("Type", JSON.stringify(tokenData));
     setIsAuthenticated(true);
   }
 
