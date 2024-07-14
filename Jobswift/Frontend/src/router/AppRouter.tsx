@@ -5,6 +5,8 @@ import ProtectedRoute from '../utils/ProtectedRoute';
 import RegistroUser from '../Pages/RegistroUser/RegristroUser';
 import Dashboard from '../View/Dcandidate';
 import Login from '../Pages/authentication/Candidate-login';
+import Favoritos from '../Pages/Favoritos/Favoritos'; 
+import PerfilCandidato from '../Pages/Perfil/PerfilCandidato'; // Importa el componente PerfilCandidato
 import { Box, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Hamburguesa from '../components/Menu';
@@ -19,7 +21,7 @@ const AppRouter = () => {
   };
 
   // Función para determinar si mostrar el menú en la ruta actual
-  const shouldShowMenu = location.pathname === '/dashboard';
+  const shouldShowMenu = location.pathname === '/dashboard' || location.pathname === '/favoritos' || location.pathname === '/perfil-candidato';
 
   return (
     <>
@@ -38,7 +40,9 @@ const AppRouter = () => {
         <Route path="/candidate-register" element={<RegistroUser />} />
         <Route path="/candidate-login" element={<Login />} />
         <Route path="/" element={<ProtectedRoute />}>
-          <Route path="/dashboard" element={<Dashboard />} /> {/* No necesitas pasar userData aquí */}
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/favoritos" element={<Favoritos usuario="reclutador" />} />
+          <Route path="/perfil-candidato" element={<PerfilCandidato />} /> {/* Añade la ruta para PerfilCandidato */}
         </Route>
       </Routes>
     </>
