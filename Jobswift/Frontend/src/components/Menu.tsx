@@ -25,12 +25,12 @@ const Hamburguesa: React.FC<HamburguesaProps> = ({ open, toggleDrawer, data }) =
     }
 
     const handleNavigateBuscarOfertas = () => {
-        navigate('/buscar-ofertas');
+        navigate('/dashboard');
         toggleDrawer();
     }
 
     const handleNavigateMisPostulaciones = () => {
-        navigate('/mis-postulaciones');
+        navigate('/MisPostulaciones');
         toggleDrawer();
     }
 
@@ -80,18 +80,18 @@ const Hamburguesa: React.FC<HamburguesaProps> = ({ open, toggleDrawer, data }) =
                     </IconButton>
                 </Box>
                 <List>
-                    <ListItem button onClick={handleNavigateConfiguracion}>
+                  {/*   <ListItem button onClick={handleNavigateConfiguracion}>
                         <ListItemIcon>
                             <Settings />
                         </ListItemIcon>
                         <ListItemText primary="Configuración" />
-                    </ListItem>
-                    <ListItem button onClick={handleNavigateMiCV}>
+                    </ListItem> */}
+                    {/* <ListItem button onClick={handleNavigateMiCV}>
                         <ListItemIcon>
                             <Description />
                         </ListItemIcon>
                         <ListItemText primary="Mi CV" />
-                    </ListItem>
+                    </ListItem> */}
                     <Divider />
                     <ListItem button onClick={handleNavigateBuscarOfertas}>
                         <ListItemIcon>
@@ -111,27 +111,27 @@ const Hamburguesa: React.FC<HamburguesaProps> = ({ open, toggleDrawer, data }) =
                         </ListItemIcon>
                         <ListItemText primary="Mis favoritos" />
                     </ListItem>
-                    <ListItem button onClick={handleNavigateMisAlertas}>
+                    {/* <ListItem button onClick={handleNavigateMisAlertas}>
                         <ListItemIcon>
                             <Alert />
                         </ListItemIcon>
                         <ListItemText primary="Mis Alertas" />
-                    </ListItem>
-                    <ListItem button onClick={handleNavigateQuienVioMiPerfil}>
+                    </ListItem> */}
+                    {/* <ListItem button onClick={handleNavigateQuienVioMiPerfil}>
                         <ListItemIcon>
                             <Visibility />
                         </ListItemIcon>
                         <ListItemText primary="Quién vio mi perfil" />
-                    </ListItem>
-                    <ListItem button onClick={handleNavigateNotificaciones}>
+                    </ListItem> */}
+                    {/* <ListItem button onClick={handleNavigateNotificaciones}>
                         <ListItemIcon>
                             <Badge badgeContent={13} color="error">
                                 <Notifications />
                             </Badge>
                         </ListItemIcon>
                         <ListItemText primary="Notificaciones" />
-                    </ListItem>
-                    <ListItem button onClick={handleNavigateOfertasOcultas}>
+                    </ListItem> */}
+                    {/* <ListItem button onClick={handleNavigateOfertasOcultas}>
                         <ListItemIcon>
                             <VisibilityOff />
                         </ListItemIcon>
@@ -140,7 +140,7 @@ const Hamburguesa: React.FC<HamburguesaProps> = ({ open, toggleDrawer, data }) =
                             <Typography variant="caption" color="textPrimary">Nuevo</Typography>
                         </Box>
                     </ListItem>
-                    <Divider />
+                    <Divider /> */}
                     <ListItem button onClick={handleNavigateBuscarEmpresas}>
                         <ListItemIcon>
                             <AccountCircle />

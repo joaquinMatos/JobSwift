@@ -10,6 +10,7 @@ import PerfilCandidato from '../Pages/Perfil/PerfilCandidato'; // Importa el com
 import { Box, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Hamburguesa from '../components/Menu';
+import MisPostulaciones from '../Pages/Postulado/PuestoP';
 
 const AppRouter = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -41,8 +42,9 @@ const AppRouter = () => {
         <Route path="/candidate-login" element={<Login />} />
         <Route path="/" element={<ProtectedRoute />}>
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/favoritos" element={<Favoritos usuario="reclutador" />} />
+          <Route path="/favoritos" element={<Favoritos />} />
           <Route path="/perfil-candidato" element={<PerfilCandidato />} /> {/* Añade la ruta para PerfilCandidato */}
+          <Route path="/MisPostulaciones" element={<MisPostulaciones />} /> {/* Añade la ruta para PerfilCandidato */}
         </Route>
       </Routes>
     </>

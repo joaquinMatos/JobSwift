@@ -120,13 +120,16 @@ const PerfilCandidato = () => {
                     />
                 </Box>
                 {/* Contenido del perfil del candidato */}
-                <Paper elevation={3} style={{ padding: '20px', maxWidth: '600px', margin: 'auto', marginTop: '20px', marginBottom: '50px' }}>
+                <Paper elevation={3} style={{ padding: '20px', maxWidth: '800px', margin: 'auto', marginTop: '20px', marginBottom: '50px' }}>
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <TextField
                                 fullWidth
                                 label="Nombre Completo"
                                 defaultValue={candidato.NombreCompleto}
+                                InputProps={{
+                                    readOnly: true,
+                                }}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -134,6 +137,9 @@ const PerfilCandidato = () => {
                                 fullWidth
                                 label="Apellidos"
                                 defaultValue={candidato.Apellidos}
+                                InputProps={{
+                                    readOnly: true,
+                                }}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -141,14 +147,17 @@ const PerfilCandidato = () => {
                                 fullWidth
                                 label="Email"
                                 defaultValue={candidato.Email}
+                                InputProps={{
+                                    readOnly: true,
+                                }}
                             />
                         </Grid>
                         <Grid item xs={12}>
                             <Button
                                 variant="outlined"
                                 color="primary"
-                                style={{ marginRight: '10px' }}
                                 onClick={showPasswordChangeForm}
+                                style={{ marginTop: '10px' }}
                             >
                                 Cambiar Contraseña
                             </Button>
@@ -158,6 +167,9 @@ const PerfilCandidato = () => {
                                 fullWidth
                                 label="Código Postal"
                                 defaultValue={candidato.CodigoP}
+                                InputProps={{
+                                    readOnly: true,
+                                }}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -165,6 +177,9 @@ const PerfilCandidato = () => {
                                 fullWidth
                                 label="Ciudad"
                                 defaultValue={candidato.Ciudad}
+                                InputProps={{
+                                    readOnly: true,
+                                }}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -172,11 +187,16 @@ const PerfilCandidato = () => {
                                 fullWidth
                                 label="Teléfono"
                                 defaultValue={candidato.NTelefonico}
+                                InputProps={{
+                                    readOnly: true,
+                                }}
                             />
                         </Grid>
-                        <Button variant="contained" color="primary" style={{ marginTop: '20px' }}>
-                            Guardar
-                        </Button>
+                        <Grid item xs={12}>
+                            <Button variant="contained" color="primary" fullWidth>
+                                Guardar
+                            </Button>
+                        </Grid>
                     </Grid>
                 </Paper>
                 {/* Formulario para cambiar la contraseña */}

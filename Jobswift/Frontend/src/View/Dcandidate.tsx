@@ -1,97 +1,103 @@
-import React, { useState } from 'react';
-import { Box, Grid, IconButton, AppBar, Toolbar, Typography, InputBase, Button } from '@mui/material';
-import { Search as SearchIcon, Menu as MenuIcon } from '@mui/icons-material';
+import React, { useState, useEffect } from 'react';
+import { Box, Grid, AppBar, Toolbar, Typography, InputBase, Button } from '@mui/material';
+import { Search as SearchIcon } from '@mui/icons-material';
 import ListaTrabajo from '../Pages/Dcandidate/ListaTrabajos';
 import Descripcion from '../Pages/Dcandidate/Descrpcion';
 import { useAuth } from '../context/AuthLogin';
-
+import axios from 'axios';
 
 interface Job {
-    id: number;
-    title: string;
-    company: string;
-    location: string;
-    time: string;
-    description: string;
-}
-
-const jobs: Job[] = [
-    {
-        id: 1,
-        title: 'Analista de Infraestructura /Gestión de Servidores Windows Server y Linux',
-        company: 'Group Cos México',
-        location: 'Nuevo León, Monterrey',
-        time: 'Hace 2 horas',
-        description: 'Administrador consola SCCM...',
-    },
-    {
-        id: 2,
-        title: 'Market Pricing Analyst Sr. de Giro Electrónico con Manejo de Sistemas Power BI y SQL',
-        company: 'Worken',
-        location: 'Jalisco, San Pedro Tlaquepaque',
-        time: 'Hace 2 horas',
-        description: 'Descripción del trabajo...',
-    },
-    {
-        id: 3,
-        title: 'Matos',
-        company: 'Worken',
-        location: 'Jalisco, San Pedro Tlaquepaque',
-        time: 'Hace 2 horas',
-        description: 'Descripción del trabajo...',
-    },
-    {
-        id: 4,
-        title: 'Osmar',
-        company: 'Worken',
-        location: 'Jalisco, San Pedro Tlaquepaque',
-        time: 'Hace 2 horas',
-        description: 'Descripción del trabajo...',
-    }
-];
-
-interface DashboardProps {
-    toggleDrawer: () => void; // Definición de la prop toggleDrawer
+    idOfertaTrabajo: number;
+    titulo: string;
+    urgente: boolean;
+    ubicacion: string;
+    descripcion: string;
+    salario: string;
+    jornada: string;
+    contrato: string;
+    requerimientos: string;
+    experiencia: string;
+    fecha_publicacion: string;
+    fk_IdReclutador: number;
+    reclutadores: any;
 }
 
 const Dashboard = () => {
     const [selectedJob, setSelectedJob] = useState<Job | null>(null);
-    // lectura de token
+    const [searchText, setSearchText] = useState<string>('');
+    const [searchResults, setSearchResults] = useState<Job[]>([]);
     const { getAccessToken } = useAuth();
-    const token = getAccessToken();
-    console.log(token)
+    const [token, setToken] = useState<string | null>(null);
+
+    useEffect(() => {
+        const fetchToken = async () => {
+            try {
+                const fetchedToken = await getAccessToken();
+                if (typeof fetchedToken === 'string') {
+                    setToken(fetchedToken);
+                    fetchJobs(fetchedToken); // Llama a la función para obtener los trabajos cuando se obtiene el token
+                } else {
+                    console.error('Error: Token no disponible o inválido');
+                }
+            } catch (error) {
+                console.error('Error al obtener el token:', error);
+            }
+        };
+
+        fetchToken();
+    }, [getAccessToken]);
+
+    const fetchJobs = async (token: string) => {
+        try {
+            const response = await axios.get(`https://localhost:7151/OfertaTrabajo`, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            });
+
+            setSearchResults(response.data.result); // Actualiza los resultados de búsqueda con los datos obtenidos
+            console.log(response.data.result); // Asegúrate de que los datos sean correctos en la consola
+        } catch (error) {
+            console.error('Error al obtener las ofertas de trabajo:', error);
+            // Puedes manejar el error según tus necesidades (por ejemplo, mostrar un mensaje al usuario)
+        }
+    };
 
     return (
         <Box sx={{ display: 'flex', height: '100vh' }}>
-            <Box>
-                <AppBar position="static" color="default">
-                    <Toolbar>
-                        <Typography variant="h6" sx={{ flexGrow: 1 }}>
-                            JobSwift
-                        </Typography>
-                        <Box sx={{ display: 'flex', alignItems: 'center', bgcolor: '#f0f0f0', borderRadius: 1, p: 1 }}>
-                            <SearchIcon />
-                            <InputBase placeholder="Cargo o categoría" sx={{ ml: 1, flex: 1 }} />
-                            <InputBase placeholder="Lugar" sx={{ ml: 1, flex: 1 }} />
-                            <Button variant="contained" color="primary" sx={{ ml: 1 }}>
-                                Buscar
-                            </Button>
-                        </Box>
-                    </Toolbar>
-                </AppBar>
-                <Box sx={{ display: 'flex', height: '100vh', p: 2 }}>
-                    <Grid container spacing={2} bgcolor={'#21bbff'} sx={{ flexGrow: 1 }}>
-                        <Grid item xs={12} md={6} sx={{ overflowY: 'auto', height: '100%' }}>
-                            <ListaTrabajo jobs={jobs} onSelectJob={setSelectedJob} />
-                        </Grid>
-                        <Grid item xs={12} md={6} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-                            <Box sx={{ flexGrow: 1 }}>
-                                <Descripcion job={selectedJob} />
-                            </Box>
-                        </Grid>
+            <AppBar position="static">
+                <Toolbar>
+                    <Box sx={{ display: 'flex', alignItems: 'center', bgcolor: '#f0f0f0', borderRadius: 1, p: 1 }}>
+                        <SearchIcon />
+                        <InputBase
+                            placeholder="Cargo o categoría"
+                            sx={{ ml: 1, flex: 1 }}
+                            value={searchText}
+                            onChange={(e) => setSearchText(e.target.value)}
+                        />
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            sx={{ ml: 1 }}
+                            onClick={() => fetchJobs(token as string)} // Llama a la función de búsqueda al hacer clic en el botón
+                        >
+                            Buscar
+                        </Button>
+                    </Box>
+                    <Box sx={{ display: 'flex', height: '100vh', p: 2 }}>
+                <Grid container spacing={2} sx={{ flexGrow: 1 }}>
+                    <Grid item xs={12} md={6} sx={{ overflowY: 'auto', height: '100%' }}>
+                        <ListaTrabajo jobs={searchResults} onSelectJob={setSelectedJob} />
                     </Grid>
-                </Box>
+                    <Grid item xs={12} md={6} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                        <Box sx={{ flexGrow: 1 }}>
+                            <Descripcion job={selectedJob} />
+                        </Box>
+                    </Grid>
+                </Grid>
             </Box>
+                </Toolbar>
+            </AppBar>
         </Box>
     );
 };

@@ -19,7 +19,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const [accessToken, setAccessToken] = useState<string>("");
 
   useEffect(() => {
-    const token = localStorage.getItem("Authorization");
+    const token = localStorage.getItem("accessToken");
     if (token) {
       const { accessToken, expiry } = JSON.parse(token);
       const isTokenValid = new Date().getTime() < new Date(expiry).getTime();
@@ -39,7 +39,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
   // Obtener el token de refresco
   function getRefreshToken(): string | null {
-    const token = localStorage.getItem("Authorization");
+    const token = localStorage.getItem("accessToken");
     if (token) {
       const { refreshToken } = JSON.parse(token);
       return refreshToken;
@@ -50,7 +50,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
   // Guardar el token de validación
   function saveUser(userData: AuthResponse) {
     const expiry = new Date();
-    expiry.setHours(expiry.getHours() + 1); // Token válido por 1 hora
+    expiry.setHours(expiry.getHours() + 5); // Token válido por 1 hora
 
     const tokenData = {
       accessToken: userData.body.accessToken,
@@ -58,14 +58,14 @@ export function AuthProvider({ children }: AuthProviderProps) {
     };
 
     setAccessToken(userData.body.accessToken);
-    localStorage.setItem("Authorization", JSON.stringify(tokenData));
+    localStorage.setItem("accessToken", JSON.stringify(tokenData));
     setIsAuthenticated(true);
   }
 
   // Borrar el token de validación
   function logoutUser() {
     setAccessToken("");
-    localStorage.removeItem("Authorization");
+    localStorage.removeItem("accessToken");
     setIsAuthenticated(false);
   }
 
