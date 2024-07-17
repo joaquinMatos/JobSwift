@@ -31,7 +31,7 @@ const ProfileCard = () => {
     }
 
     return (
-        <Box sx={{ bgcolor: '#E3F2FD', minHeight: '100vh', padding: '20px' }}>
+        {/* <Box sx={{ bgcolor: '#E3F2FD', minHeight: '100vh', padding: '20px' }}>
             <Grid container spacing={2}>
                 <Grid item xs={12} md={8}>
                     <Card sx={{ padding: '20px', borderRadius: '12px' }}>
@@ -100,7 +100,7 @@ const ProfileCard = () => {
                     </Paper>
                 </Grid>
             </Grid>
-        </Box>
+        </Box> */}
     );
 }
 
