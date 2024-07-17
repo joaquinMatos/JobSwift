@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Box, Grid, AppBar, Toolbar, Typography, InputBase, IconButton, debounce } from '@mui/material';
+import { Box, Grid, AppBar, Toolbar, InputBase, IconButton } from '@mui/material';
 import { Search as SearchIcon } from '@mui/icons-material';
 import ListaTrabajo from '../Pages/Dcandidate/ListaTrabajos';
 import Descripcion from '../Pages/Dcandidate/Descrpcion';
 import { useAuth } from '../context/AuthLogin';
 import axios from 'axios';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 interface Job {
     idOfertaTrabajo: number;
@@ -23,8 +23,18 @@ interface Job {
     reclutadores: any;
 }
 
+// Implementación personalizada de debounce
+function debounce(func: (...args: any[]) => void, wait: number): (...args: any[]) => void {
+    let timeout: NodeJS.Timeout;
+    return function (...args: any[]) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func(...args), wait);
+    };
+}
+
 const Dashboard = () => {
     const location = useLocation();
+    const navigate = useNavigate();
     const selectedJobId = location.state?.jobId || null;
 
     const [selectedJob, setSelectedJob] = useState<Job | null>(null);
@@ -82,16 +92,23 @@ const Dashboard = () => {
                 );
                 setSearchResults(filteredJobs); // Actualiza los resultados de búsqueda con las ofertas filtradas
             }
-            setSelectedJob(null); // Borra cualquier trabajo seleccionado anterior
         }, 300),
         [jobs]
     );
 
+    // Solo ejecutar búsqueda si hay texto en el campo de búsqueda
     useEffect(() => {
-        debouncedSearch(searchText);
+        if (searchText.trim() !== '') {
+            debouncedSearch(searchText);
+        }
     }, [searchText, debouncedSearch]);
 
     const isSearchDisabled = searchText.trim() === ''; // Determina si el campo de búsqueda está vacío
+
+    const handleJobSelection = (job: Job) => {
+        setSelectedJob(job);
+        navigate(`/dashboard`, { state: { jobId: job.idOfertaTrabajo } });
+    };
 
     return (
         <Box sx={{ display: 'flex', height: '100vh', flexDirection: 'column' }}>
@@ -118,7 +135,7 @@ const Dashboard = () => {
             <Box sx={{ display: 'flex', height: '100vh', p: 2, flexGrow: 1 }}>
                 <Grid container spacing={2} sx={{ flexGrow: 1 }}>
                     <Grid item xs={12} md={6} sx={{ overflowY: 'auto', height: '100%' }}>
-                        <ListaTrabajo jobs={searchResults} onSelectJob={setSelectedJob} />
+                        <ListaTrabajo jobs={searchResults} onSelectJob={handleJobSelection} />
                     </Grid>
                     <Grid item xs={12} md={6} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                         <Box sx={{ flexGrow: 1 }}>

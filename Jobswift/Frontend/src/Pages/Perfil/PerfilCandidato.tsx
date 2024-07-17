@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Button, Card, Grid, Typography, Avatar, Paper, CircularProgress } from "@mui/material";
+import { Box, Button, Card, Grid, Typography, Avatar, Paper, CircularProgress, IconButton } from "@mui/material";
 import UploadFileIcon from '@mui/icons-material/UploadFile';
+import EditIcon from '@mui/icons-material/Edit';
 
 const ProfileCard = () => {
     const [data, setData] = useState(null);
@@ -37,34 +38,48 @@ const ProfileCard = () => {
                         <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                             <Avatar
                                 alt="Profile Picture"
-                                
                                 sx={{ width: 80, height: 80, marginRight: 2 }}
                             />
-                            <Box>
+                            <Box sx={{ flexGrow: 1 }}>
                                 <Typography variant="h6" component="div">Nombre y apellido</Typography>
                                 <Typography variant="subtitle1" color="textSecondary">Puesto (Ej: Diseñadora Gráfica)</Typography>
                             </Box>
+                            <IconButton color="primary">
+                                <EditIcon />
+                            </IconButton>
                         </Box>
                         <Typography variant="body2" sx={{ mb: 2 }}>
                             Use este apartado para contar quién sos, a qué te dedicás y cuáles son tus fortalezas para entrar a un nuevo equipo de trabajo. Intentá que este texto defina con sinceridad qué te hace única/o y por qué sos la persona indicada para el puesto al que acudís.
                         </Typography>
                         <Typography variant="h6" component="div" sx={{ mb: 1 }}>Experiencia profesional</Typography>
-                        <Box sx={{ mb: 2 }}>
+                        <Box sx={{ mb: 2, display: 'flex', alignItems: 'center' }}>
                             <Typography variant="subtitle1">Experiencia</Typography>
-                            <Typography variant="body2">{data.experiencia}</Typography>
+                            <IconButton color="primary" sx={{ ml: 1 }}>
+                                <EditIcon />
+                            </IconButton>
                         </Box>
+                        <Typography variant="body2">{data.experiencia}</Typography>
                         <Typography variant="h6" component="div" sx={{ mb: 1 }}>Formación</Typography>
-                        <Box sx={{ mb: 2 }}>
+                        <Box sx={{ mb: 2, display: 'flex', alignItems: 'center' }}>
                             <Typography variant="subtitle1">Formación</Typography>
-                            <Typography variant="body2">{data.formacion}</Typography>
+                            <IconButton color="primary" sx={{ ml: 1 }}>
+                                <EditIcon />
+                            </IconButton>
                         </Box>
+                        <Typography variant="body2">{data.formacion}</Typography>
                         <Typography variant="h6" component="div" sx={{ mb: 1 }}>Idiomas</Typography>
-                        <Box sx={{ mb: 2 }}>
+                        <Box sx={{ mb: 2, display: 'flex', alignItems: 'center' }}>
                             <Typography variant="body2">{data.idiomas}</Typography>
+                            <IconButton color="primary" sx={{ ml: 1 }}>
+                                <EditIcon />
+                            </IconButton>
                         </Box>
                         <Typography variant="h6" component="div" sx={{ mb: 1 }}>Habilidades</Typography>
-                        <Box sx={{ mb: 2 }}>
+                        <Box sx={{ mb: 2, display: 'flex', alignItems: 'center' }}>
                             <Typography variant="body2">{data.habilidades}</Typography>
+                            <IconButton color="primary" sx={{ ml: 1 }}>
+                                <EditIcon />
+                            </IconButton>
                         </Box>
                     </Card>
                 </Grid>

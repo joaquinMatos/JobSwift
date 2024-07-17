@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Box, Grid, Typography } from '@mui/material';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/AuthLogin';
 
 interface Postulacion {
     idPostulacion: number;
@@ -13,6 +14,7 @@ interface Postulacion {
 const MisPostulaciones = () => {
     const [postulaciones, setPostulaciones] = useState<Postulacion[]>([]);
     const navigate = useNavigate();
+    const { getAccessToken } = useAuth();
 
     useEffect(() => {
         fetchPostulaciones(); // Carga las postulaciones al cargar la página
@@ -20,7 +22,12 @@ const MisPostulaciones = () => {
 
     const fetchPostulaciones = async () => {
         try {
-            const response = await axios.get(`https://localhost:7151/Favorito`);
+            const token = await getAccessToken();
+            const response = await axios.get(`https://localhost:7151/Favorito`, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            });
             setPostulaciones(response.data.result); // Actualiza las postulaciones con los datos obtenidos
             console.log(response.data.result); // Asegúrate de que los datos sean correctos en la consola
         } catch (error) {
@@ -30,7 +37,7 @@ const MisPostulaciones = () => {
     };
 
     const handlePostulacionClick = (fk_IdOfertaTrabajo: number) => {
-        navigate(`/dashboard/${fk_IdOfertaTrabajo}`); // Navega a Dashboard con el ID del trabajo seleccionado en la URL
+        navigate(`/dashboard`, { state: { jobId: fk_IdOfertaTrabajo } }); // Navega a Dashboard con el ID del trabajo seleccionado en la URL
     };
 
     return (
