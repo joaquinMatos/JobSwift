@@ -1,163 +1,95 @@
+import React from 'react';
 import { Box, Button, Card, Grid, Typography } from "@mui/material";
+import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import AssessmentOutlinedIcon from '@mui/icons-material/AssessmentOutlined';
 
 const Cards = () => {
     return (
-        <Box sx={{ position: 'relative' }}>
+        <Box>
             <Box sx={{
-                bgcolor: '#FFFFFF',
-                minHeight: '20vh'
+               
             }} />
             <Box display="flex" sx={{
-                bgcolor: '#142F3C',
-                minHeight: '50vh',
-                padding: '10px'
+              
             }}>
                 <Grid container justifyContent="space-evenly" marginTop={10}>
                     <Grid item xs={12} sm={3.5} md={3.5}>
                         <Card sx={{
-                            minHeight: '150px',
+                            minHeight: '350px',
                             position: 'relative',
                             overflow: 'visible',
-                            paddingTop: '100px',
+                            padding: '20px',
                             borderRadius: '20px',
-                            textAlign: 'center'
+                            textAlign: 'center',
+                            boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+                            backgroundColor: '#FFFFFF'
                         }}>
-                            <img
-                                src="img/womanyellow.png"
-                                alt=""
-                                style={{
-                                    position: 'absolute',
-                                    width: '153px',
-                                    top: '-200px',
-                                    left: '50%',
-                                    transform: 'translateX(-50%)'
-                                }}
-                            />
-                            <Typography align="center" sx={{ fontSize: '20px', fontWeight: '900', marginBottom: '20px', marginTop: '50px' }}>
+                            <WorkOutlineIcon sx={{ fontSize: 50, color: '#007AFF', marginBottom: '20px' }} />
+                            <Typography align="center" sx={{ fontSize: '24px', fontWeight: '700', marginBottom: '20px' }}>
                                 Oferta
                             </Typography>
-                            <Box sx={{ paddingLeft: '50px', paddingRight: '50px' }}>
-                                <Typography align="center" sx={{ marginBottom: '10px' }}>
+                            <Box sx={{ padding: '0 20px' }}>
+                                <Typography align="center" sx={{ marginBottom: '10px', fontSize: '16px' }}>
                                     ¡Publica tus ofertas en el portal de empleo y atrae a los mejores talentos!
                                 </Typography>
-                                <Typography align="center">
+                                <Typography align="center" sx={{ fontSize: '14px', color: '#777777' }}>
                                     ¿Necesitas encontrar al candidato perfecto para tu empresa? ¡Nuestro portal de empleo es la solución ideal!
                                 </Typography>
                             </Box>
-                            <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-                                <Button
-                                    sx={{
-                                        color: 'orange',
-                                        background: 'none',
-                                        border: 'none',
-                                        borderBottom: '2px solid orange',
-                                        padding: '0',
-                                        fontSize: 'inherit',
-                                        cursor: 'pointer',
-                                        margin: '10px'
-                                    }}
-                                >
-                                    REGÍSTRATE
-                                </Button>
-                            </Box>
+                            
                         </Card>
                     </Grid>
                     <Grid item xs={12} sm={3.5} md={3.5}>
                         <Card sx={{
-                            minHeight: '150px',
+                            minHeight: '350px',
                             position: 'relative',
                             overflow: 'visible',
-                            paddingTop: '100px',
+                            padding: '20px',
                             borderRadius: '20px',
-                            textAlign: 'center'
+                            textAlign: 'center',
+                            boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+                            backgroundColor: '#FFFFFF'
                         }}>
-                            <img
-                                src="img/chicomaleta.png"
-                                alt=""
-                                style={{
-                                    position: 'absolute',
-                                    width: '180px',
-                                    top: '-200px',
-                                    left: '53%',
-                                    transform: 'translateX(-50%)'
-                                }}
-                            />
-                            <Typography align="center" sx={{ fontSize: '20px', fontWeight: '900', marginBottom: '20px', marginTop: '50px' }}>
+                            <PersonOutlineIcon sx={{ fontSize: 50, color: '#007AFF', marginBottom: '20px' }} />
+                            <Typography align="center" sx={{ fontSize: '24px', fontWeight: '700', marginBottom: '20px' }}>
                                 Perfil
                             </Typography>
-                            <Box sx={{ paddingLeft: '50px', paddingRight: '50px' }}>
-                                <Typography align="center" sx={{ marginBottom: '10px' }}>
-                                ¡Crea tu perfil y deja que las empresas te busquen a ti!
+                            <Box sx={{ padding: '0 20px' }}>
+                                <Typography align="center" sx={{ marginBottom: '10px', fontSize: '16px' }}>
+                                    ¡Crea tu perfil y deja que las empresas te busquen a ti!
                                 </Typography>
-                                <Typography align="center">
-                                ¿Estás listo para llevar tu carrera al siguiente nivel? Las mejores oportunidades están a un click de distancia.
+                                <Typography align="center" sx={{ fontSize: '14px', color: '#777777' }}>
+                                    ¿Estás listo para llevar tu carrera al siguiente nivel? Las mejores oportunidades están a un click de distancia.
                                 </Typography>
                             </Box>
-                            <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-                                <Button
-                                    sx={{
-                                        color: 'orange',
-                                        background: 'none',
-                                        border: 'none',
-                                        borderBottom: '2px solid orange',
-                                        padding: '0',
-                                        fontSize: 'inherit',
-                                        cursor: 'pointer',
-                                        margin: '10px'
-                                    }}
-                                >
-                                    REGÍSTRATE
-                                </Button>
-                            </Box>
+                           
                         </Card>
                     </Grid>
                     <Grid item xs={12} sm={3.5} md={3.5}>
                         <Card sx={{
-                            minHeight: '150px',
+                            minHeight: '350px',
                             position: 'relative',
                             overflow: 'visible',
-                            paddingTop: '100px',
+                            padding: '20px',
                             borderRadius: '20px',
-                            textAlign: 'center'
+                            textAlign: 'center',
+                            boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+                            backgroundColor: '#FFFFFF'
                         }}>
-                            <img
-                                src="img/womanyellow.png"
-                                alt=""
-                                style={{
-                                    position: 'absolute',
-                                    width: '153px',
-                                    top: '-200px',
-                                    left: '50%',
-                                    transform: 'translateX(-50%)'
-                                }}
-                            />
-                            <Typography align="center" sx={{ fontSize: '20px', fontWeight: '900', marginBottom: '20px', marginTop: '50px' }}>
-                                Oferta
+                            <AssessmentOutlinedIcon sx={{ fontSize: 50, color: '#007AFF', marginBottom: '20px' }} />
+                            <Typography align="center" sx={{ fontSize: '24px', fontWeight: '700', marginBottom: '20px' }}>
+                                Análisis
                             </Typography>
-                            <Box sx={{ paddingLeft: '50px', paddingRight: '50px' }}>
-                                <Typography align="center" sx={{ marginBottom: '10px' }}>
-                                    ¡Publica tus ofertas en el portal de empleo y atrae a los mejores talentos!
+                            <Box sx={{ padding: '0 20px' }}>
+                                <Typography align="center" sx={{ marginBottom: '10px', fontSize: '16px' }}>
+                                    ¡Analiza el rendimiento de tus ofertas y mejora tu estrategia de contratación!
                                 </Typography>
-                                <Typography align="center">
-                                    ¿Necesitas encontrar al candidato perfecto para tu empresa? ¡Nuestro portal de empleo es la solución ideal!
+                                <Typography align="center" sx={{ fontSize: '14px', color: '#777777' }}>
+                                    Obtén estadísticas detalladas y maximiza el impacto de tus publicaciones.
                                 </Typography>
                             </Box>
-                            <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-                                <Button
-                                    sx={{
-                                        color: 'orange',
-                                        background: 'none',
-                                        border: 'none',
-                                        borderBottom: '2px solid orange',
-                                        padding: '0',
-                                        fontSize: 'inherit',
-                                        cursor: 'pointer',
-                                        margin: '10px'
-                                    }}
-                                >
-                                    REGÍSTRATE
-                                </Button>
-                            </Box>
+                           
                         </Card>
                     </Grid>
                 </Grid>

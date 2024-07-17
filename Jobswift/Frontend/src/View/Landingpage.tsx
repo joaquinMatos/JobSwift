@@ -9,6 +9,7 @@ const Landing = () => {
     <div >
       <Header />
       <Hero />
+      <Cards/>
       <Opcion />
       <Footer />
     </div>

@@ -1,254 +1,92 @@
-import React, { useState } from 'react';
-import { Grid, TextField, Typography, Paper, Button, IconButton, Box } from '@mui/material';
-import { Menu as MenuIcon } from '@mui/icons-material';
+import React, { useState, useEffect } from 'react';
+import { Box, Button, Card, Grid, Typography, Avatar, Paper, CircularProgress } from "@mui/material";
+import UploadFileIcon from '@mui/icons-material/UploadFile';
 
-const PerfilCandidato = () => {
-    // Datos del candidato (simulación)
-    const candidato = {
-        IdCandidato: 1,
-        NombreCompleto: "Juan Perez",
-        Apellidos: "Perez Lopez",
-        Email: "juan.perez@example.com",
-        Contrasena: "password123",
-        CodigoP: "12345",
-        Ciudad: "Ciudad de México",
-        NTelefonico: "1234567890",
-        Token: "sometoken123",
-        FotoPerfil: "https://img.freepik.com/foto-gratis/worldface-hombre-espanol-fondo-blanco_53876-139733.jpg" // Ruta a la foto de perfil del candidato
-    };
+const ProfileCard = () => {
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
 
-    const [menuOpen, setMenuOpen] = useState(false);
-    const [showPasswordForm, setShowPasswordForm] = useState(false);
-    const [oldPassword, setOldPassword] = useState('');
-    const [newPassword, setNewPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
+    useEffect(() => {
+        fetch('https://localhost:7151/PerfilCandidato')
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    setData(data.result[0]);
+                }
+                setLoading(false);
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                setLoading(false);
+            });
+    }, []);
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
+    if (loading) {
+        return <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}><CircularProgress /></Box>;
+    }
 
-    const handlePasswordChange = () => {
-        // Aquí implementarías la lógica para enviar los datos al backend
-        // En lugar de imprimir en consola, enviarías una solicitud HTTP (POST o PUT) al endpoint correspondiente para actualizar la contraseña del usuario.
-        // Ejemplo:
-        // fetch('http://tu-backend.com/api/actualizar-contrasena', {
-        //     method: 'PUT',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //         // Incluir cualquier token de autenticación si es necesario
-        //     },
-        //     body: JSON.stringify({
-        //         oldPassword: oldPassword,
-        //         newPassword: newPassword,
-        //         confirmPassword: confirmPassword
-        //     })
-        // })
-        // .then(response => response.json())
-        // .then(data => {
-        //     // Manejar la respuesta del backend según sea necesario
-        //     console.log('Contraseña actualizada correctamente', data);
-        // })
-        // .catch(error => {
-        //     // Manejar errores de la solicitud al backend
-        //     console.error('Error al actualizar contraseña', error);
-        // });
-        console.log("Cambiando contraseña...");
-    };
-
-    const showPasswordChangeForm = () => {
-        setShowPasswordForm(true);
-    };
+    if (!data) {
+        return <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}><Typography>No data available</Typography></Box>;
+    }
 
     return (
-        <>
-            {/* Header */}
-            <Box sx={{ position: 'relative', bgcolor: '#f0f0f0', borderBottom: '10px solid #2196f3', zIndex: 0 }}>
-                {/* Franja azul (como hero section) */}
-                <Box
-                    sx={{
-                        height: '200px',  // Aumentamos la altura de la franja azul
-                        backgroundColor: '#2196f3',
-                        position: 'relative',  // Cambiamos a posición relativa para alinear elementos internamente
-                        zIndex: 1,
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        flexDirection: 'column',
-                        textAlign: 'center'
-                    }}
-                >
-                    <Typography variant="h4" style={{ color: 'white', marginBottom: '10px' }}>
-                        Perfil del Candidato
-                    </Typography>
-                    {/* Banner detrás de la imagen de perfil */}
-                    <Box
-                        sx={{
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            width: '100%',
-                            height: '100%',
-                            backgroundImage: `linear-gradient(to right, rgba(255,255,255,0), rgba(0,0,0,0.3))`,
-                            zIndex: -1
-                        }}
-                    />
-                </Box>
-                {/* Imagen de perfil a la izquierda */}
-                <Box
-                    sx={{
-                        position: 'absolute',
-                        top: '50%',
-                        left: '10%',  // Ajustamos la posición izquierda para colocarla al lado
-                        transform: 'translate(-50%, -50%)',
-                        zIndex: 2,
-                        border: '5px solid white',
-                        borderRadius: '50%'
-                    }}
-                >
-                    <img
-                        src={candidato.FotoPerfil}
-                        alt="Foto de perfil"
-                        style={{
-                            width: '150px',
-                            height: '150px',
-                            borderRadius: '50%',
-                            position: 'absolute',
-                            top: '50%',
-                            transform: 'translateY(-50%)',
-                            marginLeft: '-75px'  // Ajustamos el margen izquierdo según sea necesario
-                        }}
-                    />
-                </Box>
-                {/* Contenido del perfil del candidato */}
-                <Paper elevation={3} style={{ padding: '20px', maxWidth: '800px', margin: 'auto', marginTop: '20px', marginBottom: '50px' }}>
-                    <Grid container spacing={2}>
-                        <Grid item xs={12}>
-                            <TextField
-                                fullWidth
-                                label="Nombre Completo"
-                                defaultValue={candidato.NombreCompleto}
-                                InputProps={{
-                                    readOnly: true,
-                                }}
+        <Box sx={{ bgcolor: '#E3F2FD', minHeight: '100vh', padding: '20px' }}>
+            <Grid container spacing={2}>
+                <Grid item xs={12} md={8}>
+                    <Card sx={{ padding: '20px', borderRadius: '12px' }}>
+                        <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                            <Avatar
+                                alt="Profile Picture"
+                                
+                                sx={{ width: 80, height: 80, marginRight: 2 }}
                             />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <TextField
-                                fullWidth
-                                label="Apellidos"
-                                defaultValue={candidato.Apellidos}
-                                InputProps={{
-                                    readOnly: true,
-                                }}
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <TextField
-                                fullWidth
-                                label="Email"
-                                defaultValue={candidato.Email}
-                                InputProps={{
-                                    readOnly: true,
-                                }}
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <Button
-                                variant="outlined"
-                                color="primary"
-                                onClick={showPasswordChangeForm}
-                                style={{ marginTop: '10px' }}
-                            >
-                                Cambiar Contraseña
-                            </Button>
-                        </Grid>
-                        <Grid item xs={12}>
-                            <TextField
-                                fullWidth
-                                label="Código Postal"
-                                defaultValue={candidato.CodigoP}
-                                InputProps={{
-                                    readOnly: true,
-                                }}
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <TextField
-                                fullWidth
-                                label="Ciudad"
-                                defaultValue={candidato.Ciudad}
-                                InputProps={{
-                                    readOnly: true,
-                                }}
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <TextField
-                                fullWidth
-                                label="Teléfono"
-                                defaultValue={candidato.NTelefonico}
-                                InputProps={{
-                                    readOnly: true,
-                                }}
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <Button variant="contained" color="primary" fullWidth>
-                                Guardar
-                            </Button>
-                        </Grid>
-                    </Grid>
-                </Paper>
-                {/* Formulario para cambiar la contraseña */}
-                {showPasswordForm && (
-                    <Paper elevation={3} style={{ padding: '20px', maxWidth: '400px', margin: 'auto', marginTop: '20px', marginBottom: '50px' }}>
-                        <Typography variant="h6" gutterBottom style={{ marginBottom: '10px' }}>
-                            Cambiar Contraseña
+                            <Box>
+                                <Typography variant="h6" component="div">Nombre y apellido</Typography>
+                                <Typography variant="subtitle1" color="textSecondary">Puesto (Ej: Diseñadora Gráfica)</Typography>
+                            </Box>
+                        </Box>
+                        <Typography variant="body2" sx={{ mb: 2 }}>
+                            Use este apartado para contar quién sos, a qué te dedicás y cuáles son tus fortalezas para entrar a un nuevo equipo de trabajo. Intentá que este texto defina con sinceridad qué te hace única/o y por qué sos la persona indicada para el puesto al que acudís.
                         </Typography>
-                        <Grid container spacing={2}>
-                            <Grid item xs={12}>
-                                <TextField
-                                    fullWidth
-                                    label="Antigua Contraseña"
-                                    type="password"
-                                    value={oldPassword}
-                                    onChange={(e) => setOldPassword(e.target.value)}
-                                />
-                            </Grid>
-                            <Grid item xs={12}>
-                                <TextField
-                                    fullWidth
-                                    label="Nueva Contraseña"
-                                    type="password"
-                                    value={newPassword}
-                                    onChange={(e) => setNewPassword(e.target.value)}
-                                />
-                            </Grid>
-                            <Grid item xs={12}>
-                                <TextField
-                                    fullWidth
-                                    label="Confirmar Contraseña"
-                                    type="password"
-                                    value={confirmPassword}
-                                    onChange={(e) => setConfirmPassword(e.target.value)}
-                                />
-                            </Grid>
-                            <Grid item xs={12}>
-                                <Button
-                                    variant="contained"
-                                    color="primary"
-                                    onClick={handlePasswordChange}
-                                    fullWidth
-                                >
-                                    Guardar Nueva Contraseña
-                                </Button>
-                            </Grid>
-                        </Grid>
+                        <Typography variant="h6" component="div" sx={{ mb: 1 }}>Experiencia profesional</Typography>
+                        <Box sx={{ mb: 2 }}>
+                            <Typography variant="subtitle1">Experiencia</Typography>
+                            <Typography variant="body2">{data.experiencia}</Typography>
+                        </Box>
+                        <Typography variant="h6" component="div" sx={{ mb: 1 }}>Formación</Typography>
+                        <Box sx={{ mb: 2 }}>
+                            <Typography variant="subtitle1">Formación</Typography>
+                            <Typography variant="body2">{data.formacion}</Typography>
+                        </Box>
+                        <Typography variant="h6" component="div" sx={{ mb: 1 }}>Idiomas</Typography>
+                        <Box sx={{ mb: 2 }}>
+                            <Typography variant="body2">{data.idiomas}</Typography>
+                        </Box>
+                        <Typography variant="h6" component="div" sx={{ mb: 1 }}>Habilidades</Typography>
+                        <Box sx={{ mb: 2 }}>
+                            <Typography variant="body2">{data.habilidades}</Typography>
+                        </Box>
+                    </Card>
+                </Grid>
+                <Grid item xs={12} md={4}>
+                    <Paper sx={{ padding: '20px', borderRadius: '12px' }}>
+                        <Typography variant="h6" component="div" sx={{ mb: 2 }}>Documentos adjuntos</Typography>
+                        <Typography variant="body2" color="textSecondary" sx={{ mb: 2 }}>Puesto (Ej: certificado.pdf)</Typography>
+                        <Button
+                            variant="contained"
+                            startIcon={<UploadFileIcon />}
+                            sx={{ bgcolor: '#007AFF', color: '#FFFFFF' }}
+                            href={data.curriculumPerfil}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Ver Curriculum
+                        </Button>
                     </Paper>
-                )}
-            </Box>
-        </>
+                </Grid>
+            </Grid>
+        </Box>
     );
 }
 
-export default PerfilCandidato;
+export default ProfileCard;

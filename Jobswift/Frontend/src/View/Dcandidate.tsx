@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { Box, Grid, AppBar, Toolbar, Typography, InputBase, Button } from '@mui/material';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Box, Grid, AppBar, Toolbar, Typography, InputBase, IconButton, debounce } from '@mui/material';
 import { Search as SearchIcon } from '@mui/icons-material';
 import ListaTrabajo from '../Pages/Dcandidate/ListaTrabajos';
 import Descripcion from '../Pages/Dcandidate/Descrpcion';
 import { useAuth } from '../context/AuthLogin';
 import axios from 'axios';
+import { useLocation } from 'react-router-dom';
 
 interface Job {
     idOfertaTrabajo: number;
@@ -23,8 +24,12 @@ interface Job {
 }
 
 const Dashboard = () => {
+    const location = useLocation();
+    const selectedJobId = location.state?.jobId || null;
+
     const [selectedJob, setSelectedJob] = useState<Job | null>(null);
     const [searchText, setSearchText] = useState<string>('');
+    const [jobs, setJobs] = useState<Job[]>([]);
     const [searchResults, setSearchResults] = useState<Job[]>([]);
     const { getAccessToken } = useAuth();
     const [token, setToken] = useState<string | null>(null);
@@ -55,19 +60,44 @@ const Dashboard = () => {
                 }
             });
 
-            setSearchResults(response.data.result); // Actualiza los resultados de búsqueda con los datos obtenidos
-            console.log(response.data.result); // Asegúrate de que los datos sean correctos en la consola
+            setJobs(response.data.result); // Guarda todas las ofertas de trabajo
+            setSearchResults(response.data.result); // Inicializa los resultados de búsqueda con todas las ofertas
+
+            if (selectedJobId) {
+                const selectedJob = response.data.result.find((job: Job) => job.idOfertaTrabajo === selectedJobId);
+                setSelectedJob(selectedJob || null);
+            }
         } catch (error) {
             console.error('Error al obtener las ofertas de trabajo:', error);
-            // Puedes manejar el error según tus necesidades (por ejemplo, mostrar un mensaje al usuario)
         }
     };
 
+    const debouncedSearch = useCallback(
+        debounce((query: string) => {
+            if (query.trim() === '') {
+                setSearchResults(jobs); // Muestra todas las ofertas si el texto de búsqueda está vacío
+            } else {
+                const filteredJobs = jobs.filter(job =>
+                    job.titulo.toLowerCase().includes(query.toLowerCase())
+                );
+                setSearchResults(filteredJobs); // Actualiza los resultados de búsqueda con las ofertas filtradas
+            }
+            setSelectedJob(null); // Borra cualquier trabajo seleccionado anterior
+        }, 300),
+        [jobs]
+    );
+
+    useEffect(() => {
+        debouncedSearch(searchText);
+    }, [searchText, debouncedSearch]);
+
+    const isSearchDisabled = searchText.trim() === ''; // Determina si el campo de búsqueda está vacío
+
     return (
-        <Box sx={{ display: 'flex', height: '100vh' }}>
+        <Box sx={{ display: 'flex', height: '100vh', flexDirection: 'column' }}>
             <AppBar position="static">
                 <Toolbar>
-                    <Box sx={{ display: 'flex', alignItems: 'center', bgcolor: '#f0f0f0', borderRadius: 1, p: 1 }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', bgcolor: '#f0f0f0', borderRadius: 1, p: 1, flexGrow: 1 }}>
                         <SearchIcon />
                         <InputBase
                             placeholder="Cargo o categoría"
@@ -75,16 +105,17 @@ const Dashboard = () => {
                             value={searchText}
                             onChange={(e) => setSearchText(e.target.value)}
                         />
-                        <Button
-                            variant="contained"
-                            color="primary"
-                            sx={{ ml: 1 }}
-                            onClick={() => fetchJobs(token as string)} // Llama a la función de búsqueda al hacer clic en el botón
-                        >
-                            Buscar
-                        </Button>
                     </Box>
-                    <Box sx={{ display: 'flex', height: '100vh', p: 2 }}>
+                    <IconButton
+                        color="primary"
+                        disabled={isSearchDisabled}
+                        onClick={() => debouncedSearch(searchText)}
+                    >
+                        <SearchIcon />
+                    </IconButton>
+                </Toolbar>
+            </AppBar>
+            <Box sx={{ display: 'flex', height: '100vh', p: 2, flexGrow: 1 }}>
                 <Grid container spacing={2} sx={{ flexGrow: 1 }}>
                     <Grid item xs={12} md={6} sx={{ overflowY: 'auto', height: '100%' }}>
                         <ListaTrabajo jobs={searchResults} onSelectJob={setSelectedJob} />
@@ -96,8 +127,6 @@ const Dashboard = () => {
                     </Grid>
                 </Grid>
             </Box>
-                </Toolbar>
-            </AppBar>
         </Box>
     );
 };

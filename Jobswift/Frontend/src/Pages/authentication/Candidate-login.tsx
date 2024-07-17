@@ -11,9 +11,9 @@ import { useAuth } from "../../context/AuthLogin";
 import { Navigate, useNavigate } from "react-router-dom";
 import LoandingProgressBars from "../../components/Loanding";
 import axios from "axios";
-import API_URL from "../../utils/api";
 import { AuthResponse } from "../../interface/interface";
 
+const API_URL = "https://localhost:7151";
 
 const Login = () => {
 

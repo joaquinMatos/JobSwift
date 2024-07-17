@@ -22,7 +22,7 @@ const AppRouter = () => {
   };
 
   // Función para determinar si mostrar el menú en la ruta actual
-  const shouldShowMenu = location.pathname === '/dashboard' || location.pathname === '/favoritos' || location.pathname === '/perfil-candidato';
+  const shouldShowMenu = location.pathname === '/dashboard' || location.pathname === '/MisPostulaciones'  ||location.pathname === '/favoritos' || location.pathname === '/perfil-candidato';
 
   return (
     <>

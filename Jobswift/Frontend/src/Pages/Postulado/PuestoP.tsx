@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Grid, AppBar, Toolbar, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 interface Postulacion {
     idPostulacion: number;
@@ -11,6 +12,7 @@ interface Postulacion {
 
 const MisPostulaciones = () => {
     const [postulaciones, setPostulaciones] = useState<Postulacion[]>([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetchPostulaciones(); // Carga las postulaciones al cargar la página
@@ -18,10 +20,7 @@ const MisPostulaciones = () => {
 
     const fetchPostulaciones = async () => {
         try {
-            const response = await axios.get(`https://localhost:7151/Favorito`, {
-                // Puedes manejar los headers según lo que requiera tu API
-            });
-
+            const response = await axios.get(`https://localhost:7151/Favorito`);
             setPostulaciones(response.data.result); // Actualiza las postulaciones con los datos obtenidos
             console.log(response.data.result); // Asegúrate de que los datos sean correctos en la consola
         } catch (error) {
@@ -30,28 +29,28 @@ const MisPostulaciones = () => {
         }
     };
 
+    const handlePostulacionClick = (fk_IdOfertaTrabajo: number) => {
+        navigate(`/dashboard/${fk_IdOfertaTrabajo}`); // Navega a Dashboard con el ID del trabajo seleccionado en la URL
+    };
+
     return (
-        <Box sx={{ display: 'flex', height: '100vh' }}>
-            <AppBar position="static">
-                <Toolbar>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        Mis Postulaciones
-                    </Typography>
-                </Toolbar>
-                <Box sx={{ p: 2, flexGrow: 1 , color: "black"}}>
-                    <Grid container spacing={2}>
-                        {postulaciones.map((postulacion) => (
-                            <Grid item key={postulacion.idPostulacion} xs={12} md={6}>
-                                <Box sx={{ p: 2, bgcolor: '#f0f0f0', borderRadius: 1 }}>
-                                    <Typography variant="h6">{`Oferta de trabajo ${postulacion.fk_IdOfertaTrabajo}`}</Typography>
-                                    <Typography variant="body1">{`Estado: ${postulacion.status === 0 ? 'Pendiente' : 'Aceptado'}`}</Typography>
-                                    {/* Puedes agregar más detalles según los datos de tu API */}
-                                </Box>
-                            </Grid>
-                        ))}
+        <Box sx={{ p: 2, flexGrow: 1 }}>
+            <Typography variant="h4" component="div" sx={{ flexGrow: 1, mb: 2 }}>
+                Mis Postulaciones
+            </Typography>
+            <Grid container spacing={2}>
+                {postulaciones.map((postulacion) => (
+                    <Grid item key={postulacion.idPostulacion} xs={12} md={6}>
+                        <Box
+                            sx={{ p: 2, bgcolor: '#f0f0f0', borderRadius: 1, cursor: 'pointer' }}
+                            onClick={() => handlePostulacionClick(postulacion.fk_IdOfertaTrabajo)}
+                        >
+                            <Typography variant="h6">{`Oferta de trabajo ${postulacion.fk_IdOfertaTrabajo}`}</Typography>
+                            <Typography variant="body1">{`Estado: ${postulacion.status === 0 ? 'Pendiente' : 'Aceptado'}`}</Typography>
+                        </Box>
                     </Grid>
-                </Box>
-            </AppBar>
+                ))}
+            </Grid>
         </Box>
     );
 };
