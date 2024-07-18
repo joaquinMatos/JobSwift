@@ -1,46 +1,33 @@
 import React from 'react';
-import { Box, Button, Grid, Typography, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { Box, Grid, Typography, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 const Opcion = () => {
     return (
         <Box sx={{ bgcolor: '#FFFFFF', padding: '50px 20px' }}>
             <Grid container spacing={4} alignItems="center">
-                <Grid item xs={12} md={5}>
-                    <Box sx={{ position: 'relative' }}>
+                <Grid item xs={12} md={5} sx={{ display: 'flex', justifyContent: 'center' }}>
+                    <Box sx={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
                         <img
                             src="img/yo.jpg" // Cambia esto a la ruta de tu imagen
                             alt="Mujer sonriente"
                             style={{
-                                left: '120px',
                                 width: '70%',
                                 borderRadius: '20px',
                                 position: 'relative',
-                                zIndex: 1
+                                zIndex: 1,
                             }}
                         />
-                        {/* <Box
-                            sx={{
-                                position: 'absolute',
-                                top: '120px',
-                                left: '-20px',
-                                width: '300px',
-                                height: '300px',
-                                bgcolor: 'blue',
-                                borderRadius: '50%',
-                                zIndex: 0
-                            }}
-                        /> */}
                         <Box
                             sx={{
                                 position: 'absolute',
                                 top: '-20px',
-                                left: '50px',
+                                left: { xs: 'calc(50% - 150px)', md: '50px' },
                                 width: '300px',
                                 height: '300px',
                                 bgcolor: 'pink',
                                 borderRadius: '50%',
-                                zIndex: 0
+                                zIndex: 0,
                             }}
                         />
                     </Box>

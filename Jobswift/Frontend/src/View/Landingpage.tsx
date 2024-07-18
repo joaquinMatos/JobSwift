@@ -2,6 +2,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Cards from "../Pages/LandingPage/Cards";
 import Hero from "../Pages/LandingPage/Hero";
+import Beneficios from "../Pages/LandingPage/Info";
 import Opcion from "../Pages/LandingPage/Opcion";
 
 const Landing = () => {
@@ -11,6 +12,7 @@ const Landing = () => {
       <Hero />
       <Cards/>
       <Opcion />
+      <Beneficios />
       <Footer />
     </div>
   );

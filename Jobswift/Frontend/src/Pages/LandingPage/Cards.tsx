@@ -8,10 +8,10 @@ const Cards = () => {
     return (
         <Box>
             <Box sx={{
-               
+
             }} />
             <Box display="flex" sx={{
-              
+
             }}>
                 <Grid container justifyContent="space-evenly" marginTop={10}>
                     <Grid item xs={12} sm={3.5} md={3.5}>
@@ -37,7 +37,7 @@ const Cards = () => {
                                     ¿Necesitas encontrar al candidato perfecto para tu empresa? ¡Nuestro portal de empleo es la solución ideal!
                                 </Typography>
                             </Box>
-                            
+
                         </Card>
                     </Grid>
                     <Grid item xs={12} sm={3.5} md={3.5}>
@@ -63,7 +63,7 @@ const Cards = () => {
                                     ¿Estás listo para llevar tu carrera al siguiente nivel? Las mejores oportunidades están a un click de distancia.
                                 </Typography>
                             </Box>
-                           
+
                         </Card>
                     </Grid>
                     <Grid item xs={12} sm={3.5} md={3.5}>
@@ -89,7 +89,7 @@ const Cards = () => {
                                     Obtén estadísticas detalladas y maximiza el impacto de tus publicaciones.
                                 </Typography>
                             </Box>
-                           
+
                         </Card>
                     </Grid>
                 </Grid>

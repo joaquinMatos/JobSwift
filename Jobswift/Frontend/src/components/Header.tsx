@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { AppBar, Box, Grid, Toolbar } from '@mui/material';
 import CustomButton from './ButtonLogin';
 import logo from '../logo.svg';
-import reclutador from '..//img/user.svg';
-import candidato from '..//img/candidate2.svg';
+import reclutador from '../img/user.svg';
+import candidato from '../img/candidate2.svg';
 import { useNavigate } from 'react-router';
 
 const Navbar = () => {
@@ -29,6 +29,9 @@ const Navbar = () => {
   const handleLoginClick = () => {
     navigate('/candidate-login');
   };
+/*   const handleLoginClick2 = () => {
+    navigate('/reclutador-login');
+  }; */
 
   return (
     <Box
@@ -45,18 +48,37 @@ const Navbar = () => {
         <Toolbar>
           <Grid container justifyContent="space-between" alignItems="center" sx={{ width: '100%' }}>
             {/* Logo o título a la izquierda */}
-            <Grid item>
+            <Grid item xs={6} sm={4} md={2}>
               <img src={logo} alt="Logo" style={{ height: '40px', marginLeft: '30px' }} />
             </Grid>
             {/* Botones a la derecha */}
-            <Grid item>
-              <Grid container spacing={1} alignItems="center">
+            <Grid item xs={6} sm={8} md={10}>
+              <Grid container spacing={1} alignItems="center" justifyContent={{ xs: 'center', sm: 'flex-end' }}>
                 <Grid item>
                   <CustomButton
                     onClick={handleLoginClick}
                     sx={{
-                      minWidth: '120px',
-                      fontSize: '10px',
+                      minWidth: { xs: '80px', sm: '120px' },
+                      fontSize: { xs: '8px', sm: '10px' },
+                      padding: '5px',
+                      background: '#000000',
+                      color: '#21bbff',
+                      borderRadius: '10px',
+                    }}
+                    tooltipText="Login candidatos"
+                  >
+                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <img src={reclutador} alt="" style={{ width: '15px', marginRight: '5px' }} />
+                      Login
+                    </Box>
+                  </CustomButton>
+                </Grid>
+                <Grid item>
+                  <CustomButton
+                    /* onClick={handleLoginClick2} */
+                    sx={{
+                      minWidth: { xs: '80px', sm: '120px' },
+                      fontSize: { xs: '8px', sm: '10px' },
                       padding: '5px',
                       background: 'white',
                       color: '#000000',
@@ -66,26 +88,7 @@ const Navbar = () => {
                     tooltipText="Login reclutadores"
                   >
                     <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                      <img src={candidato} alt="" style={{ width: '20px', marginRight: '5px' }} />
-                      Login
-                    </Box>
-                  </CustomButton>
-                </Grid>
-                <Grid item>
-                  <CustomButton
-                    onClick={handleLoginClick}
-                    sx={{
-                      minWidth: '120px',
-                      fontSize: '10px',
-                      padding: '5px',
-                      background: '#000000',
-                      color: '#21bbff',
-                      borderRadius: '10px',
-                    }}
-                    tooltipText="Login reclutadores"
-                  >
-                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                      <img src={reclutador} alt="" style={{ width: '20px', marginRight: '5px' }} />
+                      <img src={candidato} alt="" style={{ width: '15px', marginRight: '5px' }} />
                       Login
                     </Box>
                   </CustomButton>

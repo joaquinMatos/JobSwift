@@ -31,7 +31,7 @@ const ProfileCard = () => {
     }
 
     return (
-        {/* <Box sx={{ bgcolor: '#E3F2FD', minHeight: '100vh', padding: '20px' }}>
+        <Box sx={{ bgcolor: '#E3F2FD', minHeight: '100vh', padding: '20px' }}>
             <Grid container spacing={2}>
                 <Grid item xs={12} md={8}>
                     <Card sx={{ padding: '20px', borderRadius: '12px' }}>
@@ -58,7 +58,7 @@ const ProfileCard = () => {
                                 <EditIcon />
                             </IconButton>
                         </Box>
-                        <Typography variant="body2">{data.experiencia}</Typography>
+                        {/* <Typography variant="body2">{data.experiencia}</Typography> */}
                         <Typography variant="h6" component="div" sx={{ mb: 1 }}>Formación</Typography>
                         <Box sx={{ mb: 2, display: 'flex', alignItems: 'center' }}>
                             <Typography variant="subtitle1">Formación</Typography>
@@ -66,17 +66,17 @@ const ProfileCard = () => {
                                 <EditIcon />
                             </IconButton>
                         </Box>
-                        <Typography variant="body2">{data.formacion}</Typography>
+                        {/* <Typography variant="body2">{data.formacion}</Typography> */}
                         <Typography variant="h6" component="div" sx={{ mb: 1 }}>Idiomas</Typography>
                         <Box sx={{ mb: 2, display: 'flex', alignItems: 'center' }}>
-                            <Typography variant="body2">{data.idiomas}</Typography>
+                            {/* <Typography variant="body2">{data.idiomas}</Typography> */}
                             <IconButton color="primary" sx={{ ml: 1 }}>
                                 <EditIcon />
                             </IconButton>
                         </Box>
                         <Typography variant="h6" component="div" sx={{ mb: 1 }}>Habilidades</Typography>
                         <Box sx={{ mb: 2, display: 'flex', alignItems: 'center' }}>
-                            <Typography variant="body2">{data.habilidades}</Typography>
+                            {/* <Typography variant="body2">{data.habilidades}</Typography> */}
                             <IconButton color="primary" sx={{ ml: 1 }}>
                                 <EditIcon />
                             </IconButton>
@@ -87,7 +87,7 @@ const ProfileCard = () => {
                     <Paper sx={{ padding: '20px', borderRadius: '12px' }}>
                         <Typography variant="h6" component="div" sx={{ mb: 2 }}>Documentos adjuntos</Typography>
                         <Typography variant="body2" color="textSecondary" sx={{ mb: 2 }}>Puesto (Ej: certificado.pdf)</Typography>
-                        <Button
+                        {/* <Button
                             variant="contained"
                             startIcon={<UploadFileIcon />}
                             sx={{ bgcolor: '#007AFF', color: '#FFFFFF' }}
@@ -96,11 +96,11 @@ const ProfileCard = () => {
                             rel="noopener noreferrer"
                         >
                             Ver Curriculum
-                        </Button>
+                        </Button> */}
                     </Paper>
                 </Grid>
             </Grid>
-        </Box> */}
+        </Box>
     );
 }
 
