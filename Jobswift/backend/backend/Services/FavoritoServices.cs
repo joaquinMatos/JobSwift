@@ -1,5 +1,6 @@
 using back_end.Context;
 using back_end.Services.Interfaces;
+using Dapper;
 using Domain.DTO;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -18,12 +19,16 @@ namespace back_end.Services
             _context = context;
         }
 
-        public async Task<Response<List<Favoritos>>> ObtenerFavoritos()
+        public async Task<Response<List<FavoritoDTO>>> ObtenerFavoritos()
         {
             try
             {
-                List<Favoritos> response = await _context.Favoritos.ToListAsync();
-                return new Response<List<Favoritos>>(response);
+                using (var connection = _context.Database.GetDbConnection())
+                {
+                    var query = "EXEC spFavoritos";
+                    var favoritos = await connection.QueryAsync<FavoritoDTO>(query);
+                    return new Response<List<FavoritoDTO>>(favoritos.AsList());
+                }
             }
             catch (Exception ex)
             {

@@ -4,9 +4,10 @@ import { Favorite as FavoriteIcon } from '@mui/icons-material';
 import axios from 'axios';
 
 interface Favorito {
-    idFavoritos: number;
-    fk_IdCandidato: number;
-    fk_IdOfertaTrabajo: number;
+    tituloOferta: string;
+    ubicacionOferta: string;
+    urgencia: boolean;
+    fechaPublicacion: string;
 }
 
 const Favoritos = () => {
@@ -19,7 +20,7 @@ const Favoritos = () => {
     const fetchFavoritos = async () => {
         try {
             const response = await axios.get<any>('https://localhost:7151/favorito'); // Cambia la URL según tu API
-            const favoritosData = response.data.result;
+            const favoritosData = response.data;
             setFavoritos(favoritosData);
         } catch (error) {
             console.error('Error al obtener favoritos:', error);
@@ -36,18 +37,20 @@ const Favoritos = () => {
                     <Table>
                         <TableHead>
                             <TableRow>
-                                <TableCell>ID Favoritos</TableCell>
-                                <TableCell>FK ID Candidato</TableCell>
-                                <TableCell>FK ID Oferta Trabajo</TableCell>
+                                <TableCell>Título de la Oferta</TableCell>
+                                <TableCell>Ubicación</TableCell>
+                                <TableCell>Urgente</TableCell>
+                                <TableCell>Fecha de Publicación</TableCell>
                                 <TableCell>Acciones</TableCell> {/* Nueva columna para acciones */}
                             </TableRow>
                         </TableHead>
                         <TableBody>
-                            {favoritos.map((favorito) => (
-                                <TableRow key={favorito.idFavoritos}>
-                                    <TableCell>{favorito.idFavoritos}</TableCell>
-                                    <TableCell>{favorito.fk_IdCandidato}</TableCell>
-                                    <TableCell>{favorito.fk_IdOfertaTrabajo}</TableCell>
+                            {favoritos.map((favorito, index) => (
+                                <TableRow key={index}>
+                                    <TableCell>{favorito.tituloOferta}</TableCell>
+                                    <TableCell>{favorito.ubicacionOferta}</TableCell>
+                                    <TableCell>{favorito.urgencia ? "Sí" : "No"}</TableCell>
+                                    <TableCell>{new Date(favorito.fechaPublicacion).toLocaleDateString()}</TableCell>
                                     <TableCell>
                                         <IconButton aria-label="favorito">
                                             <FavoriteIcon color="error" />

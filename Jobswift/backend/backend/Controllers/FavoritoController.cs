@@ -17,11 +17,16 @@ namespace back_end.Controllers
             _favoritoServices = favoritoServices;
         }
 
+       
         [HttpGet]
-        public async Task<IActionResult> ObtenerLista()
+        public async Task<IActionResult> GetFavoritos()
         {
-            var result = await _favoritoServices.ObtenerFavoritos();
-            return Ok(result);
+            var response = await _favoritoServices.ObtenerFavoritos();
+            if (response.Success)
+            {
+                return Ok(response.Result);
+            }
+            return BadRequest(response.Message);
         }
 
         [HttpGet("{id}")]
