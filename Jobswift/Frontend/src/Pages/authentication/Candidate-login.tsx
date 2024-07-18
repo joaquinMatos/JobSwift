@@ -1,12 +1,11 @@
-import { Alert, Box, Grid, Typography, useMediaQuery } from "@mui/material"
+import { Alert, Box, Grid, Typography, useMediaQuery } from "@mui/material";
 import { useState } from "react";
 import CustomButton from "../../components/ButtonLogin";
-import { BorderBottom, Margin } from "@mui/icons-material";
-import Facebook from "../../img/facebook.svg"
-import whatsapp from "../../img/whatsapp.svg"
-import send from "../../img/send.svg"
-import adorno1 from "../../img/adornos/Alogin_1.svg"
-import robot from "../../img/avatar/robotn.svg"
+import Facebook from "../../img/facebook.svg";
+import whatsapp from "../../img/whatsapp.svg";
+import send from "../../img/send.svg";
+import adorno1 from "../../img/adornos/Alogin_1.svg";
+import robot from "../../img/avatar/robotn.svg";
 import { useAuth } from "../../context/AuthLogin";
 import { Navigate, useNavigate } from "react-router-dom";
 import LoandingProgressBars from "../../components/Loanding";
@@ -16,12 +15,11 @@ import { AuthResponse } from "../../interface/interface";
 const API_URL = "https://localhost:7151";
 
 const Login = () => {
-
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
     const isSmallScreen = useMediaQuery('(max-width:700px)');
-    const [alertError, setAlertError] =  useState<JSX.Element | null>(null);
+    const [alertError, setAlertError] = useState<JSX.Element | null>(null);
 
     const auth = useAuth();
     const navigate = useNavigate();
@@ -51,7 +49,7 @@ const Login = () => {
             navigate("/dashboard");
 
         } catch {
-            setAlertError(<Alert severity="error"> Error al Iniciar Seccion </Alert>);
+            setAlertError(<Alert severity="error"> Error al Iniciar Sesión </Alert>);
             setLoading(false);
         }
     };
@@ -59,7 +57,6 @@ const Login = () => {
     if (loading) {
         return <div> <LoandingProgressBars /></div>;
     };
-
 
     return (
         <Box sx={{ height: '100vh' }}>
@@ -74,28 +71,21 @@ const Login = () => {
                         flexDirection: 'column',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        paddingRight: '100px',
-                        paddingBottom: '100px',
-                        height: '100vh', // ajusta según necesites
+                        padding: { xs: '20px', md: '50px', lg: '100px' },
+                        height: '100vh',
                     }}
                 >
-                    <Typography variant="h4" color="black" sx={{ marginBottom: '20px', fontSize: '15px', fontWeight: '700', }}>
-                        Welcome back!
+                    <Typography variant="h4" color="black" sx={{ marginBottom: '20px', fontSize: { xs: '24px', md: '28px' }, fontWeight: '700', textAlign: 'center' }}>
+                        ¡Bienvenido de vuelta!
                     </Typography>
                     {alertError && (
                         <Box sx={{ width: '100%', maxWidth: '400px', marginBottom: '20px' }}>
                             {alertError}
                         </Box>
                     )}
-                    <Grid
-                        sx={{
-                            width: '50%'
-                        }}
-                    >
-                        <form
-                        onSubmit={handleSubmit}
-                        >
-                            <Typography sx={{ margin: '10px' }}>Email:</Typography>
+                    <Grid sx={{ width: { xs: '100%', md: '70%', lg: '50%' } }}>
+                        <form onSubmit={handleSubmit}>
+                            <Typography sx={{ margin: '10px' }}>Correo:</Typography>
                             <input
                                 type="email"
                                 value={email}
@@ -111,7 +101,7 @@ const Login = () => {
                                 }}
                                 required
                             />
-                            <Typography sx={{ margin: '10px' }}>Password:</Typography>
+                            <Typography sx={{ margin: '10px' }}>Contraseña:</Typography>
                             <input
                                 type="password"
                                 value={password}
@@ -128,22 +118,19 @@ const Login = () => {
                                 required
                             />
                             <CustomButton
-                            type="submit"
+                                type="submit"
                                 sx={{
                                     width: '100%',
                                     marginTop: '30px',
                                     borderRadius: '50px'
                                 }}>
-                                login
+                                inicio sesión
                             </CustomButton>
                         </form>
-                        <Typography sx={{
-                            marginTop: '25px',
-                            textAlign: 'center'
-                        }}>
-                            Don't have an account?
+                        <Typography sx={{ marginTop: '25px', textAlign: 'center' }}>
+                            ¿Aún no tienes una cuenta?
                             <span style={{ color: '#21bbff', cursor: 'pointer', marginLeft: '15px' }}>
-                                Register
+                                Registrate
                             </span>
                         </Typography>
                         <Grid
@@ -151,9 +138,9 @@ const Login = () => {
                             spacing={2}
                             sx={{
                                 textAlign: 'center',
-                                justifyContent: 'center', // centra horizontalmente los elementos
-                                alignItems: 'center', // centra verticalmente los elementos
-                                padding: '20px', // espacio alrededor del contenedor
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                padding: '20px',
                             }}
                         >
                             <Grid item>
@@ -167,7 +154,6 @@ const Login = () => {
                             </Grid>
                         </Grid>
                     </Grid>
-
                     <Grid
                         item
                         sx={{
@@ -191,12 +177,13 @@ const Login = () => {
                     }}>
                         <Grid item sx={{
                             position: 'relative',
-                            width: '550px',
-                            height: '500px',
-                            background: 'none',
-                            marginRight: '300px'
+                            width: '100%',
+                            height: '100%',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
                         }}>
-                          <img src={robot} alt="Robot" style={{ width: '500px',background: 'none'}}/>
+                            <img src={robot} alt="Robot" style={{ width: '80%', maxWidth: '500px', background: 'none' }} />
                         </Grid>
                     </Grid>
                 )}
@@ -205,4 +192,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Login;
