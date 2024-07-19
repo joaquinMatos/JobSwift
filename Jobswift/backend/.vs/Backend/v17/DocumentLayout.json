@@ -3,6 +3,46 @@
   "WorkspaceRootPath": "D:\\JobSwift\\Jobswift\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|d:\\jobswift\\jobswift\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|d:\\jobswift\\jobswift\\backend\\backend\\services\\postulacionservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\services\\postulacionservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55EA9344-7BDB-4239-B56F-B85FE55629DD}|Domain\\Domain.csproj|d:\\jobswift\\jobswift\\backend\\domain\\dto\\postulacionresponsive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55EA9344-7BDB-4239-B56F-B85FE55629DD}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\postulacionresponsive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55EA9344-7BDB-4239-B56F-B85FE55629DD}|Domain\\Domain.csproj|d:\\jobswift\\jobswift\\backend\\domain\\entities\\postulacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55EA9344-7BDB-4239-B56F-B85FE55629DD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\postulacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|d:\\jobswift\\jobswift\\backend\\backend\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|d:\\jobswift\\jobswift\\backend\\backend\\services\\interfaces\\ipostulacionservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\services\\interfaces\\ipostulacionservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|d:\\jobswift\\jobswift\\backend\\backend\\controllers\\postulacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\postulacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|d:\\jobswift\\jobswift\\backend\\backend\\controllers\\candidatocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\candidatocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|d:\\jobswift\\jobswift\\backend\\backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55EA9344-7BDB-4239-B56F-B85FE55629DD}|Domain\\Domain.csproj|d:\\jobswift\\jobswift\\backend\\domain\\dto\\favoritodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55EA9344-7BDB-4239-B56F-B85FE55629DD}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\favoritodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|d:\\jobswift\\jobswift\\backend\\backend\\services\\favoritoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\services\\favoritoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,18 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|d:\\jobswift\\jobswift\\backend\\backend\\controllers\\favoritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\favoritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{55EA9344-7BDB-4239-B56F-B85FE55629DD}|Domain\\Domain.csproj|d:\\jobswift\\jobswift\\backend\\domain\\dto\\favoritodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{55EA9344-7BDB-4239-B56F-B85FE55629DD}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\favoritodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|d:\\jobswift\\jobswift\\backend\\backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|d:\\jobswift\\jobswift\\backend\\backend\\controllers\\candidatocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\candidatocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|d:\\jobswift\\jobswift\\backend\\backend\\controllers\\ofertatrabajocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,34 +70,8 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IFavoritoServices.cs",
-              "DocumentMoniker": "D:\\JobSwift\\Jobswift\\backend\\backend\\Services\\Interfaces\\IFavoritoServices.cs",
-              "RelativeDocumentMoniker": "backend\\Services\\Interfaces\\IFavoritoServices.cs",
-              "ToolTip": "D:\\JobSwift\\Jobswift\\backend\\backend\\Services\\Interfaces\\IFavoritoServices.cs*",
-              "RelativeToolTip": "backend\\Services\\Interfaces\\IFavoritoServices.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T23:46:07.033Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FavoritoDTO.cs",
-              "DocumentMoniker": "D:\\JobSwift\\Jobswift\\backend\\Domain\\DTO\\FavoritoDTO.cs",
-              "RelativeDocumentMoniker": "Domain\\DTO\\FavoritoDTO.cs",
-              "ToolTip": "D:\\JobSwift\\Jobswift\\backend\\Domain\\DTO\\FavoritoDTO.cs",
-              "RelativeToolTip": "Domain\\DTO\\FavoritoDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T23:44:45.833Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
@@ -97,24 +99,141 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\JobSwift\\Jobswift\\backend\\backend\\Program.cs",
+              "RelativeDocumentMoniker": "backend\\Program.cs",
+              "ToolTip": "D:\\JobSwift\\Jobswift\\backend\\backend\\Program.cs*",
+              "RelativeToolTip": "backend\\Program.cs*",
+              "ViewState": "AQIAABoAAACAZmZmZmYUwE0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T01:26:02.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\JobSwift\\Jobswift\\backend\\backend\\Context\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "backend\\Context\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\JobSwift\\Jobswift\\backend\\backend\\Context\\ApplicationDbContext.cs",
+              "RelativeToolTip": "backend\\Context\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAFUAAACgAAAAAAAhwG4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T01:14:12.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PostulacionController.cs",
+              "DocumentMoniker": "D:\\JobSwift\\Jobswift\\backend\\backend\\Controllers\\PostulacionController.cs",
+              "RelativeDocumentMoniker": "backend\\Controllers\\PostulacionController.cs",
+              "ToolTip": "D:\\JobSwift\\Jobswift\\backend\\backend\\Controllers\\PostulacionController.cs",
+              "RelativeToolTip": "backend\\Controllers\\PostulacionController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFIAAABdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T01:12:49.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PostulacionResponsive.cs",
+              "DocumentMoniker": "D:\\JobSwift\\Jobswift\\backend\\Domain\\DTO\\PostulacionResponsive.cs",
+              "RelativeDocumentMoniker": "Domain\\DTO\\PostulacionResponsive.cs",
+              "ToolTip": "D:\\JobSwift\\Jobswift\\backend\\Domain\\DTO\\PostulacionResponsive.cs",
+              "RelativeToolTip": "Domain\\DTO\\PostulacionResponsive.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T01:07:26.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Postulacion.cs",
+              "DocumentMoniker": "D:\\JobSwift\\Jobswift\\backend\\Domain\\Entities\\Postulacion.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Postulacion.cs",
+              "ToolTip": "D:\\JobSwift\\Jobswift\\backend\\Domain\\Entities\\Postulacion.cs",
+              "RelativeToolTip": "Domain\\Entities\\Postulacion.cs",
+              "ViewState": "AQIAAAQAAACANjMzMzMtwBsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T01:06:20.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PostulacionServices.cs",
+              "DocumentMoniker": "D:\\JobSwift\\Jobswift\\backend\\Backend\\Services\\PostulacionServices.cs",
+              "RelativeDocumentMoniker": "Backend\\Services\\PostulacionServices.cs",
+              "ToolTip": "D:\\JobSwift\\Jobswift\\backend\\Backend\\Services\\PostulacionServices.cs",
+              "RelativeToolTip": "Backend\\Services\\PostulacionServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T00:59:20.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IPostulacionServices.cs",
+              "DocumentMoniker": "D:\\JobSwift\\Jobswift\\backend\\Backend\\Services\\Interfaces\\IPostulacionServices.cs",
+              "RelativeDocumentMoniker": "Backend\\Services\\Interfaces\\IPostulacionServices.cs",
+              "ToolTip": "D:\\JobSwift\\Jobswift\\backend\\Backend\\Services\\Interfaces\\IPostulacionServices.cs",
+              "RelativeToolTip": "Backend\\Services\\Interfaces\\IPostulacionServices.cs",
+              "ViewState": "AQIAAAAAAAAANDMzMzMLwBMAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T00:58:27.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IFavoritoServices.cs",
+              "DocumentMoniker": "D:\\JobSwift\\Jobswift\\backend\\backend\\Services\\Interfaces\\IFavoritoServices.cs",
+              "RelativeDocumentMoniker": "backend\\Services\\Interfaces\\IFavoritoServices.cs",
+              "ToolTip": "D:\\JobSwift\\Jobswift\\backend\\backend\\Services\\Interfaces\\IFavoritoServices.cs",
+              "RelativeToolTip": "backend\\Services\\Interfaces\\IFavoritoServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T23:46:07.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FavoritoDTO.cs",
+              "DocumentMoniker": "D:\\JobSwift\\Jobswift\\backend\\Domain\\DTO\\FavoritoDTO.cs",
+              "RelativeDocumentMoniker": "Domain\\DTO\\FavoritoDTO.cs",
+              "ToolTip": "D:\\JobSwift\\Jobswift\\backend\\Domain\\DTO\\FavoritoDTO.cs",
+              "RelativeToolTip": "Domain\\DTO\\FavoritoDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-18T23:44:45.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "FavoritoServices.cs",
               "DocumentMoniker": "D:\\JobSwift\\Jobswift\\backend\\backend\\Services\\FavoritoServices.cs",
               "RelativeDocumentMoniker": "backend\\Services\\FavoritoServices.cs",
-              "ToolTip": "D:\\JobSwift\\Jobswift\\backend\\backend\\Services\\FavoritoServices.cs*",
-              "RelativeToolTip": "backend\\Services\\FavoritoServices.cs*",
-              "ViewState": "AQIAAAYAAAAAAAAAAACGvRQAAAAAAAAA",
+              "ToolTip": "D:\\JobSwift\\Jobswift\\backend\\backend\\Services\\FavoritoServices.cs",
+              "RelativeToolTip": "backend\\Services\\FavoritoServices.cs",
+              "ViewState": "AQIAAAwAAADANjMzMzM7wBQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-18T23:24:01.669Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
               "Title": "FavoritoController.cs",
               "DocumentMoniker": "D:\\JobSwift\\Jobswift\\backend\\backend\\Controllers\\FavoritoController.cs",
               "RelativeDocumentMoniker": "backend\\Controllers\\FavoritoController.cs",
-              "ToolTip": "D:\\JobSwift\\Jobswift\\backend\\backend\\Controllers\\FavoritoController.cs*",
-              "RelativeToolTip": "backend\\Controllers\\FavoritoController.cs*",
+              "ToolTip": "D:\\JobSwift\\Jobswift\\backend\\backend\\Controllers\\FavoritoController.cs",
+              "RelativeToolTip": "backend\\Controllers\\FavoritoController.cs",
               "ViewState": "AQIAAAoAAAAAAwAAAAAhwBMAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-17T01:58:35.254Z",
@@ -122,19 +241,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "CandidatoController.cs",
               "DocumentMoniker": "D:\\JobSwift\\Jobswift\\backend\\backend\\Controllers\\CandidatoController.cs",
               "RelativeDocumentMoniker": "backend\\Controllers\\CandidatoController.cs",
               "ToolTip": "D:\\JobSwift\\Jobswift\\backend\\backend\\Controllers\\CandidatoController.cs",
               "RelativeToolTip": "backend\\Controllers\\CandidatoController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAIAAAA",
+              "ViewState": "AQIAAHUAAAAAAAAAAAAcwJMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-10T06:23:59.571Z"
+              "WhenOpened": "2024-07-10T06:23:59.571Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "OfertaTrabajoController.cs",
               "DocumentMoniker": "D:\\JobSwift\\Jobswift\\backend\\backend\\Controllers\\OfertaTrabajoController.cs",
               "RelativeDocumentMoniker": "backend\\Controllers\\OfertaTrabajoController.cs",
@@ -146,7 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "D:\\JobSwift\\Jobswift\\backend\\backend\\appsettings.Development.json",
               "RelativeDocumentMoniker": "backend\\appsettings.Development.json",
@@ -159,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\JobSwift\\Jobswift\\backend\\backend\\appsettings.json",
               "RelativeDocumentMoniker": "backend\\appsettings.json",

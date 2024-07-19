@@ -1,7 +1,6 @@
 ﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System.Diagnostics.Contracts;
-
+using System;
 
 namespace back_end.Context
 {
@@ -9,17 +8,18 @@ namespace back_end.Context
     {
         public ApplicationDbContext(DbContextOptions options) : base(options) { }
 
-        //Modelos
+        // Modelos
         public DbSet<Candidato> Candidato { get; set; }
         public DbSet<Reclutador> Reclutador { get; set; }
         public DbSet<OfertaTrabajo> OfertaTrabajo { get; set; }
         public DbSet<Favoritos> Favoritos { get; set; }
         public DbSet<PerfilCandidato> PerfilCandidato { get; set; }
+        public DbSet<Postulacion> Postulacion { get; set; } // Agregado
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //Funcion Insertar Tabla Candidato
+            // Funcion Insertar Tabla Candidato
             modelBuilder.Entity<Candidato>().HasData(
-
                 new Candidato
                 {
                     IdCandidato = 1,
@@ -32,46 +32,45 @@ namespace back_end.Context
                     NTelefonico = "1234567890",
                     Token = "sometoken123"
                 }
-               
             );
 
             modelBuilder.Entity<Reclutador>().HasData(
-
-                 new Reclutador
-                 {
-                     IdReclutador = 1,
-                     NombreReclutador = "Jose Sebastian",
-                     ApellidosReclutador = "Rodriguez Lopez",
-                     sector = "Tecnologia de la informacion(TI)",
-                     Email = "Sebastian@example.com",
-                     constrasena = "password12345",
-                     NombreComercial = "Nubefast",
-                     RazonSocial = "Sistemas de la informacion",
-                     CodigoPostal = "sometoken123",
-                     Ciudad = "Cancún",
-                     NumeroTelefonico = "9988351623",
-                     RFC = "TII190214ABC",
-                     Token = "sometoken1234"
-                 }
+                new Reclutador
+                {
+                    IdReclutador = 1,
+                    NombreReclutador = "Jose Sebastian",
+                    ApellidosReclutador = "Rodriguez Lopez",
+                    sector = "Tecnologia de la informacion(TI)",
+                    Email = "Sebastian@example.com",
+                    constrasena = "password12345",
+                    NombreComercial = "Nubefast",
+                    RazonSocial = "Sistemas de la informacion",
+                    CodigoPostal = "sometoken123",
+                    Ciudad = "Cancún",
+                    NumeroTelefonico = "9988351623",
+                    RFC = "TII190214ABC",
+                    Token = "sometoken1234"
+                }
             );
 
             modelBuilder.Entity<OfertaTrabajo>().HasData(
                 new OfertaTrabajo
                 {
                     IdOfertaTrabajo = 1,
-                    Titulo= "Desarrollador Backend",
-                    Urgente= false,
-                    Ubicacion= "Ciudad X",
-                    Descripcion= "Se busca desarrollador backend con experiencia en Node.js",
-                    Salario= "$3000 - $4000",
-                    Jornada= "Tiempo completo",
-                    Contrato= "Indefinido",
-                    Requerimientos= "Conocimientos avanzados en Node.js y MongoDB",
-                    Experiencia= "Al menos 3 años en desarrollo backend",
-                    Fecha_publicacion= DateTime.UtcNow,
+                    Titulo = "Desarrollador Backend",
+                    Urgente = false,
+                    Ubicacion = "Ciudad X",
+                    Descripcion = "Se busca desarrollador backend con experiencia en Node.js",
+                    Salario = "$3000 - $4000",
+                    Jornada = "Tiempo completo",
+                    Contrato = "Indefinido",
+                    Requerimientos = "Conocimientos avanzados en Node.js y MongoDB",
+                    Experiencia = "Al menos 3 años en desarrollo backend",
+                    Fecha_publicacion = DateTime.UtcNow,
                     Fk_IdReclutador = 1
                 }
             );
+
             modelBuilder.Entity<PerfilCandidato>().HasData(
                 new PerfilCandidato
                 {
@@ -86,17 +85,26 @@ namespace back_end.Context
                 }
             );
 
-
             modelBuilder.Entity<Favoritos>().HasData(
-               new Favoritos
-               {
-                  IdFavoritos = 1,
-                  Fk_IdCandidato= 1,
-                  Fk_IdOfertaTrabajo = 1
-               }
-           );
+                new Favoritos
+                {
+                    IdFavoritos = 1,
+                    Fk_IdCandidato = 1,
+                    Fk_IdOfertaTrabajo = 1
+                }
+            );
 
+            // Agregado: Insertar datos en la tabla Postulacion
+            modelBuilder.Entity<Postulacion>().HasData(
+                new Postulacion
+                {
+                    IdPostulacion = 1,
+                    Fk_Candidato = 1,
+                    Fk_IdOfertaTrabajo = 1,
+                    Fk_IdReclutador = 1,
+                    Status = 1 // Ejemplo de estado
+                }
+            );
         }
     }
-
 }

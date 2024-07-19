@@ -1,8 +1,8 @@
 using back_end.Context;
 using back_end.Services;
 using back_end.Services.Interfaces;
-using Backend.Services;
 using Backend.Services.Interfaces;
+using Backend.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -22,11 +22,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 // Register services
 builder.Services.AddTransient<ICandidatoServices, CandidatoServices>();
 builder.Services.AddTransient<IValidarTokenServices, ValidarTokenServices>();
-builder.Services.AddTransient<IFavoritoServices, FavoritoServices>(); 
-builder.Services.AddTransient<IOfertaTrabajoServices, OfertaTrabajoServices>(); 
-builder.Services.AddTransient<IPerfilCandidatoServices, PerfilCandidatoServices>(); 
+builder.Services.AddTransient<IFavoritoServices, FavoritoServices>();
+builder.Services.AddTransient<IOfertaTrabajoServices, OfertaTrabajoServices>();
+builder.Services.AddTransient<IPerfilCandidatoServices, PerfilCandidatoServices>();
 builder.Services.AddTransient<IReclutadorServices, ReclutadorServices>();
-
+builder.Services.AddTransient<IPostulacionServices, PostulacionServices>(); // Añade este registro
 
 // CORS 
 builder.Services.AddCors(options =>
