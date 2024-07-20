@@ -8,7 +8,12 @@ interface Postulacion {
     idPostulacion: number;
     fk_IdOfertaTrabajo: number;
     status: number;
-    // Otros campos según tu API
+    fechaPublicacion: string;
+    descripcion: string;
+    experiencia: string;
+    contrato: string;
+    salario: number;
+    titulo: string;
 }
 
 const MisPostulaciones = () => {
@@ -23,7 +28,7 @@ const MisPostulaciones = () => {
     const fetchPostulaciones = async () => {
         try {
             const token = await getAccessToken();
-            const response = await axios.get(`https://localhost:7151/Favorito`, {
+            const response = await axios.get(`https://localhost:7151/Postulacion`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -52,8 +57,13 @@ const MisPostulaciones = () => {
                             sx={{ p: 2, bgcolor: '#f0f0f0', borderRadius: 1, cursor: 'pointer' }}
                             onClick={() => handlePostulacionClick(postulacion.fk_IdOfertaTrabajo)}
                         >
-                            <Typography variant="h6">{`Oferta de trabajo ${postulacion.fk_IdOfertaTrabajo}`}</Typography>
+                            <Typography variant="h6">{postulacion.titulo}</Typography>
                             <Typography variant="body1">{`Estado: ${postulacion.status === 0 ? 'Pendiente' : 'Aceptado'}`}</Typography>
+                            <Typography variant="body2">{`Publicado: ${new Date(postulacion.fechaPublicacion).toLocaleDateString()}`}</Typography>
+                            <Typography variant="body2">{`Descripción: ${postulacion.descripcion}`}</Typography>
+                            <Typography variant="body2">{`Experiencia: ${postulacion.experiencia}`}</Typography>
+                            <Typography variant="body2">{`Contrato: ${postulacion.contrato}`}</Typography>
+                            <Typography variant="body2">{`Salario: $${postulacion.salario.toLocaleString()}`}</Typography>
                         </Box>
                     </Grid>
                 ))}

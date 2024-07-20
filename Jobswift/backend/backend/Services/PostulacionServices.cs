@@ -25,7 +25,7 @@ namespace back_end.Services
             {
                 using (var connection = _context.Database.GetDbConnection())
                 {
-                    var query = "EXEC spPostulacion";
+                    var query = "EXEC spPostulacionCandidatos";
                     var postulaciones = await connection.QueryAsync<PostulacionDTO>(query);
                     return new Response<List<PostulacionDTO>>(postulaciones.AsList());
                 }

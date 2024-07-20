@@ -11,9 +11,13 @@ namespace Domain.DTO
     public class PostulacionDTO
     {
         public int IdPostulacion { get; set; }
+        public int Fk_IdOfertaTrabajo { get; set; }
         public int Status { get; set; }
-        public string NombreCandidato { get; set; }
-        public string NombreOfertaTrabajo { get; set; }
-        public string NombreReclutador { get; set; }
+        public DateTime FechaPublicacion { get; set; }
+        public string Descripcion { get; set; }
+        public string Experiencia { get; set; } // Cambiado a string
+        public string Contrato { get; set; }
+        public string Salario { get; set; }
+        public string Titulo { get; set; }
     }
 }
