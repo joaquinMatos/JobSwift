@@ -26,7 +26,8 @@ builder.Services.AddTransient<IFavoritoServices, FavoritoServices>();
 builder.Services.AddTransient<IOfertaTrabajoServices, OfertaTrabajoServices>();
 builder.Services.AddTransient<IPerfilCandidatoServices, PerfilCandidatoServices>();
 builder.Services.AddTransient<IReclutadorServices, ReclutadorServices>();
-builder.Services.AddTransient<IPostulacionServices, PostulacionServices>(); // Añade este registro
+builder.Services.AddTransient<IPostulacionServices, PostulacionServices>();
+builder.Services.AddTransient<IPostulacionCandidatosServices, PostulacionCandidatosServices>(); // Añadido
 
 // CORS 
 builder.Services.AddCors(options =>

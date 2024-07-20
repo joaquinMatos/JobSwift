@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using Domain.DTO;
+using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -6,7 +7,7 @@ namespace back_end.Context
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions options) : base(options) { }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
         // Modelos
         public DbSet<Candidato> Candidato { get; set; }
@@ -14,11 +15,12 @@ namespace back_end.Context
         public DbSet<OfertaTrabajo> OfertaTrabajo { get; set; }
         public DbSet<Favoritos> Favoritos { get; set; }
         public DbSet<PerfilCandidato> PerfilCandidato { get; set; }
-        public DbSet<Postulacion> Postulacion { get; set; } // Agregado
+        public DbSet<Postulacion> Postulacion { get; set; }
+        public DbSet<PostulacionCandidatos> PostulacionCandidatos { get; set; } // Agregado
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Funcion Insertar Tabla Candidato
+            // Función Insertar Tabla Candidato
             modelBuilder.Entity<Candidato>().HasData(
                 new Candidato
                 {
@@ -103,6 +105,20 @@ namespace back_end.Context
                     Fk_IdOfertaTrabajo = 1,
                     Fk_IdReclutador = 1,
                     Status = 1 // Ejemplo de estado
+                }
+            );
+
+            // Agregado: Configuración de la entidad PostulacionCandidatos
+            modelBuilder.Entity<PostulacionCandidatos>()
+                .HasKey(pc => pc.IdPostulacion_candidato); // Define la propiedad 'IdPostulacion_candidato' como clave primaria
+
+            modelBuilder.Entity<PostulacionCandidatos>().HasData(
+                new PostulacionCandidatos
+                {
+                    IdPostulacion_candidato = 1,
+                    Status = 1,
+                    Fk_Candidato = 1,
+                    Fk_IdReclutador = 1
                 }
             );
         }
