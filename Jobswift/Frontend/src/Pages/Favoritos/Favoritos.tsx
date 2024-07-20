@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { Typography, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, IconButton } from '@mui/material';
-import { Favorite as FavoriteIcon } from '@mui/icons-material';
+import { Typography, Grid, Card, CardContent, CardActions, Button, IconButton, Box } from '@mui/material';
+import { Favorite as FavoriteIcon, Star as StarIcon } from '@mui/icons-material';
 import axios from 'axios';
+import fav from '../../img/Fav.webp'
 
 interface Favorito {
     tituloOferta: string;
     ubicacionOferta: string;
     urgencia: boolean;
     fechaPublicacion: string;
+    empresa: string;
+    rating: number;
 }
 
 const Favoritos = () => {
@@ -28,41 +31,61 @@ const Favoritos = () => {
     };
 
     return (
-        <>
-            <Typography variant="h4" gutterBottom style={{ textAlign: 'center', marginTop: '20px' }}>
-                Favoritos
+        <Box sx={{ backgroundColor: '#f5f5f5', minHeight: '100vh', padding: '20px' }}>
+            <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: '20px' }}>
+                Mis Favoritos
             </Typography>
-            <Paper elevation={3} style={{ padding: '20px', maxWidth: '800px', margin: 'auto', marginTop: '20px', marginBottom: '50px' }}>
-                <TableContainer component={Paper}>
-                    <Table>
-                        <TableHead>
-                            <TableRow>
-                                <TableCell>Título de la Oferta</TableCell>
-                                <TableCell>Ubicación</TableCell>
-                                <TableCell>Urgente</TableCell>
-                                <TableCell>Fecha de Publicación</TableCell>
-                                <TableCell>Acciones</TableCell> {/* Nueva columna para acciones */}
-                            </TableRow>
-                        </TableHead>
-                        <TableBody>
-                            {favoritos.map((favorito, index) => (
-                                <TableRow key={index}>
-                                    <TableCell>{favorito.tituloOferta}</TableCell>
-                                    <TableCell>{favorito.ubicacionOferta}</TableCell>
-                                    <TableCell>{favorito.urgencia ? "Sí" : "No"}</TableCell>
-                                    <TableCell>{new Date(favorito.fechaPublicacion).toLocaleDateString()}</TableCell>
-                                    <TableCell>
-                                        <IconButton aria-label="favorito">
-                                            <FavoriteIcon color="error" />
-                                        </IconButton>
-                                    </TableCell>
-                                </TableRow>
-                            ))}
-                        </TableBody>
-                    </Table>
-                </TableContainer>
-            </Paper>
-        </>
+            <Grid container spacing={3} justifyContent="center">
+                {favoritos.map((favorito, index) => (
+                    <Grid item key={index} xs={12} md={8}>
+                        <Card sx={{ borderRadius: '15px', backgroundColor: 'white', marginBottom: '10px' }}>
+                            <CardContent>
+                                <Typography variant="h6" component="div">
+                                    {favorito.tituloOferta}
+                                </Typography>
+                                <Typography color="textSecondary">
+                                    {favorito.empresa} <StarIcon fontSize="small" sx={{ verticalAlign: 'middle' }} /> {favorito.rating}
+                                </Typography>
+                                <Typography color="textSecondary">
+                                    {favorito.ubicacionOferta}
+                                </Typography>
+                                {favorito.urgencia && (
+                                    <Typography color="error" sx={{ fontWeight: 'bold' }}>
+                                        ¡URGENTE!
+                                    </Typography>
+                                )}
+                                <Typography color="textSecondary">
+                                    Publicado el: {new Date(favorito.fechaPublicacion).toLocaleDateString()}
+                                </Typography>
+                            </CardContent>
+                            <CardActions sx={{ justifyContent: 'space-between' }}>
+                                <Button variant="contained" color="primary">
+                                    Postular
+                                </Button>
+                                <IconButton aria-label="favorito">
+                                    <FavoriteIcon color="error" />
+                                </IconButton>
+                            </CardActions>
+                        </Card>
+                    </Grid>
+                ))}
+                <Grid item xs={12} md={4}>
+                    <Card sx={{ borderRadius: '15px', backgroundColor: 'white', textAlign: 'center', padding: '20px' }}>
+                        <CardContent>
+                            <img src={fav} alt="Search Jobs" style={{ maxWidth: '100%', marginBottom: '20px' }} />
+                            <Typography>
+                                Guarda con un <FavoriteIcon color="error" sx={{ verticalAlign: 'middle' }} /> las ofertas de empleo que más te interesan y postúlate cuando lo desees
+                            </Typography>
+                        </CardContent>
+                        <CardActions sx={{ justifyContent: 'center' }}>
+                            <Button variant="contained" color="primary">
+                                Buscar empleos
+                            </Button>
+                        </CardActions>
+                    </Card>
+                </Grid>
+            </Grid>
+        </Box>
     );
 };
 

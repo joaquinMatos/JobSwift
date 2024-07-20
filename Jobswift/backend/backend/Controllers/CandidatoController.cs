@@ -57,17 +57,18 @@ namespace back_end.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> ObtenerCandidato(int id)
         {
-            var result = await _candidatoServices.ObtenerCandidato(id);
+            var response = await _candidatoServices.ObtenerCandidato(id);
 
-            if (result.Success)
+            if (response.Success)
             {
-                return Ok(result.Result);
+                return Ok(response.Result);
             }
             else
             {
-                return NotFound(result.Message);
+                return BadRequest(response.Message);
             }
         }
+
 
         [HttpPost]
         public async Task<IActionResult> Crear([FromBody] CandidatoResponsive request)
@@ -87,6 +88,19 @@ namespace back_end.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> ActualizarCandidato(int id, [FromBody] CandidatoResponsive request)
         {
+            // Obtener la información actual del candidato
+            var candidatoExistenteResponse = await _candidatoServices.ObtenerCandidato(id);
+            if (!candidatoExistenteResponse.Success)
+            {
+                return BadRequest(candidatoExistenteResponse.Message);
+            }
+
+            // Mostrar la información actual del candidato para que el usuario pueda modificarla
+            var candidatoExistente = candidatoExistenteResponse.Result;
+
+            // Aquí puedes incluir lógica para visualizar la información y permitir modificaciones
+
+            // Actualizar solo los campos proporcionados en la solicitud
             var response = await _candidatoServices.ActualizarCandidato(id, request);
 
             if (response.Success)
@@ -98,6 +112,7 @@ namespace back_end.Controllers
                 return BadRequest(response.Message);
             }
         }
+
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> EliminarCandidato(int id)

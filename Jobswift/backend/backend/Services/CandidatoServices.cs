@@ -53,6 +53,7 @@ namespace back_end.Services
             }
         }
 
+
         public async Task<Response<Candidato>> CrearCandidato(CandidatoResponsive request)
         {
             try
@@ -90,14 +91,39 @@ namespace back_end.Services
                     return new Response<int>("Candidato no encontrado");
                 }
 
-                candidato.NombreCompleto = request.NombreCompleto;
-                candidato.Apellidos = request.Apellidos;
-                candidato.Email = request.Email;
-                candidato.Contrasena = request.Contrasena;
-                candidato.CodigoP = request.CodigoP;
-                candidato.Ciudad = request.Ciudad;
-                candidato.NTelefonico = request.NTelefonico;
-                candidato.Token = request.Token;
+                // Solo actualiza los campos que no sean null
+                if (!string.IsNullOrEmpty(request.NombreCompleto))
+                {
+                    candidato.NombreCompleto = request.NombreCompleto;
+                }
+                if (!string.IsNullOrEmpty(request.Apellidos))
+                {
+                    candidato.Apellidos = request.Apellidos;
+                }
+                if (!string.IsNullOrEmpty(request.Email))
+                {
+                    candidato.Email = request.Email;
+                }
+                if (!string.IsNullOrEmpty(request.Contrasena))
+                {
+                    candidato.Contrasena = request.Contrasena;
+                }
+                if (!string.IsNullOrEmpty(request.CodigoP))
+                {
+                    candidato.CodigoP = request.CodigoP;
+                }
+                if (!string.IsNullOrEmpty(request.Ciudad))
+                {
+                    candidato.Ciudad = request.Ciudad;
+                }
+                if (!string.IsNullOrEmpty(request.NTelefonico))
+                {
+                    candidato.NTelefonico = request.NTelefonico;
+                }
+                if (!string.IsNullOrEmpty(request.Token))
+                {
+                    candidato.Token = request.Token;
+                }
 
                 _context.Candidato.Update(candidato);
                 await _context.SaveChangesAsync();
@@ -109,6 +135,8 @@ namespace back_end.Services
                 throw new Exception("Ocurrió un error al actualizar el candidato: " + ex.Message);
             }
         }
+
+
 
         public async Task<Response<int>> EliminarCandidato(int id)
         {

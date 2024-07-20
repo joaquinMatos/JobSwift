@@ -35,7 +35,7 @@ namespace back_end.Services
         {
             try
             {
-                PerfilCandidato perfil = await _context.PerfilCandidato.FirstOrDefaultAsync(x => x.IdPerfilCandidato == id);
+                PerfilCandidato perfil = await _context.PerfilCandidato.FirstOrDefaultAsync(x => x.Fk_Candidato == id);
                 if (perfil == null)
                 {
                     return new Response<PerfilCandidato>("Perfil de candidato no encontrado");

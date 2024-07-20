@@ -15,7 +15,7 @@ const Hamburguesa: React.FC<HamburguesaProps> = ({ open, toggleDrawer, data }) =
     const navigate = useNavigate();
 
     const handleNavigateConfiguracion = () => {
-        navigate('/configuracion');
+        navigate('/Actualiza-candidato');
         toggleDrawer();
     }
 
@@ -80,12 +80,12 @@ const Hamburguesa: React.FC<HamburguesaProps> = ({ open, toggleDrawer, data }) =
                     </IconButton>
                 </Box>
                 <List>
-                  {/*   <ListItem button onClick={handleNavigateConfiguracion}>
+                  <ListItem button onClick={handleNavigateConfiguracion}>
                         <ListItemIcon>
                             <Settings />
                         </ListItemIcon>
                         <ListItemText primary="Configuración" />
-                    </ListItem> */}
+                    </ListItem>
                     {/* <ListItem button onClick={handleNavigateMiCV}>
                         <ListItemIcon>
                             <Description />
