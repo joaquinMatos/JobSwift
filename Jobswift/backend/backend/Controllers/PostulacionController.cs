@@ -24,29 +24,15 @@ namespace back_end.Controllers
         [HttpGet]
         public async Task<IActionResult> ObtenerLista()
         {
-            // Lógica para validar token
-            var identity = HttpContext.User.Identity as ClaimsIdentity;
-
-            if (identity == null)
-            {
-                return Unauthorized(new
-                {
-                    success = false,
-                    message = "Token no válido",
-                    result = ""
-                });
-            }
-
-            var rtoken = await _validarTokenServices.ValidarToken(identity);
-
-            if (!rtoken.success)
-            {
-                return Unauthorized(rtoken);
-            }
-
-            // Fin validación
             var result = await _postulacionServices.ObtenerPostulaciones();
-            return Ok(result);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            else
+            {
+                return BadRequest(result.Message);
+            }
         }
 
         [HttpGet("{id}")]

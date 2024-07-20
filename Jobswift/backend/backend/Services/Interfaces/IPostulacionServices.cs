@@ -8,7 +8,7 @@ namespace back_end.Services.Interfaces
     public interface IPostulacionServices
     {
         // Método para obtener una lista de todas las postulaciones
-        Task<Response<List<Postulacion>>> ObtenerPostulaciones();
+        Task<Response<List<PostulacionDTO>>> ObtenerPostulaciones();
 
         // Método para obtener una postulación por ID
         Task<Response<Postulacion>> ObtenerPostulacion(int id);

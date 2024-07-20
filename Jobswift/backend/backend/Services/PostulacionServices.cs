@@ -1,5 +1,6 @@
 using back_end.Context;
 using back_end.Services.Interfaces;
+using Dapper;
 using Domain.DTO;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -18,41 +19,30 @@ namespace back_end.Services
             _context = context;
         }
 
-        public async Task<Response<List<Postulacion>>> ObtenerPostulaciones()
+        public async Task<Response<List<PostulacionDTO>>> ObtenerPostulaciones()
         {
             try
             {
-                var postulaciones = await _context.Postulacion
-                    .Include(p => p.Candidato) // Incluir datos relacionados si es necesario
-                    .Include(p => p.OfertaTrabajo)
-                    .Include(p => p.Reclutador)
-                    .ToListAsync();
-
-                var response = postulaciones.ConvertAll(p => new Postulacion
+                using (var connection = _context.Database.GetDbConnection())
                 {
-                    IdPostulacion = p.IdPostulacion,
-                    Fk_Candidato = p.Fk_Candidato,
-                    Fk_IdOfertaTrabajo = p.Fk_IdOfertaTrabajo,
-                    Fk_IdReclutador = p.Fk_IdReclutador,
-                    Status = p.Status
-                });
-
-                return new Response<List<Postulacion>>(response);
+                    var query = "EXEC spPostulacion";
+                    var postulaciones = await connection.QueryAsync<PostulacionDTO>(query);
+                    return new Response<List<PostulacionDTO>>(postulaciones.AsList());
+                }
             }
             catch (Exception ex)
             {
-                throw new Exception("Ocurrió un error al obtener las postulaciones: " + ex.Message);
+                throw new Exception("Ocurrió un error al obtener los detalles de las postulaciones: " + ex.Message);
             }
         }
+
 
         public async Task<Response<Postulacion>> ObtenerPostulacion(int id)
         {
             try
             {
                 var postulacion = await _context.Postulacion
-                    .Include(p => p.Candidato)
-                    .Include(p => p.OfertaTrabajo)
-                    .Include(p => p.Reclutador)
+                 
                     .FirstOrDefaultAsync(p => p.IdPostulacion == id);
 
                 if (postulacion == null)
