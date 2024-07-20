@@ -15,6 +15,7 @@ import ActualizarCandidato from '../Pages/Perfil/Configuracion';
 import BienvenidoReclutador from '../Pages/Reclutador/vistas';
 import LoginComponent from '../Pages/authentication/Login';
 import { GetUsernameFromToken } from '../utils/Information'; 
+import MenuReclutador from '../components/MenuReclutador';
 
 const AppRouter = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,6 +32,7 @@ const AppRouter = () => {
   };
 
   const shouldShowMenu = location.pathname === '/dashboard' || location.pathname === '/MisPostulaciones' || location.pathname === '/favoritos' || location.pathname === '/perfil-candidato' || location.pathname === '/Actualiza-candidato';
+  const shouldShowMenu2 = location.pathname === '/BienvenidoReclutador';
 
   return (
     <>
@@ -41,6 +43,14 @@ const AppRouter = () => {
           </IconButton>
         )}
         {shouldShowMenu && <Hamburguesa open={menuOpen} toggleDrawer={toggleDrawer} data={userData || 'Default User'} />} {/* Proporciona un valor por defecto */}
+      </Box>
+      <Box>
+        {shouldShowMenu2 && (
+          <IconButton onClick={toggleDrawer}>
+            <MenuIcon />
+          </IconButton>
+        )}
+        {shouldShowMenu2 && <MenuReclutador open={menuOpen} toggleDrawer={toggleDrawer} data={userData || 'Default User'} />} {/* Proporciona un valor por defecto */}
       </Box>
       <Routes>
         <Route path="/" element={<Landing />} />
@@ -54,6 +64,7 @@ const AppRouter = () => {
           <Route path="/MisPostulaciones" element={<MisPostulaciones />} /> 
           <Route path="/Reclutador-home" element={<BienvenidoReclutador />} /> 
           <Route path="/Actualiza-candidato" element={<ActualizarCandidato />} />
+          <Route path="/BienvenidoReclutador" element={<BienvenidoReclutador />} />
         </Route>
       </Routes>
     </>

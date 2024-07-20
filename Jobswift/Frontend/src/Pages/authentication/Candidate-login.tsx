@@ -10,6 +10,7 @@ import { useAuth } from "../../context/AuthLogin";
 import { Navigate, useNavigate } from "react-router-dom";
 import LoandingProgressBars from "../../components/Loanding";
 import axios from "axios";
+import {jwtDecode} from "jwt-decode";
 import { AuthResponse } from "../../interface/interface";
 
 const API_URL = "https://localhost:7151";
@@ -24,8 +25,17 @@ const Login = () => {
     const auth = useAuth();
     const navigate = useNavigate();
 
-    if (auth.isAuthenticated) {
-        return <Navigate to="/dashboard" />;
+    if (auth.isAuthenticated && auth.user) {
+        // Decodificar el token para obtener el rol del usuario
+        const decodedToken: any = jwtDecode(auth.user.body.accessToken);
+        const userRole = decodedToken.rol;
+
+        // Redirigir al usuario según su rol
+        if (userRole === "Reclutador") {
+            return <Navigate to="/BienvenidoReclutador" />;
+        } else {
+            return <Navigate to="/dashboard" />;
+        }
     }
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -35,8 +45,6 @@ const Login = () => {
             // Petición login API
             const response = await axios.post(`${API_URL}/Login/login`, { Email: email, Constrasena: password });
             const { result: token } = response.data;
-            // Token de autenticación y para cualquier petición de API
-            console.log(token);
 
             // Prepara el objeto userData para la función saveUser
             const userData: AuthResponse = {
@@ -45,9 +53,19 @@ const Login = () => {
                 },
             };
 
-            auth.saveUser(userData);
-            navigate("/dashboard");
+            // Decodificar el token para obtener el rol del usuario
+            const decodedToken: any = jwtDecode(token);
+            const userRole = decodedToken.rol;
 
+            // Guardar el usuario en el contexto de autenticación
+            auth.saveUser(userData);
+
+            // Redirigir al usuario según su rol
+            if (userRole === "Reclutador") {
+                navigate("/BienvenidoReclutador");
+            } else {
+                navigate("/dashboard");
+            }
         } catch {
             setAlertError(<Alert severity="error"> Error al Iniciar Sesión </Alert>);
             setLoading(false);
