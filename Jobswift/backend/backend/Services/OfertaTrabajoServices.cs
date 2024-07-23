@@ -35,7 +35,7 @@ namespace back_end.Services
         {
             try
             {
-                OfertaTrabajo oferta = await _context.OfertaTrabajo.FirstOrDefaultAsync(x => x.IdOfertaTrabajo == id);
+                OfertaTrabajo oferta = await _context.OfertaTrabajo.FirstOrDefaultAsync(x => x.Fk_IdReclutador == id);
                 if (oferta == null)
                 {
                     return new Response<OfertaTrabajo>("Oferta de trabajo no encontrada");

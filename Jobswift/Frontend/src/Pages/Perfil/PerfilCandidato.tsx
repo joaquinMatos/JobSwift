@@ -5,11 +5,6 @@ import { Box, Button, Card, Grid, Typography, Avatar, CircularProgress, IconButt
 import UploadFileIcon from '@mui/icons-material/UploadFile';
 import EditIcon from '@mui/icons-material/Edit';
 
-interface DecodedToken {
-  id: number;
-  usuario: string;
-}
-
 interface PerfilCandidato {
   idPerfilCandidato: number;
   fotoCandidato: string;
@@ -19,6 +14,11 @@ interface PerfilCandidato {
   habilidades: string;
   curriculumPerfil: string;
   fk_Candidato: number;
+}
+
+interface DecodedToken {
+  id: number;
+  usuario: string;
 }
 
 const GetUserIdFromToken = (): number | null => {

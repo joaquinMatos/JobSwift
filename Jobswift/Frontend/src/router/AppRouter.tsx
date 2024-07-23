@@ -16,6 +16,8 @@ import BienvenidoReclutador from '../Pages/Reclutador/vistas';
 import LoginComponent from '../Pages/authentication/Login';
 import { GetUsernameFromToken } from '../utils/Information'; 
 import MenuReclutador from '../components/MenuReclutador';
+import JobOffers from '../Pages/Reclutador/Oferta-trabajo';
+import CandidateSearch from '../Pages/Reclutador/Search-Reclutador';
 
 const AppRouter = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,7 +34,7 @@ const AppRouter = () => {
   };
 
   const shouldShowMenu = location.pathname === '/dashboard' || location.pathname === '/MisPostulaciones' || location.pathname === '/favoritos' || location.pathname === '/perfil-candidato' || location.pathname === '/Actualiza-candidato';
-  const shouldShowMenu2 = location.pathname === '/BienvenidoReclutador';
+  const shouldShowMenu2 = location.pathname === '/BienvenidoReclutador' || location.pathname === '/JobOffers'|| location.pathname === '/CandidateSearch';
 
   return (
     <>
@@ -64,7 +66,9 @@ const AppRouter = () => {
           <Route path="/MisPostulaciones" element={<MisPostulaciones />} /> 
           <Route path="/Reclutador-home" element={<BienvenidoReclutador />} /> 
           <Route path="/Actualiza-candidato" element={<ActualizarCandidato />} />
-          <Route path="/BienvenidoReclutador" element={<BienvenidoReclutador />} />
+          <Route path="/BienvenidoReclutador" element={<BienvenidoReclutador />} /> 
+          <Route path="/JobOffers" element={<JobOffers />} />  
+          <Route path="/CandidateSearch" element={<CandidateSearch />} /> 
         </Route>
       </Routes>
     </>

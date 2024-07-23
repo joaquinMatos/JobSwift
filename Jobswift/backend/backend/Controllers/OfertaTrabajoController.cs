@@ -26,25 +26,6 @@ namespace back_end.Controllers
         public async Task<IActionResult> ObtenerLista()
         {
 
-            // lógica para validar
-            var identity = HttpContext.User.Identity as ClaimsIdentity;
-            if (identity == null)
-            {
-                return Unauthorized(new
-                {
-                    success = false,
-                    message = "Token no válido",
-                    result = ""
-                });
-            }
-
-            var rtoken = await _validarTokenServices.ValidarToken(identity);
-            if (!rtoken.success)
-            {
-                return Unauthorized(rtoken);
-            }
-            // fin validación
-
             var result = await _ofertaTrabajoServices.ObtenerOfertasTrabajo();
             return Ok(result);
 
@@ -95,24 +76,6 @@ namespace back_end.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> EliminarOfertaTrabajo(int id)
         {
-            // lógica para validar
-            var identity = HttpContext.User.Identity as ClaimsIdentity;
-            if (identity == null)
-            {
-                return Unauthorized(new
-                {
-                    success = false,
-                    message = "Token no válido",
-                    result = ""
-                });
-            }
-
-            var rtoken = await _validarTokenServices.ValidarToken(identity);
-            if (!rtoken.success)
-            {
-                return Unauthorized(rtoken);
-            }
-            // fin validación
 
             var response = await _ofertaTrabajoServices.EliminarOfertaTrabajo(id);
             if (response.Success)
