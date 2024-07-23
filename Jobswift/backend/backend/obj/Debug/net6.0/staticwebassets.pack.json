@@ -1,6 +1,7 @@
 {
   "Files": [
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\CV.pdf",
       "PackagePath": "staticwebassets\\uploads\\CV.pdf"
     },
@@ -18,6 +19,25 @@
     },
     {
       "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\img2.png",
+=======
+      "Id": "D:\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\CV.pdf",
+      "PackagePath": "staticwebassets\\uploads\\CV.pdf"
+    },
+    {
+      "Id": "D:\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\Larry_Basto_Diaz CV.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Larry_Basto_Diaz CV.pdf"
+    },
+    {
+      "Id": "D:\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\chi.pdf",
+      "PackagePath": "staticwebassets\\uploads\\chi.pdf"
+    },
+    {
+      "Id": "D:\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\img.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\img.jpeg"
+    },
+    {
+      "Id": "D:\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\img2.png",
+>>>>>>> 60efec27b45020e96cb793f5689fe34cf522f321
       "PackagePath": "staticwebassets\\uploads\\img2.png"
     },
     {
