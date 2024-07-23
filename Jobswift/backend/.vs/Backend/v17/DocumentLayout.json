@@ -1,8 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\",
+  "WorkspaceRootPath": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|c:\\users\\balam\\desktop\\aqui\\jobswift\\jobswift\\backend\\backend\\controllers\\ofertatrabajocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\ofertatrabajocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -25,6 +26,94 @@
     {
       "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|c:\\users\\balam\\desktop\\aqui\\jobswift\\jobswift\\backend\\backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+=======
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\backend\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55EA9344-7BDB-4239-B56F-B85FE55629DD}|Domain\\Domain.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55EA9344-7BDB-4239-B56F-B85FE55629DD}|Domain\\Domain.csproj|solutionrelative:domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55EA9344-7BDB-4239-B56F-B85FE55629DD}|Domain\\Domain.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{55EA9344-7BDB-4239-B56F-B85FE55629DD}|Domain\\Domain.csproj|solutionrelative:domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\backend\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\backend\\migrations\\20240618222135_example.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\migrations\\20240618222135_example.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\backend\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\backend\\backend.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\backend.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55EA9344-7BDB-4239-B56F-B85FE55629DD}|Domain\\Domain.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\domain\\dto\\postulaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55EA9344-7BDB-4239-B56F-B85FE55629DD}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\postulaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\backend\\services\\postulacionservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\services\\postulacionservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\backend\\controllers\\postulacioncandidatoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\postulacioncandidatoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\backend\\controllers\\postulacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\postulacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55EA9344-7BDB-4239-B56F-B85FE55629DD}|Domain\\Domain.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\domain\\entities\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55EA9344-7BDB-4239-B56F-B85FE55629DD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{55EA9344-7BDB-4239-B56F-B85FE55629DD}|Domain\\Domain.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\domain\\dto\\perfilcandidatoresponsive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55EA9344-7BDB-4239-B56F-B85FE55629DD}|Domain\\Domain.csproj|solutionrelative:domain\\dto\\perfilcandidatoresponsive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\backend\\controllers\\perfilcandidatocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\perfilcandidatocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\backend\\services\\perfilcandidatoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\services\\perfilcandidatoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\backend\\services\\interfaces\\iperfilcandidatoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\services\\interfaces\\iperfilcandidatoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\backend\\services\\interfaces\\ireclutadorservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\services\\interfaces\\ireclutadorservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\backend\\services\\candidatoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\services\\candidatoservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|c:\\users\\osmar\\onedrive\\escritorio\\jobswift\\jobswift\\backend\\backend\\controllers\\candidatocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A27E4134-D709-4FD9-BD2F-5FCBE5FB75B0}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\candidatocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 2479f29e6216020fb888700c54349b0a31f475de
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +123,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 3,
+=======
+          "SelectedChildIndex": 11,
+>>>>>>> 2479f29e6216020fb888700c54349b0a31f475de
           "Children": [
             {
               "$type": "Document",
@@ -137,6 +230,283 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+<<<<<<< HEAD
+=======
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "backend\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\WeatherForecast.cs",
+              "RelativeToolTip": "backend\\WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T22:41:43.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\appsettings.json",
+              "RelativeDocumentMoniker": "backend\\appsettings.json",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\appsettings.json",
+              "RelativeToolTip": "backend\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-21T22:41:36.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "backend\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "backend\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AQIAAGABAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T22:41:30.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Domain\\Class1.cs",
+              "RelativeDocumentMoniker": "Domain\\Class1.cs",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Domain\\Class1.cs",
+              "RelativeToolTip": "Domain\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T22:41:01.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Program.cs",
+              "RelativeDocumentMoniker": "backend\\Program.cs",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Program.cs",
+              "RelativeToolTip": "backend\\Program.cs",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAAUAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T00:40:57.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "backend\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\appsettings.Development.json*",
+              "RelativeToolTip": "backend\\appsettings.Development.json*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAB/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-20T19:59:32.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20240618222135_example.cs",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Migrations\\20240618222135_example.cs",
+              "RelativeDocumentMoniker": "backend\\Migrations\\20240618222135_example.cs",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Migrations\\20240618222135_example.cs",
+              "RelativeToolTip": "backend\\Migrations\\20240618222135_example.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T22:41:29.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Backend",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\Backend.csproj",
+              "RelativeDocumentMoniker": "Backend\\Backend.csproj",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\Backend.csproj",
+              "RelativeToolTip": "Backend\\Backend.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-21T22:41:14.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Domain.csproj",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj",
+              "RelativeDocumentMoniker": "Domain\\Domain.csproj",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj",
+              "RelativeToolTip": "Domain\\Domain.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-20T19:59:39.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PostulacionDTO.cs",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Domain\\DTO\\PostulacionDTO.cs",
+              "RelativeDocumentMoniker": "Domain\\DTO\\PostulacionDTO.cs",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Domain\\DTO\\PostulacionDTO.cs",
+              "RelativeToolTip": "Domain\\DTO\\PostulacionDTO.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAuwBMAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T19:49:17.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PostulacionController.cs",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Controllers\\PostulacionController.cs",
+              "RelativeDocumentMoniker": "backend\\Controllers\\PostulacionController.cs",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Controllers\\PostulacionController.cs",
+              "RelativeToolTip": "backend\\Controllers\\PostulacionController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T20:05:34.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Response.cs",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Domain\\Entities\\Response.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Response.cs",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Domain\\Entities\\Response.cs",
+              "RelativeToolTip": "Domain\\Entities\\Response.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T19:49:20.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Context\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "backend\\Context\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Context\\ApplicationDbContext.cs",
+              "RelativeToolTip": "backend\\Context\\ApplicationDbContext.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAwwGUAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T16:13:35.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PostulacionCandidatosController.cs",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Controllers\\PostulacionCandidatosController.cs",
+              "RelativeDocumentMoniker": "backend\\Controllers\\PostulacionCandidatosController.cs",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Controllers\\PostulacionCandidatosController.cs",
+              "RelativeToolTip": "backend\\Controllers\\PostulacionCandidatosController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T20:05:50.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PostulacionServices.cs",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Services\\PostulacionServices.cs",
+              "RelativeDocumentMoniker": "backend\\Services\\PostulacionServices.cs",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Services\\PostulacionServices.cs",
+              "RelativeToolTip": "backend\\Services\\PostulacionServices.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAzwBwAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T20:05:58.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PerfilCandidatoResponsive.cs",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Domain\\DTO\\PerfilCandidatoResponsive.cs",
+              "RelativeDocumentMoniker": "Domain\\DTO\\PerfilCandidatoResponsive.cs",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Domain\\DTO\\PerfilCandidatoResponsive.cs",
+              "RelativeToolTip": "Domain\\DTO\\PerfilCandidatoResponsive.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T19:16:46.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PerfilCandidatoController.cs",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Controllers\\PerfilCandidatoController.cs",
+              "RelativeDocumentMoniker": "backend\\Controllers\\PerfilCandidatoController.cs",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Controllers\\PerfilCandidatoController.cs",
+              "RelativeToolTip": "backend\\Controllers\\PerfilCandidatoController.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAAAEMAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T15:58:03.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "PerfilCandidatoServices.cs",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Services\\PerfilCandidatoServices.cs",
+              "RelativeDocumentMoniker": "backend\\Services\\PerfilCandidatoServices.cs",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Services\\PerfilCandidatoServices.cs",
+              "RelativeToolTip": "backend\\Services\\PerfilCandidatoServices.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAgwAsAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T15:58:12.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IPerfilCandidatoServices.cs",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Services\\Interfaces\\IPerfilCandidatoServices.cs",
+              "RelativeDocumentMoniker": "backend\\Services\\Interfaces\\IPerfilCandidatoServices.cs",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Services\\Interfaces\\IPerfilCandidatoServices.cs",
+              "RelativeToolTip": "backend\\Services\\Interfaces\\IPerfilCandidatoServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T16:47:04.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IReclutadorServices.cs",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Services\\Interfaces\\IReclutadorServices.cs",
+              "RelativeDocumentMoniker": "backend\\Services\\Interfaces\\IReclutadorServices.cs",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Services\\Interfaces\\IReclutadorServices.cs",
+              "RelativeToolTip": "backend\\Services\\Interfaces\\IReclutadorServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T19:02:09.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CandidatoServices.cs",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Services\\CandidatoServices.cs",
+              "RelativeDocumentMoniker": "backend\\Services\\CandidatoServices.cs",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Services\\CandidatoServices.cs",
+              "RelativeToolTip": "backend\\Services\\CandidatoServices.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAuwFMAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T15:40:12.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CandidatoController.cs",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Controllers\\CandidatoController.cs",
+              "RelativeDocumentMoniker": "backend\\Controllers\\CandidatoController.cs",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\Controllers\\CandidatoController.cs",
+              "RelativeToolTip": "backend\\Controllers\\CandidatoController.cs",
+              "ViewState": "AQIAAGcAAAAAAAAAAAAqwG8AAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T15:40:11.243Z"
+>>>>>>> 2479f29e6216020fb888700c54349b0a31f475de
             }
           ]
         },
