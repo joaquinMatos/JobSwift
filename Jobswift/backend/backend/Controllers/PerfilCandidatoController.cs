@@ -34,7 +34,7 @@ namespace back_end.Controllers
             var result = await _perfilCandidatoServices.ObtenerPerfilCandidato(id);
             if (result.Success)
             {
-                return Ok(result.Result); 
+                return Ok(result.Result);
             }
             else
             {
@@ -43,7 +43,7 @@ namespace back_end.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Crear([FromBody] PerfilCandidatoResponsive request)
+        public async Task<IActionResult> Crear([FromForm] ProfileUploadDTO request)
         {
             var result = await _perfilCandidatoServices.CrearPerfilCandidato(request);
             if (result.Success)
@@ -57,7 +57,7 @@ namespace back_end.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> ActualizarPerfilCandidato(int id, [FromBody] PerfilCandidatoResponsive request)
+        public async Task<IActionResult> ActualizarPerfilCandidato(int id, [FromForm] ProfileUploadDTO request)
         {
             var response = await _perfilCandidatoServices.ActualizarPerfilCandidato(id, request);
             if (response.Success)
@@ -99,7 +99,7 @@ namespace back_end.Controllers
                 {
                     success = true,
                     message = "El perfil de candidato se eliminó correctamente",
-                    result = response.Result 
+                    result = response.Result
                 });
             }
             else

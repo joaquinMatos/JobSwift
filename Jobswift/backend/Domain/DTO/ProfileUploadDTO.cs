@@ -1,22 +1,24 @@
-﻿using Domain.Entities;
+﻿using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Domain.DTO
 {
-    public class PerfilCandidatoResponsive
+
+    public class ProfileUploadDTO
     {
-        public string FotoCandidato { get; set; }
+        public IFormFile FotoCandidato { get; set; }
+        public IFormFile CurriculumPerfil { get; set; }
         public string Experiencia { get; set; }
         public string Formacion { get; set; }
         public string Idiomas { get; set; }
         public string Habilidades { get; set; }
-        public string CurriculumPerfil { get; set; }
         public int Fk_Candidato { get; set; }
-
     }
+
+
+
 }

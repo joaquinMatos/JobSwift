@@ -12,15 +12,14 @@ namespace Domain.Entities
     {
         [Key]
         public int IdPerfilCandidato { get; set; }
+
         public string FotoCandidato { get; set; }
         public string Experiencia { get; set; }
         public string Formacion { get; set; }
         public string Idiomas { get; set; }
         public string Habilidades { get; set; }
         public string CurriculumPerfil { get; set; }
-
-        [ForeignKey("PCandidatos")]
         public int Fk_Candidato { get; set; }
-        public Candidato PCandidatos { get; set; }
     }
+
 }
