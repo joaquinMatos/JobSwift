@@ -159,8 +159,8 @@ const JobOfferCard = ({ offer, setEditingJobOffer, setViewingApplications, setDe
       <Typography color="textSecondary">{offer.descripcion}</Typography>
     </CardContent>
     <Button onClick={() => setEditingJobOffer(offer)} variant="contained" color="primary">Edit</Button>
-    <Button onClick={() => setViewingApplications(offer)} variant="contained" color="secondary">View Applications</Button>
-    <Button onClick={() => setDeletingJobOffer(offer)} variant="contained" color="error">Delete</Button>
+    <Button onClick={() => setViewingApplications(offer)} variant="contained" color="secondary"> Postulados </Button>
+    <Button onClick={() => setDeletingJobOffer(offer)} variant="contained" color="error"> Delete </Button>
   </Card>
 );
 
