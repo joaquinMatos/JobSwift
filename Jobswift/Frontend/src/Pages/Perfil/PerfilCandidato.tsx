@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import {jwtDecode} from 'jwt-decode';
 import { Box, Button, Card, Grid, Typography, Avatar, CircularProgress, IconButton, TextField, Paper } from "@mui/material";
-import UploadFileIcon from '@mui/icons-material/UploadFile';
 import EditIcon from '@mui/icons-material/Edit';
+import AttachFileIcon from '@mui/icons-material/AttachFile';
 
 interface PerfilCandidato {
   idPerfilCandidato: number;
@@ -35,8 +35,11 @@ const ProfileCard = () => {
   const [data, setData] = useState<PerfilCandidato | null>(null);
   const [loading, setLoading] = useState(true);
   const [editing, setEditing] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [submitting, setSubmitting] = useState(false);
 
   const userId = GetUserIdFromToken();
 
@@ -45,6 +48,16 @@ const ProfileCard = () => {
       fetchPerfilCandidato(userId);
     }
   }, [userId]);
+
+  useEffect(() => {
+    if (selectedImage) {
+      const objectUrl = URL.createObjectURL(selectedImage);
+      setImagePreview(objectUrl);
+      return () => URL.revokeObjectURL(objectUrl);
+    } else {
+      setImagePreview(data?.fotoCandidato ? `https://localhost:7151/${data.fotoCandidato}` : null);
+    }
+  }, [selectedImage, data?.fotoCandidato]);
 
   const fetchPerfilCandidato = async (id: number) => {
     try {
@@ -68,22 +81,40 @@ const ProfileCard = () => {
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      setSelectedFile(e.target.files[0]);
+    if (e.target.files) {
+      const file = e.target.files[0];
+      if (file.type === 'application/pdf') {
+        setSelectedFile(file);
+      } else if (file.type.startsWith('image/')) {
+        setSelectedImage(file);
+      }
     }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (userId && data) {
+      setSubmitting(true);
       try {
         const formData = new FormData();
         formData.append('experiencia', data.experiencia);
         formData.append('formacion', data.formacion);
         formData.append('idiomas', data.idiomas);
         formData.append('habilidades', data.habilidades);
+        formData.append('fk_Candidato', userId.toString());
+
+        // Conditionally add image if selected or existing image
+        if (selectedImage) {
+          formData.append('fotoCandidato', selectedImage);
+        } else {
+          formData.append('fotoCandidato', data.fotoCandidato || '');
+        }
+
+        // Conditionally add file if selected or existing file
         if (selectedFile) {
-          formData.append('file', selectedFile);
+          formData.append('curriculumPerfil', selectedFile);
+        } else {
+          formData.append('curriculumPerfil', data.curriculumPerfil || '');
         }
 
         await axios.put(`https://localhost:7151/PerfilCandidato/${userId}`, formData, {
@@ -97,6 +128,8 @@ const ProfileCard = () => {
       } catch (error) {
         console.error('Error updating profile:', error);
         setError('Error updating profile');
+      } finally {
+        setSubmitting(false);
       }
     }
   };
@@ -106,7 +139,7 @@ const ProfileCard = () => {
   }
 
   if (error) {
-    return <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}><Typography>{error}</Typography></Box>;
+    return <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}><Typography color="error">{error}</Typography></Box>;
   }
 
   if (!data) {
@@ -122,7 +155,7 @@ const ProfileCard = () => {
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                 <Avatar
                   alt="Profile Picture"
-                  src={data.fotoCandidato}
+                  src={imagePreview || undefined}
                   sx={{ width: 80, height: 80, marginRight: 2 }}
                 />
                 <Box sx={{ flexGrow: 1 }}>
@@ -174,8 +207,33 @@ const ProfileCard = () => {
               </Box>
               {editing && (
                 <>
-                  <input type="file" onChange={handleFileChange} />
-                  <Button variant="contained" color="primary" type="submit">Guardar Cambios</Button>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={handleFileChange}
+                    style={{ display: 'none' }}
+                    id="image-upload"
+                  />
+                  <label htmlFor="image-upload">
+                    <Button variant="contained" component="span">
+                      Actualiza tu imagen
+                    </Button>
+                  </label>
+                  <input
+                    type="file"
+                    accept="application/pdf"
+                    onChange={handleFileChange}
+                    style={{ display: 'none' }}
+                    id="file-upload"
+                  />
+                  <label htmlFor="file-upload">
+                    <Button variant="contained" component="span">
+                      Actualiza tu CV
+                    </Button>
+                  </label>
+                  <Button variant="contained" color="primary" type="submit" disabled={submitting}>
+                    {submitting ? <CircularProgress size={24} /> : 'Guardar Cambios'}
+                  </Button>
                 </>
               )}
             </Card>
@@ -184,16 +242,12 @@ const ProfileCard = () => {
             <Paper sx={{ padding: '20px', borderRadius: '12px' }}>
               <Typography variant="h6" component="div" sx={{ mb: 2 }}>Documentos adjuntos</Typography>
               {data.curriculumPerfil && (
-                <Button
-                  variant="contained"
-                  startIcon={<UploadFileIcon />}
-                  sx={{ bgcolor: '#007AFF', color: '#FFFFFF' }}
-                  href={data.curriculumPerfil}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Ver Curriculum
-                </Button>
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                  <Typography sx={{ mr: 2 }}>CV Actual</Typography>
+                  <Button href={`https://localhost:7151/${data.curriculumPerfil}`} target="_blank" variant="contained">
+                    Descargar CV
+                  </Button>
+                </Box>
               )}
             </Paper>
           </Grid>
