@@ -1,4 +1,4 @@
-import { Alert, Box, Grid, Typography, useMediaQuery } from "@mui/material";
+import { Alert, Box, Grid, Typography, useMediaQuery, Button, IconButton } from "@mui/material";
 import { useState } from "react";
 import CustomButton from "../../components/ButtonLogin";
 import Facebook from "../../img/facebook.svg";
@@ -12,6 +12,7 @@ import LoandingProgressBars from "../../components/Loanding";
 import axios from "axios";
 import {jwtDecode} from "jwt-decode";
 import { AuthResponse } from "../../interface/interface";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';  // Importar el ícono de flecha
 
 const API_URL = "https://localhost:7151";
 
@@ -26,11 +27,9 @@ const Login = () => {
     const navigate = useNavigate();
 
     if (auth.isAuthenticated && auth.user) {
-        // Decodificar el token para obtener el rol del usuario
         const decodedToken: any = jwtDecode(auth.user.body.accessToken);
         const userRole = decodedToken.rol;
 
-        // Redirigir al usuario según su rol
         if (userRole === "Reclutador") {
             return <Navigate to="/BienvenidoReclutador" />;
         } else {
@@ -42,25 +41,20 @@ const Login = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            // Petición login API
             const response = await axios.post(`${API_URL}/Login/login`, { Email: email, Constrasena: password });
             const { result: token } = response.data;
 
-            // Prepara el objeto userData para la función saveUser
             const userData: AuthResponse = {
                 body: {
                     accessToken: token,
                 },
             };
 
-            // Decodificar el token para obtener el rol del usuario
             const decodedToken: any = jwtDecode(token);
             const userRole = decodedToken.rol;
 
-            // Guardar el usuario en el contexto de autenticación
             auth.saveUser(userData);
 
-            // Redirigir al usuario según su rol
             if (userRole === "Reclutador") {
                 navigate("/BienvenidoReclutador");
             } else {
@@ -93,6 +87,13 @@ const Login = () => {
                         height: '100vh',
                     }}
                 >
+                    <IconButton 
+                        color="primary" 
+                        onClick={() => navigate('/')}
+                        sx={{ alignSelf: 'flex-start', mb: 2 }}
+                    >
+                        <ArrowBackIcon />
+                    </IconButton>
                     <Typography variant="h4" color="black" sx={{ marginBottom: '20px', fontSize: { xs: '24px', md: '28px' }, fontWeight: '700', textAlign: 'center' }}>
                         ¡Bienvenido de vuelta!
                     </Typography>
@@ -142,7 +143,7 @@ const Login = () => {
                                     marginTop: '30px',
                                     borderRadius: '50px'
                                 }}>
-                                inicio sesión
+                                Iniciar sesión
                             </CustomButton>
                         </form>
                         <Typography sx={{ marginTop: '25px', textAlign: 'center' }}>
@@ -207,7 +208,7 @@ const Login = () => {
                 )}
             </Grid>
         </Box>
-    )
+    );
 }
 
 export default Login;
