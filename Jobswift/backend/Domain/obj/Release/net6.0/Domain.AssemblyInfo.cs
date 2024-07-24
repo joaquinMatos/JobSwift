@@ -16,10 +16,14 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60efec27b45020e96cb793f5689fe34cf522f321")]
 =======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dc460cd3109682a64449a4fbf36116a0e815eae2")]
 >>>>>>> 099978667426d3c164f2dd7f496aa65856a4edaf
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c9287bb4bb4b08ae5813d294546b89de21db483")]
+>>>>>>> 6a7df7fef097a82a3d1dd14eadfb3278ecfe1363
 =======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c9287bb4bb4b08ae5813d294546b89de21db483")]
 >>>>>>> 6a7df7fef097a82a3d1dd14eadfb3278ecfe1363
