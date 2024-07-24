@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Box, Grid, AppBar, Toolbar, InputBase, IconButton } from '@mui/material';
+import { Box, Grid, AppBar, Toolbar, InputBase, IconButton, MenuItem, Select, InputLabel, FormControl, TextField, SelectChangeEvent } from '@mui/material';
 import { Search as SearchIcon } from '@mui/icons-material';
 import ListaTrabajo from '../Pages/Dcandidate/ListaTrabajos';
 import Descripcion from '../Pages/Dcandidate/Descrpcion';
@@ -41,6 +41,8 @@ const Dashboard = () => {
     const [searchText, setSearchText] = useState<string>('');
     const [jobs, setJobs] = useState<Job[]>([]);
     const [searchResults, setSearchResults] = useState<Job[]>([]);
+    const [locationFilter, setLocationFilter] = useState<string>('');
+    const [experienceFilter, setExperienceFilter] = useState<string>('');
     const { getAccessToken } = useAuth();
     const [token, setToken] = useState<string | null>(null);
 
@@ -84,23 +86,38 @@ const Dashboard = () => {
 
     const debouncedSearch = useCallback(
         debounce((query: string) => {
-            if (query.trim() === '') {
-                setSearchResults(jobs); // Muestra todas las ofertas si el texto de búsqueda está vacío
-            } else {
-                const filteredJobs = jobs.filter(job =>
-                    job.titulo.toLowerCase().includes(query.toLowerCase())
-                );
-                setSearchResults(filteredJobs); // Actualiza los resultados de búsqueda con las ofertas filtradas
-            }
+            applyFilters(query, locationFilter, experienceFilter);
         }, 300),
-        [jobs]
+        [jobs, locationFilter, experienceFilter]
     );
+
+    const applyFilters = (query: string, location: string, experience: string) => {
+        let filteredJobs = jobs;
+
+        if (query.trim() !== '') {
+            filteredJobs = filteredJobs.filter(job =>
+                job.titulo.toLowerCase().includes(query.toLowerCase())
+            );
+        }
+
+        if (location.trim() !== '') {
+            filteredJobs = filteredJobs.filter(job =>
+                job.ubicacion.toLowerCase().includes(location.toLowerCase())
+            );
+        }
+
+        if (experience.trim() !== '') {
+            filteredJobs = filteredJobs.filter(job =>
+                job.experiencia.toLowerCase().includes(experience.toLowerCase())
+            );
+        }
+
+        setSearchResults(filteredJobs);
+    };
 
     // Solo ejecutar búsqueda si hay texto en el campo de búsqueda
     useEffect(() => {
-        if (searchText.trim() !== '') {
-            debouncedSearch(searchText);
-        }
+        debouncedSearch(searchText);
     }, [searchText, debouncedSearch]);
 
     const isSearchDisabled = searchText.trim() === ''; // Determina si el campo de búsqueda está vacío
@@ -110,9 +127,20 @@ const Dashboard = () => {
         navigate(`/dashboard`, { state: { jobId: job.idOfertaTrabajo } });
     };
 
+    const handleLocationFilterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setLocationFilter(e.target.value);
+        applyFilters(searchText, e.target.value, experienceFilter);
+    };
+
+    const handleExperienceFilterChange = (e: SelectChangeEvent<string>) => {
+        const value = e.target.value;
+        setExperienceFilter(value);
+        applyFilters(searchText, locationFilter, value);
+    };
+
     return (
         <Box sx={{ display: 'flex', height: '100vh', flexDirection: 'column' }}>
-            <AppBar position="static">
+            <AppBar position="static" sx={{ bgcolor: 'black' }}>
                 <Toolbar>
                     <Box sx={{ display: 'flex', alignItems: 'center', bgcolor: '#f0f0f0', borderRadius: 1, p: 1, flexGrow: 1 }}>
                         <SearchIcon />
@@ -122,9 +150,32 @@ const Dashboard = () => {
                             value={searchText}
                             onChange={(e) => setSearchText(e.target.value)}
                         />
+                        <TextField
+                            label="Ubicación"
+                            variant="outlined"
+                            margin="normal"
+                            value={locationFilter}
+                            onChange={handleLocationFilterChange}
+                            sx={{ ml: 1, flex: 1 }}
+                        />
+                        <FormControl variant="outlined" sx={{ ml: 1, flex: 1 }}>
+                            <InputLabel>Experiencia</InputLabel>
+                            <Select
+                                value={experienceFilter}
+                                onChange={handleExperienceFilterChange}
+                                label="Experiencia"
+                            >
+                                <MenuItem value="">Todos</MenuItem>
+                                <MenuItem value="1 año">1 año</MenuItem>
+                                <MenuItem value="2 años">2 años</MenuItem>
+                                <MenuItem value="3 años">3 años</MenuItem>
+                                <MenuItem value="4 años">4 años</MenuItem>
+                                <MenuItem value="5 años">5 años</MenuItem>
+                            </Select>
+                        </FormControl>
                     </Box>
                     <IconButton
-                        color="primary"
+                        color="inherit"
                         disabled={isSearchDisabled}
                         onClick={() => debouncedSearch(searchText)}
                     >
@@ -134,10 +185,10 @@ const Dashboard = () => {
             </AppBar>
             <Box sx={{ display: 'flex', height: '100vh', p: 2, flexGrow: 1 }}>
                 <Grid container spacing={2} sx={{ flexGrow: 1 }}>
-                    <Grid item xs={12} md={6} sx={{ overflowY: 'auto', height: '100%' }}>
+                    <Grid item xs={12} md={4} sx={{ overflowY: 'auto', height: '100%' }}>
                         <ListaTrabajo jobs={searchResults} onSelectJob={handleJobSelection} />
                     </Grid>
-                    <Grid item xs={12} md={6} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                    <Grid item xs={12} md={8} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
                         <Box sx={{ flexGrow: 1 }}>
                             <Descripcion job={selectedJob} />
                         </Box>

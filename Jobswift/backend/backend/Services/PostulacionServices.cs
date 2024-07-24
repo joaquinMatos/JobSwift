@@ -52,7 +52,6 @@ namespace back_end.Services
 
                 var response = new Postulacion
                 {
-                    IdPostulacion = postulacion.IdPostulacion,
                     Fk_Candidato = postulacion.Fk_Candidato,
                     Fk_IdOfertaTrabajo = postulacion.Fk_IdOfertaTrabajo,
                     Fk_IdReclutador = postulacion.Fk_IdReclutador,

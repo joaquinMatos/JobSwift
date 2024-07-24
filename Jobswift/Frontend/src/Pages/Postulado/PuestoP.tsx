@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Grid, Typography, Button, Snackbar, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, LinearProgress } from '@mui/material';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthLogin';
@@ -18,6 +18,9 @@ interface Postulacion {
 
 const MisPostulaciones = () => {
     const [postulaciones, setPostulaciones] = useState<Postulacion[]>([]);
+    const [selectedPostulacion, setSelectedPostulacion] = useState<Postulacion | null>(null);
+    const [snackbarMessage, setSnackbarMessage] = useState<string | null>(null);
+    const [openDialog, setOpenDialog] = useState<boolean>(false);
     const navigate = useNavigate();
     const { getAccessToken } = useAuth();
 
@@ -45,6 +48,61 @@ const MisPostulaciones = () => {
         navigate(`/dashboard`, { state: { jobId: fk_IdOfertaTrabajo } }); // Navega a Dashboard con el ID del trabajo seleccionado en la URL
     };
 
+    const handleDeleteClick = (postulacion: Postulacion) => {
+        setSelectedPostulacion(postulacion);
+        setOpenDialog(true);
+    };
+
+    const handleDeleteConfirm = async () => {
+        if (!selectedPostulacion) return;
+        try {
+            const token = await getAccessToken();
+            await axios.delete(`https://localhost:7151/Postulacion/${selectedPostulacion.idPostulacion}`, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            });
+            setPostulaciones(prev => prev.filter(p => p.idPostulacion !== selectedPostulacion.idPostulacion));
+            setSnackbarMessage('Despostulación exitosa');
+        } catch (error) {
+            console.error('Error al despostularse:', error);
+            setSnackbarMessage('Error al despostularse');
+        } finally {
+            setOpenDialog(false);
+            setSelectedPostulacion(null);
+        }
+    };
+
+    const handleCloseSnackbar = () => {
+        setSnackbarMessage(null);
+    };
+
+    const handleCloseDialog = () => {
+        setOpenDialog(false);
+        setSelectedPostulacion(null);
+    };
+
+    const getStatusText = (status: number) => {
+        switch (status) {
+            case 0:
+                return 'En proceso';
+            case 1:
+                return 'CV Visto';
+            case 2:
+                return 'Entrevista';
+            case 3:
+                return 'Ofrecido';
+            case 4:
+                return 'Contratado';
+            default:
+                return 'Desconocido';
+        }
+    };
+
+    const getStatusPercentage = (status: number) => {
+        return (status / 4) * 100;
+    };
+
     return (
         <Box sx={{ p: 2, flexGrow: 1 }}>
             <Typography variant="h4" component="div" sx={{ flexGrow: 1, mb: 2 }}>
@@ -52,22 +110,67 @@ const MisPostulaciones = () => {
             </Typography>
             <Grid container spacing={2}>
                 {postulaciones.map((postulacion) => (
-                    <Grid item key={postulacion.idPostulacion} xs={12} md={6}>
+                    <Grid item key={postulacion.idPostulacion} xs={12}>
                         <Box
-                            sx={{ p: 2, bgcolor: '#f0f0f0', borderRadius: 1, cursor: 'pointer' }}
-                            onClick={() => handlePostulacionClick(postulacion.fk_IdOfertaTrabajo)}
+                            sx={{
+                                p: 2,
+                                bgcolor: '#fff',
+                                borderRadius: 2,
+                                boxShadow: 2,
+                                display: 'flex',
+                                justifyContent: 'space-between',
+                                alignItems: 'center',
+                                '&:hover': { bgcolor: '#f9f9f9' }
+                            }}
                         >
-                            <Typography variant="h6">{postulacion.titulo}</Typography>
-                            <Typography variant="body1">{`Estado: ${postulacion.status === 0 ? 'Pendiente' : 'Aceptado'}`}</Typography>
-                            <Typography variant="body2">{`Publicado: ${new Date(postulacion.fechaPublicacion).toLocaleDateString()}`}</Typography>
-                            <Typography variant="body2">{`Descripción: ${postulacion.descripcion}`}</Typography>
-                            <Typography variant="body2">{`Experiencia: ${postulacion.experiencia}`}</Typography>
-                            <Typography variant="body2">{`Contrato: ${postulacion.contrato}`}</Typography>
-                            <Typography variant="body2">{`Salario: $${postulacion.salario.toLocaleString()}`}</Typography>
+                            <Box onClick={() => handlePostulacionClick(postulacion.fk_IdOfertaTrabajo)} sx={{ flexGrow: 1, cursor: 'pointer' }}>
+                                <Typography variant="h6">{postulacion.titulo}</Typography>
+                                <Typography variant="body2" color="textSecondary">{`Publicado: ${new Date(postulacion.fechaPublicacion).toLocaleDateString()}`}</Typography>
+                                <Typography variant="body2" color="textSecondary">{postulacion.descripcion}</Typography>
+                                <Typography variant="body2" color="textSecondary">{`Experiencia: ${postulacion.experiencia}`}</Typography>
+                                <Typography variant="body2" color="textSecondary">{`Contrato: ${postulacion.contrato}`}</Typography>
+                                <Typography variant="body2" color="textSecondary">{`Salario: $${postulacion.salario.toLocaleString()}`}</Typography>
+                            </Box>
+                            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '150px', ml: 2 }}>
+                                <Typography variant="body2" sx={{ mb: 1 }}>
+                                    {getStatusText(postulacion.status)}
+                                </Typography>
+                                <LinearProgress variant="determinate" value={getStatusPercentage(postulacion.status)} sx={{ width: '100%' }} />
+                            </Box>
+                            <Button
+                                variant="contained"
+                                color="secondary"
+                                onClick={() => handleDeleteClick(postulacion)}
+                                sx={{ ml: 2 }}
+                            >
+                                Despostularme
+                            </Button>
                         </Box>
                     </Grid>
                 ))}
             </Grid>
+            <Snackbar
+                open={snackbarMessage !== null}
+                autoHideDuration={6000}
+                onClose={handleCloseSnackbar}
+                message={snackbarMessage}
+            />
+            <Dialog open={openDialog} onClose={handleCloseDialog}>
+                <DialogTitle>Confirmar Despostulación</DialogTitle>
+                <DialogContent>
+                    <DialogContentText>
+                        ¿Estás seguro de que quieres despostularte de esta oferta de trabajo?
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleCloseDialog} color="primary">
+                        Cancelar
+                    </Button>
+                    <Button onClick={handleDeleteConfirm} color="error">
+                        Despostularme
+                    </Button>
+                </DialogActions>
+            </Dialog>
         </Box>
     );
 };
