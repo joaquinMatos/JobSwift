@@ -1,56 +1,56 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\CV.pdf",
+      "Id": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\CV.pdf",
       "PackagePath": "staticwebassets\\uploads\\CV.pdf"
     },
     {
-      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\JoaquínMatosCv.pdf",
+      "Id": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\JoaquínMatosCv.pdf",
       "PackagePath": "staticwebassets\\uploads\\JoaquínMatosCv.pdf"
     },
     {
-      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\Larry_Basto_Diaz CV.pdf",
+      "Id": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\Larry_Basto_Diaz CV.pdf",
       "PackagePath": "staticwebassets\\uploads\\Larry_Basto_Diaz CV.pdf"
     },
     {
-      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\OCCIDENTE.pdf",
+      "Id": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\OCCIDENTE.pdf",
       "PackagePath": "staticwebassets\\uploads\\OCCIDENTE.pdf"
     },
     {
-      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\chi.pdf",
+      "Id": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\chi.pdf",
       "PackagePath": "staticwebassets\\uploads\\chi.pdf"
     },
     {
-      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\hola.png",
+      "Id": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\hola.png",
       "PackagePath": "staticwebassets\\uploads\\hola.png"
     },
     {
-      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\img.jpeg",
+      "Id": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\img.jpeg",
       "PackagePath": "staticwebassets\\uploads\\img.jpeg"
     },
     {
-      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\img2.png",
+      "Id": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\img2.png",
       "PackagePath": "staticwebassets\\uploads\\img2.png"
     },
     {
-      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\user.png",
+      "Id": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\user.png",
       "PackagePath": "staticwebassets\\uploads\\user.png"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.backend.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Backend.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.backend.props",
-      "PackagePath": "build\\backend.props"
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Backend.props",
+      "PackagePath": "build\\Backend.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.backend.props",
-      "PackagePath": "buildMultiTargeting\\backend.props"
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Backend.props",
+      "PackagePath": "buildMultiTargeting\\Backend.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.backend.props",
-      "PackagePath": "buildTransitive\\backend.props"
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Backend.props",
+      "PackagePath": "buildTransitive\\Backend.props"
     }
   ],
   "ElementsToRemove": []

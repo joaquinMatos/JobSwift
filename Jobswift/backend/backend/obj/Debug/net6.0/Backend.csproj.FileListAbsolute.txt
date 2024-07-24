@@ -495,3 +495,4 @@ C:\Users\osmar\OneDrive\Escritorio\JobSwift\Jobswift\backend\Backend\obj\Debug\n
 C:\Users\osmar\OneDrive\Escritorio\JobSwift\Jobswift\backend\Backend\obj\Debug\net6.0\ref\Backend.dll
 D:\JobSwift\Jobswift\backend\Backend\bin\Debug\net6.0\Backend.staticwebassets.runtime.json
 C:\Users\balam\Desktop\aqui\JobSwift\JobSwift\backend\Backend\bin\Debug\net6.0\Backend.staticwebassets.runtime.json
+C:\Users\osmar\OneDrive\Escritorio\JobSwift\Jobswift\backend\Backend\bin\Debug\net6.0\Backend.staticwebassets.runtime.json
