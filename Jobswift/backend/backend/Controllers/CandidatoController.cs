@@ -54,6 +54,14 @@ namespace back_end.Controllers
             return Ok(result);
         }
 
+        [HttpGet]
+        [Route("obtener")]
+        public async Task<IActionResult> ObtenerLista2()
+        {
+            var result = await _candidatoServices.ObtenerCandidatos2();
+            return Ok(result);
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> ObtenerCandidato(int id)
         {

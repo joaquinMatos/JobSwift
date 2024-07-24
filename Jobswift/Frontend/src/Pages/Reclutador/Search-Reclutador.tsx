@@ -8,6 +8,12 @@ import {
   CardContent,
   Typography,
   TextField,
+  Box,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  Button,
 } from '@mui/material';
 
 // Interface for decoded token
@@ -19,12 +25,24 @@ interface DecodedToken {
 
 // Interface for candidate
 interface Candidate {
-  id: number;
-  nombre: string;
-  apellido: string;
+  idCandidato: number;
+  nombreCompleto: string;
+  apellidos: string;
   email: string;
   telefono: string;
   puesto: string;
+}
+
+// Interface for candidate profile
+interface CandidateProfile {
+  idPerfilCandidato: number;
+  fotoCandidato: string;
+  experiencia: string;
+  formacion: string;
+  idiomas: string;
+  habilidades: string;
+  curriculumPerfil: string;
+  fk_Candidato: number;
 }
 
 // Interface for server response
@@ -32,6 +50,13 @@ interface CandidateResponse {
   success: boolean;
   message: string | null;
   result: Candidate[];
+}
+
+// Interface for profile response
+interface CandidateProfileResponse {
+  success: boolean;
+  message: string | null;
+  result: CandidateProfile;
 }
 
 // Get access token from localStorage
@@ -46,7 +71,10 @@ const getAccessToken = (): string | null => {
 
 const CandidateSearch = () => {
   const [candidates, setCandidates] = useState<Candidate[]>([]);
+  const [selectedCandidate, setSelectedCandidate] = useState<Candidate | null>(null);
+  const [candidateProfile, setCandidateProfile] = useState<CandidateProfile | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const [openDialog, setOpenDialog] = useState(false);
   const accessToken = getAccessToken();
 
   useEffect(() => {
@@ -92,13 +120,58 @@ const CandidateSearch = () => {
     }
   };
 
+  const fetchCandidateProfile = async (candidateId: number) => {
+    try {
+      if (!candidateId) {
+        throw new Error('candidateId is undefined');
+      }
+
+      console.log(`Fetching profile for candidateId: ${candidateId}`);
+
+      const response = await axios.get<CandidateProfileResponse>(`https://localhost:7151/PerfilCandidato/${candidateId}`, {
+        headers: {
+          Authorization: `Bearer ${accessToken}`
+        }
+      });
+
+      if (response.data.success) {
+        setCandidateProfile(response.data.result);
+      } else {
+        setCandidateProfile(null);
+        console.error(response.data.message);
+      }
+    } catch (error) {
+      console.error('Error fetching candidate profile:', error);
+      setCandidateProfile(null);
+    }
+  };
+
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
   };
 
+  const handleCandidateClick = (candidate: Candidate) => {
+    try {
+      if (!candidate.idCandidato) {
+        throw new Error('Candidate ID is undefined');
+      }
+
+      setSelectedCandidate(candidate);
+      fetchCandidateProfile(candidate.idCandidato);
+      setOpenDialog(true);
+    } catch (error) {
+      console.error('Error handling candidate click:', error);
+    }
+  };
+
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
+    setCandidateProfile(null);
+  };
+
   const filteredCandidates = candidates.filter(candidate =>
-    (candidate.nombre && candidate.nombre.toLowerCase().includes(searchQuery.toLowerCase())) ||
-    (candidate.apellido && candidate.apellido.toLowerCase().includes(searchQuery.toLowerCase())) ||
+    (candidate.nombreCompleto && candidate.nombreCompleto.toLowerCase().includes(searchQuery.toLowerCase())) ||
+    (candidate.apellidos && candidate.apellidos.toLowerCase().includes(searchQuery.toLowerCase())) ||
     (candidate.email && candidate.email.toLowerCase().includes(searchQuery.toLowerCase())) ||
     (candidate.puesto && candidate.puesto.toLowerCase().includes(searchQuery.toLowerCase()))
   );
@@ -116,10 +189,10 @@ const CandidateSearch = () => {
       />
       <Grid container spacing={4} style={{ marginTop: '20px' }}>
         {filteredCandidates.map(candidate => (
-          <Grid item xs={12} sm={6} md={4} key={candidate.id}>
-            <Card>
+          <Grid item xs={12} sm={6} md={4} key={candidate.idCandidato}>
+            <Card onClick={() => handleCandidateClick(candidate)} style={{ cursor: 'pointer' }}>
               <CardContent>
-                <Typography variant="h5">{candidate.nombre} {candidate.apellido}</Typography>
+                <Typography variant="h5">{candidate.nombreCompleto} {candidate.apellidos}</Typography>
                 <Typography color="textSecondary">{candidate.puesto}</Typography>
                 <Typography>{candidate.email}</Typography>
                 <Typography>{candidate.telefono}</Typography>
@@ -128,6 +201,27 @@ const CandidateSearch = () => {
           </Grid>
         ))}
       </Grid>
+
+      {selectedCandidate && candidateProfile && (
+        <Dialog open={openDialog} onClose={handleCloseDialog} maxWidth="md" fullWidth>
+          <DialogTitle>Candidate Profile</DialogTitle>
+          <DialogContent>
+            <Box display="flex" flexDirection="column" alignItems="center">
+              <img src={candidateProfile.fotoCandidato} alt="Foto del Candidato" style={{ width: '150px', height: '150px', marginBottom: '20px' }} />
+              <Typography variant="h6"><strong>ID:</strong> {candidateProfile.idPerfilCandidato}</Typography>
+              <Typography variant="h6"><strong>Nombre Completo:</strong> {selectedCandidate.nombreCompleto} {selectedCandidate.apellidos}</Typography>
+              <Typography variant="h6"><strong>Experiencia:</strong> {candidateProfile.experiencia}</Typography>
+              <Typography variant="h6"><strong>Formación:</strong> {candidateProfile.formacion}</Typography>
+              <Typography variant="h6"><strong>Idiomas:</strong> {candidateProfile.idiomas}</Typography>
+              <Typography variant="h6"><strong>Habilidades:</strong> {candidateProfile.habilidades}</Typography>
+              <Typography variant="h6"><strong>Curriculum:</strong> <a href={candidateProfile.curriculumPerfil} target="_blank" rel="noopener noreferrer">Ver CV</a></Typography>
+            </Box>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleCloseDialog} color="primary">Cerrar</Button>
+          </DialogActions>
+        </Dialog>
+      )}
     </Container>
   );
 };
