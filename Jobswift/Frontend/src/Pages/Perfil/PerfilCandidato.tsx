@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import {jwtDecode} from 'jwt-decode';
-import { Box, Button, Card, Grid, Typography, Avatar, CircularProgress, IconButton, TextField, Paper } from "@mui/material";
+import { jwtDecode } from 'jwt-decode';
+import { Box, Button, Card, Grid, Typography, Avatar, CircularProgress, IconButton, TextField, Paper, styled } from "@mui/material";
 import EditIcon from '@mui/icons-material/Edit';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 
+// Interface for PerfilCandidato
 interface PerfilCandidato {
   idPerfilCandidato: number;
   fotoCandidato: string;
@@ -16,11 +17,13 @@ interface PerfilCandidato {
   fk_Candidato: number;
 }
 
+// Interface for DecodedToken
 interface DecodedToken {
   id: number;
   usuario: string;
 }
 
+// Get user ID from token
 const GetUserIdFromToken = (): number | null => {
   const tokenData = localStorage.getItem('accessToken');
   if (tokenData) {
@@ -30,6 +33,17 @@ const GetUserIdFromToken = (): number | null => {
   }
   return null;
 };
+
+// Styled component for the card with hover effect
+const ProfileCardStyled = styled(Card)(({ theme }) => ({
+  padding: '20px',
+  borderRadius: '12px',
+  boxShadow: theme.shadows[2],
+  transition: 'transform 0.3s ease-in-out',
+  '&:hover': {
+    transform: 'scale(1.02)',
+  },
+}));
 
 const ProfileCard = () => {
   const [data, setData] = useState<PerfilCandidato | null>(null);
@@ -103,14 +117,12 @@ const ProfileCard = () => {
         formData.append('habilidades', data.habilidades);
         formData.append('fk_Candidato', userId.toString());
 
-        // Conditionally add image if selected or existing image
         if (selectedImage) {
           formData.append('fotoCandidato', selectedImage);
         } else {
           formData.append('fotoCandidato', data.fotoCandidato || '');
         }
 
-        // Conditionally add file if selected or existing file
         if (selectedFile) {
           formData.append('curriculumPerfil', selectedFile);
         } else {
@@ -151,7 +163,7 @@ const ProfileCard = () => {
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           <Grid item xs={12} md={8}>
-            <Card sx={{ padding: '20px', borderRadius: '12px' }}>
+            <ProfileCardStyled>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                 <Avatar
                   alt="Profile Picture"
@@ -198,6 +210,8 @@ const ProfileCard = () => {
                     <>
                       <Typography variant="h6" component="div">{data.experiencia}</Typography>
                       <Typography variant="subtitle1" color="textSecondary">{data.formacion}</Typography>
+                      <Typography variant="body2" color="textSecondary">{data.idiomas}</Typography>
+                      <Typography variant="body2" color="textSecondary">{data.habilidades}</Typography>
                     </>
                   )}
                 </Box>
@@ -206,7 +220,7 @@ const ProfileCard = () => {
                 </IconButton>
               </Box>
               {editing && (
-                <>
+                <Box sx={{ display: 'flex', gap: 2, flexDirection: 'column' }}>
                   <input
                     type="file"
                     accept="image/*"
@@ -215,7 +229,7 @@ const ProfileCard = () => {
                     id="image-upload"
                   />
                   <label htmlFor="image-upload">
-                    <Button variant="contained" component="span">
+                    <Button variant="contained" component="span" fullWidth startIcon={<AttachFileIcon />}>
                       Actualiza tu imagen
                     </Button>
                   </label>
@@ -227,16 +241,16 @@ const ProfileCard = () => {
                     id="file-upload"
                   />
                   <label htmlFor="file-upload">
-                    <Button variant="contained" component="span">
+                    <Button variant="contained" component="span" fullWidth startIcon={<AttachFileIcon />}>
                       Actualiza tu CV
                     </Button>
                   </label>
-                  <Button variant="contained" color="primary" type="submit" disabled={submitting}>
-                    {submitting ? <CircularProgress size={24} /> : 'Guardar Cambios'}
+                  <Button variant="contained" color="primary" type="submit" fullWidth disabled={submitting} startIcon={submitting ? <CircularProgress size={24} /> : null}>
+                    {submitting ? 'Guardando...' : 'Guardar Cambios'}
                   </Button>
-                </>
+                </Box>
               )}
-            </Card>
+            </ProfileCardStyled>
           </Grid>
           <Grid item xs={12} md={4}>
             <Paper sx={{ padding: '20px', borderRadius: '12px' }}>

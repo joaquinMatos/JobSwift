@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Grid, Typography, Button, Snackbar, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, LinearProgress } from '@mui/material';
+import { Box, Grid, Typography, Button, Snackbar, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, LinearProgress, styled } from '@mui/material';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthLogin';
@@ -15,6 +15,22 @@ interface Postulacion {
     salario: number;
     titulo: string;
 }
+
+// Styled component for the card with hover effect
+const StyledBox = styled(Box)(({ theme }) => ({
+    padding: theme.spacing(2),
+    backgroundColor: '#fff',
+    borderRadius: theme.shape.borderRadius,
+    boxShadow: theme.shadows[2],
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    '&:hover': { backgroundColor: '#f9f9f9' },
+    transition: 'transform 0.3s ease-in-out',
+    '&:hover': {
+        transform: 'scale(1.02)',
+    },
+}));
 
 const MisPostulaciones = () => {
     const [postulaciones, setPostulaciones] = useState<Postulacion[]>([]);
@@ -104,26 +120,15 @@ const MisPostulaciones = () => {
     };
 
     return (
-        <Box sx={{ p: 2, flexGrow: 1 }}>
+        <Box sx={{bgcolor: '#E3F2FD',minHeight: '100vh', p: 2, flexGrow: 1 }}>
             <Typography variant="h4" component="div" sx={{ flexGrow: 1, mb: 2 }}>
                 Mis Postulaciones
             </Typography>
             <Grid container spacing={2}>
                 {postulaciones.map((postulacion) => (
                     <Grid item key={postulacion.idPostulacion} xs={12}>
-                        <Box
-                            sx={{
-                                p: 2,
-                                bgcolor: '#fff',
-                                borderRadius: 2,
-                                boxShadow: 2,
-                                display: 'flex',
-                                justifyContent: 'space-between',
-                                alignItems: 'center',
-                                '&:hover': { bgcolor: '#f9f9f9' }
-                            }}
-                        >
-                            <Box onClick={() => handlePostulacionClick(postulacion.fk_IdOfertaTrabajo)} sx={{ flexGrow: 1, cursor: 'pointer' }}>
+                        <StyledBox onClick={() => handlePostulacionClick(postulacion.fk_IdOfertaTrabajo)}>
+                            <Box sx={{ flexGrow: 1, cursor: 'pointer' }}>
                                 <Typography variant="h6">{postulacion.titulo}</Typography>
                                 <Typography variant="body2" color="textSecondary">{`Publicado: ${new Date(postulacion.fechaPublicacion).toLocaleDateString()}`}</Typography>
                                 <Typography variant="body2" color="textSecondary">{postulacion.descripcion}</Typography>
@@ -139,13 +144,16 @@ const MisPostulaciones = () => {
                             </Box>
                             <Button
                                 variant="contained"
-                                color="secondary"
-                                onClick={() => handleDeleteClick(postulacion)}
+                                color="error"
+                                onClick={(e) => {
+                                    e.stopPropagation(); // Evita que se dispare el evento onClick del contenedor
+                                    handleDeleteClick(postulacion);
+                                }}
                                 sx={{ ml: 2 }}
                             >
                                 Despostularme
                             </Button>
-                        </Box>
+                        </StyledBox>
                     </Grid>
                 ))}
             </Grid>
