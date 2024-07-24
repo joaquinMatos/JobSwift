@@ -29,9 +29,6 @@ const Navbar = () => {
   const handleLoginClick = () => {
     navigate('/candidate-login');
   };
-/*   const handleLoginClick2 = () => {
-    navigate('/reclutador-login');
-  }; */
 
   return (
     <Box
@@ -75,7 +72,7 @@ const Navbar = () => {
                 </Grid>
                 <Grid item>
                   <CustomButton
-                    /* onClick={handleLoginClick2} */
+                    onClick={handleLoginClick}
                     sx={{
                       minWidth: { xs: '80px', sm: '120px' },
                       fontSize: { xs: '8px', sm: '10px' },

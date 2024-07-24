@@ -31,6 +31,19 @@ namespace back_end.Services
             }
         }
 
+        public async Task<Response<List<Candidato>>> ObtenerCandidatos2()
+        {
+            try
+            {
+                List<Candidato> response = await _context.Candidato.ToListAsync();
+                return new Response<List<Candidato>>(response);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Ocurrió un error al obtener los candidatos: " + ex.Message);
+            }
+        }
+
         public async Task<Candidato> ObtenerCandidatoPorCredenciales(string user, string password)
         {
             return await _context.Candidato.Where(x => x.Email == user && x.Contrasena == password).FirstOrDefaultAsync();
