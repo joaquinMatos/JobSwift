@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Backend")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5166dc6b0b2dcfb568392d433939f0d90ac8792")]
-[assembly: System.Reflection.AssemblyProductAttribute("Backend")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Backend")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37b29b330e7ce0e62e76c5f81cfe4277e8f05420")]
+[assembly: System.Reflection.AssemblyProductAttribute("backend")]
+[assembly: System.Reflection.AssemblyTitleAttribute("backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.

@@ -141,12 +141,12 @@ const Hamburguesa: React.FC<HamburguesaProps> = ({ open, toggleDrawer, data }) =
                         </Box>
                     </ListItem>
                     <Divider /> */}
-                    <ListItem button onClick={handleNavigateBuscarEmpresas}>
+                    {/* <ListItem button onClick={handleNavigateBuscarEmpresas}>
                         <ListItemIcon>
                             <AccountCircle />
                         </ListItemIcon>
                         <ListItemText primary="Buscar empresas" />
-                    </ListItem>
+                    </ListItem> */}
                     <ListItem button onClick={handleNavigatePerfilCandidato}>
                         <ListItemIcon>
                             <Person />

@@ -83,27 +83,7 @@ namespace back_end.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> EliminarPostulacion(int id)
         {
-            // Lógica para validar token
-            var identity = HttpContext.User.Identity as ClaimsIdentity;
-
-            if (identity == null)
-            {
-                return Unauthorized(new
-                {
-                    success = false,
-                    message = "Token no válido",
-                    result = ""
-                });
-            }
-
-            var rtoken = await _validarTokenServices.ValidarToken(identity);
-
-            if (!rtoken.success)
-            {
-                return Unauthorized(rtoken);
-            }
-
-            // Fin validación
+           
             var response = await _postulacionServices.EliminarPostulacion(id);
 
             if (response.Success)
