@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import {jwtDecode} from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
 import {
   Container,
   Grid,
@@ -19,7 +19,17 @@ import {
   InputLabel,
   FormControl,
   SelectChangeEvent,
+  InputAdornment
 } from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
+import SearchIcon from '@mui/icons-material/Search';
+import WorkIcon from '@mui/icons-material/Work';
+import SkillIcon from '@mui/icons-material/Build';
+import PersonIcon from '@mui/icons-material/Person';
+import SchoolIcon from '@mui/icons-material/School';
+import LanguageIcon from '@mui/icons-material/Language';
+import DescriptionIcon from '@mui/icons-material/Description';
+import { styled } from '@mui/system';
 
 // Interface for decoded token
 interface DecodedToken {
@@ -58,6 +68,20 @@ interface CandidateResponse {
   message: string | null;
   result: Candidate[];
 }
+
+// Styled component for the job card
+const JobCard = styled(Card)(({ theme }) => ({
+  cursor: 'pointer',
+  minHeight: '200px',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+  padding: '20px',
+  transition: 'transform 0.3s ease-in-out',
+  '&:hover': {
+    transform: 'scale(1.05)',
+  },
+}));
 
 // Get access token from localStorage
 const getAccessToken = (): string | null => {
@@ -192,86 +216,104 @@ const CandidateSearch = () => {
   });
 
   return (
-    <Container>
-      <Typography variant="h3" gutterBottom>Candidate Search</Typography>
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm={4}>
-          <TextField
-            label="Search Candidates"
-            variant="outlined"
-            fullWidth
-            margin="normal"
-            value={searchQuery}
-            onChange={handleSearch}
-          />
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <FormControl fullWidth margin="normal">
-            <InputLabel>Experiencia</InputLabel>
-            <Select
-              value={experienceFilter}
-              onChange={handleExperienceFilterChange}
-              label="Experiencia"
-            >
-              <MenuItem value="">Todos</MenuItem>
-              <MenuItem value="1 año">1 año</MenuItem>
-              <MenuItem value="2 años">2 años</MenuItem>
-              <MenuItem value="3 años">3 años</MenuItem>
-              <MenuItem value="4 años">4 años</MenuItem>
-              <MenuItem value="5 años">5 años</MenuItem>
-            </Select>
-          </FormControl>
-        </Grid>
-        <Grid item xs={12} sm={4}>
-          <TextField
-            label="Habilidades"
-            variant="outlined"
-            fullWidth
-            margin="normal"
-            value={skillsFilter}
-            onChange={handleSkillsFilterChange}
-          />
-        </Grid>
-      </Grid>
-      <Grid container spacing={4} style={{ marginTop: '20px' }}>
-        {filteredCandidates.map(candidate => (
-          <Grid item xs={12} sm={6} md={4} key={candidate.idCandidato}>
-            <Card onClick={() => handleCandidateClick(candidate)} style={{ cursor: 'pointer' }}>
-              <CardContent>
-                <Typography variant="h5">{candidate.nombreCompleto} {candidate.apellidos}</Typography>
-                <Typography color="textSecondary">{candidate.puesto}</Typography>
-                <Typography>{candidate.email}</Typography>
-                <Typography>{candidate.telefono}</Typography>
-                <Typography>{candidate.experiencia}</Typography>
-                <Typography>{candidate.habilidades}</Typography>
-              </CardContent>
-            </Card>
+    <Box sx={{ bgcolor: '#E3F2FD', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <Container>
+        <Typography variant="h3" gutterBottom>Candidate Search</Typography>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={4}>
+            <TextField
+              label="Search Candidates"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              value={searchQuery}
+              onChange={handleSearch}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <SearchIcon />
+                  </InputAdornment>
+                ),
+              }}
+            />
           </Grid>
-        ))}
-      </Grid>
+          <Grid item xs={12} sm={4}>
+            <FormControl fullWidth margin="normal" variant="outlined">
+              <InputLabel>Experiencia</InputLabel>
+              <Select
+                value={experienceFilter}
+                onChange={handleExperienceFilterChange}
+                label="Experiencia"
+                startAdornment={
+                  <InputAdornment position="start">
+                    <WorkIcon />
+                  </InputAdornment>
+                }
+              >
+                <MenuItem value="">Todos</MenuItem>
+                <MenuItem value="1 año">1 año</MenuItem>
+                <MenuItem value="2 años">2 años</MenuItem>
+                <MenuItem value="3 años">3 años</MenuItem>
+                <MenuItem value="4 años">4 años</MenuItem>
+                <MenuItem value="5 años">5 años</MenuItem>
+              </Select>
+            </FormControl>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <TextField
+              label="Habilidades"
+              variant="outlined"
+              fullWidth
+              margin="normal"
+              value={skillsFilter}
+              onChange={handleSkillsFilterChange}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <SkillIcon />
+                  </InputAdornment>
+                ),
+              }}
+            />
+          </Grid>
+        </Grid>
+        <Grid container spacing={4} style={{ marginTop: '20px' }}>
+          {filteredCandidates.map(candidate => (
+            <Grid item xs={12} sm={6} md={4} key={candidate.idCandidato}>
+              <JobCard elevation={3} onClick={() => handleCandidateClick(candidate)}>
+                <CardContent>
+                  <Typography variant="h5" sx={{ mb: 2 }}>{candidate.nombreCompleto} {candidate.apellidos}</Typography>
+                  <Typography color="textSecondary" sx={{ mb: 2 }}>{candidate.puesto}</Typography>
+                  <Typography>{candidate.email}</Typography>
+                </CardContent>
+              </JobCard>
+            </Grid>
+          ))}
+        </Grid>
 
-      <Dialog open={openDialog} onClose={handleCloseDialog} maxWidth="md" fullWidth>
-        <DialogTitle>Candidate Profile</DialogTitle>
-        <DialogContent>
-          {candidateProfile ? (
-            <Box display="flex" flexDirection="column" alignItems="center">
-              <img src={`https://localhost:7151/${candidateProfile.fotoCandidato}`} alt="Foto del Candidato" style={{ width: '150px', height: '150px', marginBottom: '20px' }} />
-              <Typography variant="h6"><strong>Nombre Completo:</strong> {selectedCandidate?.nombreCompleto} {selectedCandidate?.apellidos}</Typography>
-              <Typography variant="h6"><strong>Experiencia:</strong> {candidateProfile.experiencia}</Typography>
-              <Typography variant="h6"><strong>Formación:</strong> {candidateProfile.formacion}</Typography>
-              <Typography variant="h6"><strong>Idiomas:</strong> {candidateProfile.idiomas}</Typography>
-              <Typography variant="h6"><strong>Habilidades:</strong> {candidateProfile.habilidades}</Typography>
-              <Typography variant="h6"><strong>Curriculum:</strong> <a href={`https://localhost:7151/${candidateProfile.curriculumPerfil}`} target="_blank" rel="noopener noreferrer">Ver CV</a></Typography>
-            </Box>
-          ) : (
-            <Typography variant="body1">Cargando...</Typography>
-          )}
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleCloseDialog} color="primary">Cerrar</Button>
-        </DialogActions>
-      </Dialog>
-    </Container>
+        <Dialog open={openDialog} onClose={handleCloseDialog} maxWidth="md" fullWidth>
+          <DialogTitle>Candidate Profile</DialogTitle>
+          <DialogContent>
+            {candidateProfile ? (
+              <Box display="flex" flexDirection="column" alignItems="flex-start" textAlign="left">
+                <img src={`https://localhost:7151/${candidateProfile.fotoCandidato}`} alt="Foto del Candidato" style={{ width: '150px', height: '150px', borderRadius: '50%', marginBottom: '20px' }} />
+                <Typography variant="h6" sx={{ mb: 2 }}><PersonIcon /><strong> Nombre Completo:</strong> {selectedCandidate?.nombreCompleto} {selectedCandidate?.apellidos}</Typography>
+                <Typography variant="h6" sx={{ mb: 2 }}><WorkIcon /><strong> Experiencia:</strong> {candidateProfile.experiencia}</Typography>
+                <Typography variant="h6" sx={{ mb: 2 }}><SchoolIcon /><strong> Formación:</strong> {candidateProfile.formacion}</Typography>
+                <Typography variant="h6" sx={{ mb: 2 }}><LanguageIcon /><strong> Idiomas:</strong> {candidateProfile.idiomas}</Typography>
+                <Typography variant="h6" sx={{ mb: 2 }}><SkillIcon /><strong> Habilidades:</strong> {candidateProfile.habilidades}</Typography>
+                <Typography variant="h6" sx={{ mb: 2 }}><DescriptionIcon /><strong> Curriculum:</strong> <a href={`https://localhost:7151/${candidateProfile.curriculumPerfil}`} target="_blank" rel="noopener noreferrer">Ver CV</a></Typography>
+              </Box>
+            ) : (
+              <Typography variant="body1">Cargando...</Typography>
+            )}
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleCloseDialog} color="primary">Cerrar</Button>
+          </DialogActions>
+        </Dialog>
+      </Container>
+    </Box>
   );
 };
 
