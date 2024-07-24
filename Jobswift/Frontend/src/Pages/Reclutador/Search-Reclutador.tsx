@@ -121,27 +121,36 @@ const CandidateSearch = () => {
   };
 
   const fetchCandidateProfile = async (candidateId: number) => {
+    if (!candidateId) {
+      console.error('candidateId is undefined');
+      return;
+    }
+
+    console.log(`Fetching profile for candidateId: ${candidateId}`);
+
     try {
-      if (!candidateId) {
-        throw new Error('candidateId is undefined');
-      }
+      const response = await axios.get<CandidateProfileResponse>(`https://localhost:7151/PerfilCandidato/${candidateId}`);
 
-      console.log(`Fetching profile for candidateId: ${candidateId}`);
-
-      const response = await axios.get<CandidateProfileResponse>(`https://localhost:7151/PerfilCandidato/${candidateId}`, {
-        headers: {
-          Authorization: `Bearer ${accessToken}`
-        }
-      });
+      console.log('API Response:', response.data);  // Agregar registro de la respuesta completa
 
       if (response.data.success) {
         setCandidateProfile(response.data.result);
+        console.log('Fetched profile:', response.data.result);  // Registrar el perfil obtenido
       } else {
         setCandidateProfile(null);
         console.error(response.data.message);
       }
     } catch (error) {
-      console.error('Error fetching candidate profile:', error);
+      if (axios.isAxiosError(error)) {
+        console.error('Error fetching candidate profile:', error.message);
+        if (error.response) {
+          console.error('Response data:', error.response.data);
+          console.error('Response status:', error.response.status);
+          console.error('Response headers:', error.response.headers);
+        }
+      } else {
+        console.error('Unexpected error:', error);
+      }
       setCandidateProfile(null);
     }
   };
@@ -151,17 +160,15 @@ const CandidateSearch = () => {
   };
 
   const handleCandidateClick = (candidate: Candidate) => {
-    try {
-      if (!candidate.idCandidato) {
-        throw new Error('Candidate ID is undefined');
-      }
-
-      setSelectedCandidate(candidate);
-      fetchCandidateProfile(candidate.idCandidato);
-      setOpenDialog(true);
-    } catch (error) {
-      console.error('Error handling candidate click:', error);
+    if (!candidate.idCandidato) {
+      console.error('Candidate ID is undefined:', candidate);
+      return;
     }
+
+    setSelectedCandidate(candidate);
+    fetchCandidateProfile(candidate.idCandidato).then(() => {
+      setOpenDialog(true);
+    });
   };
 
   const handleCloseDialog = () => {
@@ -202,26 +209,28 @@ const CandidateSearch = () => {
         ))}
       </Grid>
 
-      {selectedCandidate && candidateProfile && (
-        <Dialog open={openDialog} onClose={handleCloseDialog} maxWidth="md" fullWidth>
-          <DialogTitle>Candidate Profile</DialogTitle>
-          <DialogContent>
+      <Dialog open={openDialog} onClose={handleCloseDialog} maxWidth="md" fullWidth>
+        <DialogTitle>Candidate Profile</DialogTitle>
+        <DialogContent>
+          {candidateProfile ? (
             <Box display="flex" flexDirection="column" alignItems="center">
               <img src={candidateProfile.fotoCandidato} alt="Foto del Candidato" style={{ width: '150px', height: '150px', marginBottom: '20px' }} />
               <Typography variant="h6"><strong>ID:</strong> {candidateProfile.idPerfilCandidato}</Typography>
-              <Typography variant="h6"><strong>Nombre Completo:</strong> {selectedCandidate.nombreCompleto} {selectedCandidate.apellidos}</Typography>
+              <Typography variant="h6"><strong>Nombre Completo:</strong> {selectedCandidate?.nombreCompleto} {selectedCandidate?.apellidos}</Typography>
               <Typography variant="h6"><strong>Experiencia:</strong> {candidateProfile.experiencia}</Typography>
               <Typography variant="h6"><strong>Formación:</strong> {candidateProfile.formacion}</Typography>
               <Typography variant="h6"><strong>Idiomas:</strong> {candidateProfile.idiomas}</Typography>
               <Typography variant="h6"><strong>Habilidades:</strong> {candidateProfile.habilidades}</Typography>
               <Typography variant="h6"><strong>Curriculum:</strong> <a href={candidateProfile.curriculumPerfil} target="_blank" rel="noopener noreferrer">Ver CV</a></Typography>
             </Box>
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={handleCloseDialog} color="primary">Cerrar</Button>
-          </DialogActions>
-        </Dialog>
-      )}
+          ) : (
+            <Typography variant="body1">Cargando...</Typography>
+          )}
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseDialog} color="primary">Cerrar</Button>
+        </DialogActions>
+      </Dialog>
     </Container>
   );
 };
