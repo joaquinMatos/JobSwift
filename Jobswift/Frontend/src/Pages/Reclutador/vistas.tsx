@@ -2,10 +2,6 @@
 import React from 'react';
 import { Box, Typography, Grid, Button } from "@mui/material";
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
-<<<<<<< HEAD
-=======
-import News from '../../components/News';
->>>>>>> 67de0f4b1cdba038af723a0c78d741cdf3da57a3
 
 const BienvenidoReclutador: React.FC = () => {
     return (
@@ -18,7 +14,6 @@ const BienvenidoReclutador: React.FC = () => {
                 Estamos encantados de tenerte aquí. Utiliza este panel para gestionar tus ofertas de trabajo, 
                 buscar candidatos y más.
             </Typography>
-<<<<<<< HEAD
             <Grid container spacing={2} justifyContent="center">
                 <Grid item>
                     <Button variant="contained" color="primary" href="/crear-oferta">
@@ -31,10 +26,6 @@ const BienvenidoReclutador: React.FC = () => {
                     </Button>
                 </Grid>
             </Grid>
-=======
-            
-            <News />
->>>>>>> 67de0f4b1cdba038af723a0c78d741cdf3da57a3
         </Box>
     );
 }
