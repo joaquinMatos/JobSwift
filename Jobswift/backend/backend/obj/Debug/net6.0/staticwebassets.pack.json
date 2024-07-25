@@ -5,8 +5,16 @@
       "PackagePath": "staticwebassets\\uploads\\CV.pdf"
     },
     {
+      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\Cálculo de Rentabilidad.png",
+      "PackagePath": "staticwebassets\\uploads\\Cálculo de Rentabilidad.png"
+    },
+    {
       "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\JoaquínMatosCv.pdf",
       "PackagePath": "staticwebassets\\uploads\\JoaquínMatosCv.pdf"
+    },
+    {
+      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\LOADING.jpg",
+      "PackagePath": "staticwebassets\\uploads\\LOADING.jpg"
     },
     {
       "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\Larry_Basto_Diaz CV.pdf",
@@ -17,8 +25,16 @@
       "PackagePath": "staticwebassets\\uploads\\OCCIDENTE.pdf"
     },
     {
+      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\Prototipo del proyecto.pdf",
+      "PackagePath": "staticwebassets\\uploads\\Prototipo del proyecto.pdf"
+    },
+    {
       "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\chi.pdf",
       "PackagePath": "staticwebassets\\uploads\\chi.pdf"
+    },
+    {
+      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\evaluación de inversión.pdf",
+      "PackagePath": "staticwebassets\\uploads\\evaluación de inversión.pdf"
     },
     {
       "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\hola.png",
@@ -37,20 +53,20 @@
       "PackagePath": "staticwebassets\\uploads\\user.png"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Backend.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.backend.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Backend.props",
-      "PackagePath": "build\\Backend.props"
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.backend.props",
+      "PackagePath": "build\\backend.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Backend.props",
-      "PackagePath": "buildMultiTargeting\\Backend.props"
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.backend.props",
+      "PackagePath": "buildMultiTargeting\\backend.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Backend.props",
-      "PackagePath": "buildTransitive\\Backend.props"
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.backend.props",
+      "PackagePath": "buildTransitive\\backend.props"
     }
   ],
   "ElementsToRemove": []

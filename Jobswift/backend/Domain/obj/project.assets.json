@@ -2318,16 +2318,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\balam\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\osmar\\.nuget\\packages\\": {}
->>>>>>> 5099160a72106ffdf681b5ff76d00521e3a13c9c
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Domain\\Domain.csproj",
       "projectName": "Domain",
       "projectPath": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Domain\\Domain.csproj",
@@ -2336,16 +2331,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\balam\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj",
-      "projectName": "Domain",
-      "projectPath": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj",
-      "packagesPath": "C:\\Users\\osmar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Domain\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\osmar\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 5099160a72106ffdf681b5ff76d00521e3a13c9c
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2420,8 +2405,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Domain\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
