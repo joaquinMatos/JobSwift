@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rldp8aBAVjsmQLdRfFUlqiFquuA05YauBqzixtgMgmM=",
+  "Hash": "0HA7vBZMHrJWhMT2IkyTxORamI0eO6QOMzZXhjSBIpA=",
   "Source": "Backend",
   "BasePath": "_content/Backend",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Backend\\wwwroot",
       "Source": "Backend",
-      "ContentRoot": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\chi.pdf",
+      "Identity": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\chi.pdf",
       "SourceId": "Backend",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
       "RelativePath": "uploads/chi.pdf",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\chi.pdf"
     },
     {
-      "Identity": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\CV.pdf",
+      "Identity": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\CV.pdf",
       "SourceId": "Backend",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
       "RelativePath": "uploads/CV.pdf",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\CV.pdf"
     },
     {
-      "Identity": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\hola.png",
+      "Identity": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\hola.png",
       "SourceId": "Backend",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
       "RelativePath": "uploads/hola.png",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\hola.png"
     },
     {
-      "Identity": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\img.jpeg",
+      "Identity": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\img.jpeg",
       "SourceId": "Backend",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
       "RelativePath": "uploads/img.jpeg",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\img.jpeg"
     },
     {
-      "Identity": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\img2.png",
+      "Identity": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\img2.png",
       "SourceId": "Backend",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
       "RelativePath": "uploads/img2.png",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\img2.png"
     },
     {
-      "Identity": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\JoaquínMatosCv.pdf",
+      "Identity": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\JoaquínMatosCv.pdf",
       "SourceId": "Backend",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
       "RelativePath": "uploads/JoaquínMatosCv.pdf",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\JoaquínMatosCv.pdf"
     },
     {
-      "Identity": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\Larry_Basto_Diaz CV.pdf",
+      "Identity": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\Larry_Basto_Diaz CV.pdf",
       "SourceId": "Backend",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
       "RelativePath": "uploads/Larry_Basto_Diaz CV.pdf",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\Larry_Basto_Diaz CV.pdf"
     },
     {
-      "Identity": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\OCCIDENTE.pdf",
+      "Identity": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\OCCIDENTE.pdf",
       "SourceId": "Backend",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
       "RelativePath": "uploads/OCCIDENTE.pdf",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\OCCIDENTE.pdf"
     },
     {
-      "Identity": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\user.png",
+      "Identity": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\user.png",
       "SourceId": "Backend",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
       "RelativePath": "uploads/user.png",
       "AssetKind": "All",

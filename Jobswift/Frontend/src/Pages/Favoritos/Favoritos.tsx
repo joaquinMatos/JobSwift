@@ -63,11 +63,6 @@ const Favoritos = () => {
     };
 
     const handlePostular = async (fk_IdOfertaTrabajo: number) => {
-        if (!fk_IdOfertaTrabajo) {
-            setError('Error: ID de la oferta de trabajo no definido');
-            return;
-        }
-        
         try {
             setIsPostulating(prev => ({ ...prev, [fk_IdOfertaTrabajo]: true }));
 
@@ -87,20 +82,19 @@ const Favoritos = () => {
             } else {
                 setSnackbarMessage('Postulación exitosa');
             }
-        } catch (error) {
+        } catch (error: unknown) {
+            if (axios.isAxiosError(error)) {
+                setError(`Error al procesar la postulación: ${error.response?.data?.message || error.message}`);
+            } else {
+                setError(`Error al procesar la postulación: ${(error as Error).message}`);
+            }
             console.error('Error al postular:', error);
-            setError(`Error al procesar la postulación: ${error.response?.data?.message || error.message}`);
         } finally {
             setIsPostulating(prev => ({ ...prev, [fk_IdOfertaTrabajo]: false }));
         }
     };
 
     const handleDespostular = async (fk_IdOfertaTrabajo: number) => {
-        if (!fk_IdOfertaTrabajo || !postulacionId[fk_IdOfertaTrabajo]) {
-            setError('Error: ID de la postulación no definido');
-            return;
-        }
-
         try {
             setIsPostulating(prev => ({ ...prev, [fk_IdOfertaTrabajo]: true }));
 
@@ -108,28 +102,31 @@ const Favoritos = () => {
 
             setPostulacionId(prev => ({ ...prev, [fk_IdOfertaTrabajo]: null }));
             setSnackbarMessage('Despostulación exitosa');
-        } catch (error) {
+        } catch (error: unknown) {
+            if (axios.isAxiosError(error)) {
+                setError(`Error al procesar la despostulación: ${error.response?.data?.message || error.message}`);
+            } else {
+                setError(`Error al procesar la despostulación: ${(error as Error).message}`);
+            }
             console.error('Error al despostular:', error);
-            setError(`Error al procesar la despostulación: ${error.response?.data?.message || error.message}`);
         } finally {
             setIsPostulating(prev => ({ ...prev, [fk_IdOfertaTrabajo]: false }));
         }
     };
 
     const handleRemoveFavorite = async (id: number) => {
-        if (!id) {
-            setSnackbarMessage('Error: ID del favorito no definido');
-            return;
-        }
-        
         try {
             console.log(`Deleting favorite with ID: ${id}`); // Log to ensure ID is correct
             await axios.delete(`https://localhost:7151/Favorito/${id}`);
             setFavoritos(prev => prev.filter(favorito => favorito.id !== id));
             setSnackbarMessage('Favorito eliminado');
-        } catch (error) {
+        } catch (error: unknown) {
+            if (axios.isAxiosError(error)) {
+                setSnackbarMessage(`Error al eliminar favorito: ${error.response?.data?.message || error.message}`);
+            } else {
+                setSnackbarMessage(`Error al eliminar favorito: ${(error as Error).message}`);
+            }
             console.error('Error al eliminar favorito:', error);
-            setSnackbarMessage(`Error al eliminar favorito: ${error.response?.data?.message || error.message}`);
         }
     };
 
@@ -143,8 +140,8 @@ const Favoritos = () => {
                 Mis Favoritos
             </Typography>
             <Grid container spacing={3} justifyContent="center">
-                {favoritos.map((favorito, index) => (
-                    <Grid item key={index} xs={12} md={8}>
+                {favoritos.map((favorito) => (
+                    <Grid item key={favorito.id} xs={12} md={8}>
                         <Card sx={{ borderRadius: '15px', backgroundColor: 'white', marginBottom: '10px' }}>
                             <CardContent>
                                 <Typography variant="h6" component="div">
