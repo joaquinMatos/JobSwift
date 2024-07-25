@@ -208,8 +208,8 @@ const CandidateSearch = () => {
   };
 
   const filteredCandidates = candidates.filter(candidate => {
-    const matchName = (candidate.nombreCompleto?.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                      candidate.apellidos?.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchName = (candidate.nombreCompleto?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      candidate.apellidos?.toLowerCase().includes(searchQuery.toLowerCase()));
     const matchExperience = experienceFilter === '' || candidate.experiencia === experienceFilter;
     const matchSkills = skillsFilter === '' || candidate.habilidades?.toLowerCase().includes(skillsFilter.toLowerCase());
     return matchName && matchExperience && matchSkills;
@@ -218,7 +218,9 @@ const CandidateSearch = () => {
   return (
     <Box sx={{ bgcolor: '#E3F2FD', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Container>
-        <Typography variant="h3" gutterBottom>Candidate Search</Typography>
+        <Typography variant="h3" gutterBottom align="center" sx={{ fontFamily: 'Arial', fontWeight: 'bold', marginTop: '20px' }}>
+          Busca tus candidatos
+        </Typography>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={4}>
             <TextField

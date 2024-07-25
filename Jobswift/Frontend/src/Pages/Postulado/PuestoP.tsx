@@ -27,7 +27,7 @@ const StyledBox = styled(Box)(({ theme }) => ({
     alignItems: 'center',
     '&:hover': { backgroundColor: '#f9f9f9' },
     transition: 'transform 0.3s ease-in-out',
-    '&:hover': {
+    '&:hover2': {
         transform: 'scale(1.02)',
     },
 }));
@@ -121,9 +121,9 @@ const MisPostulaciones = () => {
 
     return (
         <Box sx={{bgcolor: '#E3F2FD',minHeight: '100vh', p: 2, flexGrow: 1 }}>
-            <Typography variant="h4" component="div" sx={{ flexGrow: 1, mb: 2 }}>
-                Mis Postulaciones
-            </Typography>
+            <Typography variant="h3" gutterBottom align="center" sx={{ fontFamily: 'Arial', fontWeight: 'bold', marginTop: '20px' }}>
+                    Mis postulaciones
+                </Typography>
             <Grid container spacing={2}>
                 {postulaciones.map((postulacion) => (
                     <Grid item key={postulacion.idPostulacion} xs={12}>
@@ -151,7 +151,7 @@ const MisPostulaciones = () => {
                                 }}
                                 sx={{ ml: 2 }}
                             >
-                                Despostularme
+                                Quitar
                             </Button>
                         </StyledBox>
                     </Grid>
