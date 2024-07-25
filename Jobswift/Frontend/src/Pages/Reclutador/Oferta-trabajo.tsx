@@ -138,7 +138,9 @@ const JobOffers = () => {
   return (
     <Box sx={{ bgcolor: '#E3F2FD', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Container>
-        <Typography variant="h3" gutterBottom>Ofertas de trabajo</Typography>
+        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: '20px', fontFamily: 'Roboto', fontWeight: 'bold' }}>
+          Ofertas de Trabajo
+        </Typography>
         <Grid container spacing={4}>
           {jobOffers.map((offer) => (
             <Grid item xs={12} sm={6} md={4} key={offer.idOfertaTrabajo}>

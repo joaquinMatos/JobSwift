@@ -112,12 +112,14 @@ const ActualizarCandidato = () => {
   };
 
   return (
-    <Box sx={{ bgcolor: '#E3F2FD', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: 3 }}>
+    <Box sx={{minHeight: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: 3 }}>
       <Container>
-        <Typography variant="h4" gutterBottom align="center">Actualizar Candidato</Typography>
+        <Typography variant="h3" gutterBottom align="center" sx={{ fontFamily: 'Arial', fontWeight: 'bold', marginTop: '20px' }}>
+          Configuración
+        </Typography>
         <ProfileCard>
           <CardContent>
-            <Box component="form" onSubmit={handleSubmit} sx={{ maxWidth: 1000, mx: 'auto' }}>
+            <Box component="form" onSubmit={handleSubmit} sx={{ maxWidth: 1000, mx: 'auto',  }}>
               <Grid container spacing={2}>
                 <Grid item xs={6}>
                   <TextField

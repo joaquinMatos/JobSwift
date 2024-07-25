@@ -96,22 +96,8 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "backend\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\appsettings.Development.json",
-              "RelativeToolTip": "backend\\appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-20T19:59:32.695Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
@@ -135,6 +121,20 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "backend\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\backend\\appsettings.Development.json",
+              "RelativeToolTip": "backend\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-20T19:59:32.695Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

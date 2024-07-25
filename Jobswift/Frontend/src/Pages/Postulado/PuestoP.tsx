@@ -122,8 +122,8 @@ const MisPostulaciones = () => {
     return (
         <Box sx={{bgcolor: '#E3F2FD',minHeight: '100vh', p: 2, flexGrow: 1 }}>
             <Typography variant="h3" gutterBottom align="center" sx={{ fontFamily: 'Arial', fontWeight: 'bold', marginTop: '20px' }}>
-                    Mis postulaciones
-                </Typography>
+                Mis postulaciones
+            </Typography>
             <Grid container spacing={2}>
                 {postulaciones.map((postulacion) => (
                     <Grid item key={postulacion.idPostulacion} xs={12}>

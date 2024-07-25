@@ -218,7 +218,9 @@ const CandidateSearch = () => {
   return (
     <Box sx={{ bgcolor: '#E3F2FD', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Container>
-        <Typography variant="h3" gutterBottom>Candidate Search</Typography>
+        <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: '20px', fontFamily: 'Roboto', fontWeight: 'bold' }}>
+          Buscar Candidatos
+        </Typography>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={4}>
             <TextField

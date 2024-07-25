@@ -135,30 +135,45 @@ const Favoritos = () => {
     };
 
     return (
-        <Box sx={{ backgroundColor: '#f5f5f5', minHeight: '100vh', padding: '20px' }}>
-            <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: '20px' }}>
+        <Box sx={{ backgroundColor: '#E3F2FD', minHeight: '100vh', padding: '20px' }}>
+            <Typography variant="h4" gutterBottom align="center" sx={{ marginTop: '20px', fontFamily: 'Roboto', fontWeight: 'bold' }}>
                 Mis Favoritos
             </Typography>
             <Grid container spacing={3} justifyContent="center">
+                <Grid item xs={12} md={8} lg={4}>
+                    <Card sx={{ borderRadius: '15px', backgroundColor: 'white', textAlign: 'center', padding: '20px' }}>
+                        <CardContent>
+                            <img src={fav} alt="Search Jobs" style={{ maxWidth: '100%', marginBottom: '20px' }} />
+                            <Typography sx={{ fontFamily: 'Roboto' }}>
+                                Guarda con un <FavoriteIcon color="error" sx={{ verticalAlign: 'middle' }} /> las ofertas de empleo que más te interesan y postúlate cuando lo desees
+                            </Typography>
+                        </CardContent>
+                        <CardActions sx={{ justifyContent: 'center' }}>
+                            <Button variant="contained" color="primary" sx={{ fontFamily: 'Roboto' }}>
+                                Buscar empleos
+                            </Button>
+                        </CardActions>
+                    </Card>
+                </Grid>
                 {favoritos.map((favorito) => (
-                    <Grid item key={favorito.id} xs={12} md={8}>
-                        <Card sx={{ borderRadius: '15px', backgroundColor: 'white', marginBottom: '10px' }}>
+                    <Grid item key={favorito.id} xs={12} md={8} lg={4}>
+                        <Card sx={{ borderRadius: '15px', backgroundColor: 'white', marginBottom: '10px', transition: 'transform 0.3s ease-in-out', '&:hover': { transform: 'scale(1.02)' } }}>
                             <CardContent>
-                                <Typography variant="h6" component="div">
+                                <Typography variant="h6" component="div" sx={{ fontFamily: 'Roboto', fontWeight: 'bold' }}>
                                     {favorito.tituloOferta}
                                 </Typography>
-                                <Typography color="textSecondary">
+                                <Typography color="textSecondary" sx={{ fontFamily: 'Roboto' }}>
                                     {favorito.empresa} <StarIcon fontSize="small" sx={{ verticalAlign: 'middle' }} /> {favorito.rating}
                                 </Typography>
-                                <Typography color="textSecondary">
+                                <Typography color="textSecondary" sx={{ fontFamily: 'Roboto' }}>
                                     {favorito.ubicacionOferta}
                                 </Typography>
                                 {favorito.urgencia && (
-                                    <Typography color="error" sx={{ fontWeight: 'bold' }}>
+                                    <Typography color="error" sx={{ fontWeight: 'bold', fontFamily: 'Roboto' }}>
                                         ¡URGENTE!
                                     </Typography>
                                 )}
-                                <Typography color="textSecondary">
+                                <Typography color="textSecondary" sx={{ fontFamily: 'Roboto' }}>
                                     Publicado el: {new Date(favorito.fechaPublicacion).toLocaleDateString()}
                                 </Typography>
                             </CardContent>
@@ -169,6 +184,7 @@ const Favoritos = () => {
                                     onClick={postulacionId[favorito.fk_IdOfertaTrabajo] !== null ? () => handleDespostular(favorito.fk_IdOfertaTrabajo) : () => handlePostular(favorito.fk_IdOfertaTrabajo)}
                                     disabled={isPostulating[favorito.fk_IdOfertaTrabajo] || false}
                                     startIcon={isPostulating[favorito.fk_IdOfertaTrabajo] ? <CircularProgress size={24} /> : null}
+                                    sx={{ fontFamily: 'Roboto' }}
                                 >
                                     {isPostulating[favorito.fk_IdOfertaTrabajo] ? 'Procesando...' : (postulacionId[favorito.fk_IdOfertaTrabajo] !== null ? 'Despostularme' : 'Postularme')}
                                 </Button>
@@ -179,21 +195,6 @@ const Favoritos = () => {
                         </Card>
                     </Grid>
                 ))}
-                <Grid item xs={12} md={4}>
-                    <Card sx={{ borderRadius: '15px', backgroundColor: 'white', textAlign: 'center', padding: '20px' }}>
-                        <CardContent>
-                            <img src={fav} alt="Search Jobs" style={{ maxWidth: '100%', marginBottom: '20px' }} />
-                            <Typography>
-                                Guarda con un <FavoriteIcon color="error" sx={{ verticalAlign: 'middle' }} /> las ofertas de empleo que más te interesan y postúlate cuando lo desees
-                            </Typography>
-                        </CardContent>
-                        <CardActions sx={{ justifyContent: 'center' }}>
-                            <Button variant="contained" color="primary">
-                                Buscar empleos
-                            </Button>
-                        </CardActions>
-                    </Card>
-                </Grid>
             </Grid>
             <Snackbar
                 open={snackbarMessage !== null}
