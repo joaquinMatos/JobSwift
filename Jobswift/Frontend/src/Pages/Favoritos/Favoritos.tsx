@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Typography, Grid, Card, CardContent, CardActions, Button, IconButton, Snackbar, CircularProgress } from '@mui/material';
+import { Box, Typography, Grid, Card, CardContent, CardActions, Button, IconButton, Snackbar, CircularProgress, styled } from '@mui/material';
 import { Favorite as FavoriteIcon, Star as StarIcon } from '@mui/icons-material';
 import axios from 'axios';
 import fav from '../../img/Fav.webp';
@@ -20,6 +20,16 @@ interface Postulacion {
     fk_IdOfertaTrabajo: number;
     status: number;
 }
+
+// Styled component for the card with hover effect
+const StyledCard = styled(Card)(({ theme }) => ({
+    borderRadius: '15px',
+    backgroundColor: 'white',
+    transition: 'transform 0.3s ease-in-out',
+    '&:hover': {
+        transform: 'scale(1.02)',
+    },
+}));
 
 const Favoritos = () => {
     const [favoritos, setFavoritos] = useState<Favorito[]>([]);
@@ -142,7 +152,11 @@ const Favoritos = () => {
             <Grid container spacing={3} justifyContent="center">
                 {favoritos.map((favorito) => (
                     <Grid item key={favorito.id} xs={12} md={8}>
+<<<<<<< HEAD
                         <Card sx={{ borderRadius: '15px', backgroundColor: 'white', marginBottom: '10px' }}>
+=======
+                        <StyledCard>
+>>>>>>> 67de0f4b1cdba038af723a0c78d741cdf3da57a3
                             <CardContent>
                                 <Typography variant="h6" component="div">
                                     {favorito.tituloOferta}
@@ -176,11 +190,11 @@ const Favoritos = () => {
                                     <FavoriteIcon color="error" />
                                 </IconButton>
                             </CardActions>
-                        </Card>
+                        </StyledCard>
                     </Grid>
                 ))}
                 <Grid item xs={12} md={4}>
-                    <Card sx={{ borderRadius: '15px', backgroundColor: 'white', textAlign: 'center', padding: '20px' }}>
+                    <StyledCard sx={{ textAlign: 'center', padding: '20px' }}>
                         <CardContent>
                             <img src={fav} alt="Search Jobs" style={{ maxWidth: '100%', marginBottom: '20px' }} />
                             <Typography>
@@ -192,7 +206,7 @@ const Favoritos = () => {
                                 Buscar empleos
                             </Button>
                         </CardActions>
-                    </Card>
+                    </StyledCard>
                 </Grid>
             </Grid>
             <Snackbar

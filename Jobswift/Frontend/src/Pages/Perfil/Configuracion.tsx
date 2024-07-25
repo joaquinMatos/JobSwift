@@ -1,6 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { jwtDecode } from 'jwt-decode';
+import {
+  Container,
+  TextField,
+  Box,
+  Button,
+  Typography,
+  Card,
+  CardContent,
+  Grid,
+  styled,
+  InputAdornment,
+} from '@mui/material';
+import PersonIcon from '@mui/icons-material/Person';
+import EmailIcon from '@mui/icons-material/Email';
+import LockIcon from '@mui/icons-material/Lock';
+import MailIcon from '@mui/icons-material/Mail';
+import LocationCityIcon from '@mui/icons-material/LocationCity';
+import PhoneIcon from '@mui/icons-material/Phone';
+import VpnKeyIcon from '@mui/icons-material/VpnKey';
 
 interface DecodedToken {
   id: number;
@@ -27,6 +46,17 @@ export function GetUsernameFromToken(): string | null {
   }
   return null;
 }
+
+// Styled component for the card with hover effect
+const ProfileCard = styled(Card)(({ theme }) => ({
+  marginBottom: theme.spacing(2),
+  borderRadius: theme.shape.borderRadius,
+  boxShadow: theme.shadows[2],
+  transition: 'transform 0.3s ease-in-out',
+  '&:hover': {
+    transform: 'scale(1.02)',
+  },
+}));
 
 const ActualizarCandidato = () => {
   const [candidato, setCandidato] = useState<Candidato>({
@@ -82,84 +112,160 @@ const ActualizarCandidato = () => {
   };
 
   return (
-    <div>
-      <h2>Actualizar Candidato</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Nombre Completo</label>
-          <input
-            type="text"
-            name="nombreCompleto"
-            value={candidato.nombreCompleto}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Apellidos</label>
-          <input
-            type="text"
-            name="apellidos"
-            value={candidato.apellidos}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            value={candidato.email}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Contraseña</label>
-          <input
-            type="password"
-            name="contrasena"
-            value={candidato.contrasena}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Código Postal</label>
-          <input
-            type="text"
-            name="codigoP"
-            value={candidato.codigoP}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Ciudad</label>
-          <input
-            type="text"
-            name="ciudad"
-            value={candidato.ciudad}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Número Telefónico</label>
-          <input
-            type="text"
-            name="nTelefonico"
-            value={candidato.nTelefonico}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Token</label>
-          <input
-            type="text"
-            name="token"
-            value={candidato.token}
-            onChange={handleChange}
-          />
-        </div>
-        <button type="submit">Actualizar</button>
-      </form>
-    </div>
+    <Box sx={{ bgcolor: '#E3F2FD', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: 3 }}>
+      <Container>
+        <Typography variant="h4" gutterBottom align="center">Actualizar Candidato</Typography>
+        <ProfileCard>
+          <CardContent>
+            <Box component="form" onSubmit={handleSubmit} sx={{ maxWidth: 1000, mx: 'auto' }}>
+              <Grid container spacing={2}>
+                <Grid item xs={6}>
+                  <TextField
+                    label="Nombre Completo"
+                    name="nombreCompleto"
+                    value={candidato.nombreCompleto}
+                    onChange={handleChange}
+                    fullWidth
+                    margin="normal"
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">
+                          <PersonIcon />
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField
+                    label="Apellidos"
+                    name="apellidos"
+                    value={candidato.apellidos}
+                    onChange={handleChange}
+                    fullWidth
+                    margin="normal"
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">
+                          <PersonIcon />
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField
+                    label="Email"
+                    name="email"
+                    value={candidato.email}
+                    onChange={handleChange}
+                    type="email"
+                    fullWidth
+                    margin="normal"
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">
+                          <EmailIcon />
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField
+                    label="Contraseña"
+                    name="contrasena"
+                    value={candidato.contrasena}
+                    onChange={handleChange}
+                    type="password"
+                    fullWidth
+                    margin="normal"
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">
+                          <LockIcon />
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField
+                    label="Código Postal"
+                    name="codigoP"
+                    value={candidato.codigoP}
+                    onChange={handleChange}
+                    fullWidth
+                    margin="normal"
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">
+                          <MailIcon />
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField
+                    label="Ciudad"
+                    name="ciudad"
+                    value={candidato.ciudad}
+                    onChange={handleChange}
+                    fullWidth
+                    margin="normal"
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">
+                          <LocationCityIcon />
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField
+                    label="Número Telefónico"
+                    name="nTelefonico"
+                    value={candidato.nTelefonico}
+                    onChange={handleChange}
+                    fullWidth
+                    margin="normal"
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">
+                          <PhoneIcon />
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <TextField
+                    label="Token"
+                    name="token"
+                    value={candidato.token}
+                    onChange={handleChange}
+                    fullWidth
+                    margin="normal"
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">
+                          <VpnKeyIcon />
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+                  <Button variant="contained" color="primary" type="submit" sx={{ mx: 1 }}>Actualizar</Button>
+                </Grid>
+              </Grid>
+            </Box>
+          </CardContent>
+        </ProfileCard>
+      </Container>
+    </Box>
   );
 };
 

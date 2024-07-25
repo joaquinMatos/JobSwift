@@ -7,3 +7,6 @@ JobSwift\conexion.txt
 .vscode
 
 JobSwift\.github
+
+/Jobswift/backend/backend/bin/
+/Jobswift/backend/backend/obj/
