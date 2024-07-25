@@ -48,7 +48,7 @@ const Body = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
-    
+
     // Clear error message for the specific field when its value changes
     setFormErrors({ ...formErrors, [name]: '' });
     if (name === 'email') {
@@ -102,7 +102,8 @@ const Body = () => {
       console.log('Response:', response.data);
       setEmailError(''); // Clear any previous email errors
       setCandidateData(null); // Clear any previous candidate data
-      // Aquí puedes manejar la respuesta, como mostrar un mensaje de éxito
+      // Redirigir al login de candidato
+      navigate('/candidate-login');
     } catch (error) {
       console.error('Error:', error);
       setEmailError('Error registrando el usuario.');
@@ -268,20 +269,31 @@ const Body = () => {
               )}
             </Grid>
             <Grid item xs={12} md={4}>
-              <Box
-                sx={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  height: '100%',
-                  p: 2,
-                  textAlign: { xs: 'center', md: 'left' },
-                }}
-              >
-                <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold', color: 'White' }}>
-                  ¡Únete a nosotros y encuentra la mejor oferta de empleo!
-                </Typography>
-              </Box>
+              {candidateData && (
+                <Alert severity="info">
+                  <Typography variant="body2">
+                    <strong>Información del candidato:</strong>
+                  </Typography>
+                  <Typography variant="body2">
+                    <strong>Nombre completo:</strong> {candidateData.nombreCompleto}
+                  </Typography>
+                  <Typography variant="body2">
+                    <strong>Apellidos:</strong> {candidateData.apellidos}
+                  </Typography>
+                  <Typography variant="body2">
+                    <strong>Correo electrónico:</strong> {candidateData.email}
+                  </Typography>
+                  <Typography variant="body2">
+                    <strong>Teléfono:</strong> {candidateData.nTelefonico}
+                  </Typography>
+                  <Typography variant="body2">
+                    <strong>Ciudad:</strong> {candidateData.ciudad}
+                  </Typography>
+                  <Typography variant="body2">
+                    <strong>Código Postal:</strong> {candidateData.codigoP}
+                  </Typography>
+                </Alert>
+              )}
             </Grid>
           </Grid>
         </form>

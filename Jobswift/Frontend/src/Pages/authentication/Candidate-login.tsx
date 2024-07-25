@@ -10,9 +10,9 @@ import { useAuth } from "../../context/AuthLogin";
 import { Navigate, useNavigate } from "react-router-dom";
 import LoandingProgressBars from "../../components/Loanding";
 import axios from "axios";
-import {jwtDecode} from "jwt-decode";
+import {jwtDecode} from "jwt-decode"; // Asegúrate de importar esto correctamente
 import { AuthResponse } from "../../interface/interface";
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';  // Importar el ícono de flecha
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const API_URL = "https://localhost:7151";
 
@@ -61,13 +61,13 @@ const Login = () => {
                 navigate("/dashboard");
             }
         } catch {
-            setAlertError(<Alert severity="error"> Error al Iniciar Sesión </Alert>);
+            setAlertError(<Alert severity="error">Error al Iniciar Sesión</Alert>);
             setLoading(false);
         }
     };
 
     if (loading) {
-        return <div> <LoandingProgressBars /></div>;
+        return <div><LoandingProgressBars /></div>;
     };
 
     return (
@@ -148,7 +148,10 @@ const Login = () => {
                         </form>
                         <Typography sx={{ marginTop: '25px', textAlign: 'center' }}>
                             ¿Aún no tienes una cuenta?
-                            <span style={{ color: '#21bbff', cursor: 'pointer', marginLeft: '15px' }}>
+                            <span 
+                                style={{ color: '#21bbff', cursor: 'pointer', marginLeft: '15px' }}
+                                onClick={() => navigate('/candidate-register')}
+                            >
                                 Registrate
                             </span>
                         </Typography>
