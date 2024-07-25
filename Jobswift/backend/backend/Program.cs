@@ -10,7 +10,7 @@ using System.Text;
 using Microsoft.Extensions.FileProviders;
 using System.IO;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();

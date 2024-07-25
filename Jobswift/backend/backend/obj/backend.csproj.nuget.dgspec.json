@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\Backend.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\balam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\Backend.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\Backend.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\Backend.csproj",
+        "projectName": "Backend",
+        "projectPath": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\Backend.csproj",
+        "packagesPath": "C:\\Users\\osmar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\osmar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 5099160a72106ffdf681b5ff76d00521e3a13c9c
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,8 +46,13 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+<<<<<<< HEAD
               "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Domain\\Domain.csproj": {
                 "projectPath": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Domain\\Domain.csproj"
+=======
+              "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj"
+>>>>>>> 5099160a72106ffdf681b5ff76d00521e3a13c9c
               }
             }
           }
@@ -108,10 +130,11 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
+<<<<<<< HEAD
     "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -123,6 +146,19 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\balam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\osmar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\osmar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 5099160a72106ffdf681b5ff76d00521e3a13c9c
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -197,7 +233,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
