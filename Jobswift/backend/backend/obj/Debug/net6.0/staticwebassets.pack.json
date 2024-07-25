@@ -1,71 +1,39 @@
 {
   "Files": [
     {
-      "Id": "D:\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\CV.pdf",
+      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\CV.pdf",
       "PackagePath": "staticwebassets\\uploads\\CV.pdf"
     },
     {
-<<<<<<< HEAD
-      "Id": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\Cálculo de Rentabilidad.png",
-      "PackagePath": "staticwebassets\\uploads\\Cálculo de Rentabilidad.png"
-    },
-    {
-      "Id": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\JoaquínMatosCv.pdf",
+      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\JoaquínMatosCv.pdf",
       "PackagePath": "staticwebassets\\uploads\\JoaquínMatosCv.pdf"
     },
     {
-      "Id": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\LOADING.jpg",
-      "PackagePath": "staticwebassets\\uploads\\LOADING.jpg"
-    },
-    {
-      "Id": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\Larry_Basto_Diaz CV.pdf",
-=======
-      "Id": "D:\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\JoaquínMatosCv.pdf",
-      "PackagePath": "staticwebassets\\uploads\\JoaquínMatosCv.pdf"
-    },
-    {
-      "Id": "D:\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\Larry_Basto_Diaz CV.pdf",
->>>>>>> aede94e78b8fa78867c22ef117f58ee4c6925121
+      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\Larry_Basto_Diaz CV.pdf",
       "PackagePath": "staticwebassets\\uploads\\Larry_Basto_Diaz CV.pdf"
     },
     {
-      "Id": "D:\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\OCCIDENTE.pdf",
+      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\OCCIDENTE.pdf",
       "PackagePath": "staticwebassets\\uploads\\OCCIDENTE.pdf"
     },
     {
-<<<<<<< HEAD
-      "Id": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\Prototipo del proyecto.pdf",
-      "PackagePath": "staticwebassets\\uploads\\Prototipo del proyecto.pdf"
-    },
-    {
-      "Id": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\chi.pdf",
+      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\chi.pdf",
       "PackagePath": "staticwebassets\\uploads\\chi.pdf"
     },
     {
-      "Id": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\evaluación de inversión.pdf",
-      "PackagePath": "staticwebassets\\uploads\\evaluación de inversión.pdf"
-    },
-    {
-      "Id": "C:\\Users\\osmar\\OneDrive\\Escritorio\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\hola.png",
-=======
-      "Id": "D:\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\chi.pdf",
-      "PackagePath": "staticwebassets\\uploads\\chi.pdf"
-    },
-    {
-      "Id": "D:\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\hola.png",
->>>>>>> aede94e78b8fa78867c22ef117f58ee4c6925121
+      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\hola.png",
       "PackagePath": "staticwebassets\\uploads\\hola.png"
     },
     {
-      "Id": "D:\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\img.jpeg",
+      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\img.jpeg",
       "PackagePath": "staticwebassets\\uploads\\img.jpeg"
     },
     {
-      "Id": "D:\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\img2.png",
+      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\img2.png",
       "PackagePath": "staticwebassets\\uploads\\img2.png"
     },
     {
-      "Id": "D:\\JobSwift\\Jobswift\\backend\\Backend\\wwwroot\\uploads\\user.png",
+      "Id": "C:\\Users\\balam\\Desktop\\aqui\\JobSwift\\JobSwift\\backend\\Backend\\wwwroot\\uploads\\user.png",
       "PackagePath": "staticwebassets\\uploads\\user.png"
     },
     {
